@@ -44,3 +44,5 @@ C:\Users\User\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exerc
 C:\Users\User\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.exe
 C:\Users\User\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.pdb
+C:\Users\User\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.CustomControll.CustomTextBox.resources
+C:\Users\User\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.CustomControll.CustomComboBox.resources

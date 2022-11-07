@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.label1 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtPW = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.join = new System.Windows.Forms.Label();
             this.loginBtn = new Exercise.CustomControll.RoundButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -53,24 +52,9 @@
             this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtID.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(462, 265);
-            this.txtID.Margin = new System.Windows.Forms.Padding(110, 2, 110, 2);
-            this.txtID.MaxLength = 64;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(300, 38);
-            this.txtID.TabIndex = 28;
-            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
-            // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Image = global::Exercise.Properties.Resources.bar_Space;
             this.pictureBox3.Location = new System.Drawing.Point(445, 383);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(96, 70, 96, 0);
             this.pictureBox3.Name = "pictureBox3";
@@ -93,17 +77,6 @@
             this.txtPW.Size = new System.Drawing.Size(300, 38);
             this.txtPW.TabIndex = 25;
             this.txtPW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPW_KeyPress);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(445, 253);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(436, 30, 436, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(330, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
             // 
             // join
             // 
@@ -139,25 +112,51 @@
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Exercise.Properties.Resources.bar_Space;
+            this.pictureBox1.Location = new System.Drawing.Point(445, 266);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(96, 70, 96, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(330, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtID
+            // 
+            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtID.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtID.ForeColor = System.Drawing.Color.White;
+            this.txtID.Location = new System.Drawing.Point(462, 280);
+            this.txtID.Margin = new System.Windows.Forms.Padding(110, 2, 110, 2);
+            this.txtID.MaxLength = 64;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(300, 38);
+            this.txtID.TabIndex = 32;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1202, 674);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.join);
             this.Controls.Add(this.txtPW);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "FormLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,10 +165,10 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private CustomControll.RoundButton loginBtn;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txtPW;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label join;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

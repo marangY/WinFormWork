@@ -85,6 +85,12 @@
     <Compile Include="CustomControll\CustomComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CustomControll\CustomTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControll\CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControll\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControll\CustomComboBox.resx">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControll\CustomTextBox.resx">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControll\RoundButton.resx">
       <DependentUpon>RoundButton.cs</DependentUpon>
     </EmbeddedResource>

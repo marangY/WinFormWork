@@ -90,7 +90,7 @@ namespace Exercise.Froms
 
                 return;
             }
-            else if (txtID.Text.Equals(IdPlaceholder))
+            else if (txtID.Text.Equals(txtID))
             {
                 sendMessage("아이디를 입력해 주세요.");
 
