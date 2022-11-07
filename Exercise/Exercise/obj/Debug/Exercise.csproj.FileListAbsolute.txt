@@ -1,0 +1,84 @@
+D:\c#\Exercise\Exercise\bin\Debug\Exercise.exe.config
+D:\c#\Exercise\Exercise\bin\Debug\Exercise.exe
+D:\c#\Exercise\Exercise\bin\Debug\Exercise.pdb
+D:\c#\Exercise\Exercise\bin\Debug\FontAwesome.Sharp.dll
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.csproj.AssemblyReference.cache
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.csproj.SuggestedBindingRedirects.cache
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Properties.Resources.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.csproj.GenerateResource.cache
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.csproj.CoreCompileInputs.cache
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.csproj.CopyComplete
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.exe
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.pdb
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\bin\Debug\Exercise.exe.config
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\bin\Debug\Exercise.exe
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\bin\Debug\Exercise.pdb
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Properties.Resources.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.csproj.GenerateResource.cache
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.csproj.CopyComplete
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.exe
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.pdb
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\bin\Debug\Oracle.DataAccess.dll
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Froms.FormCalculator.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Froms.FormExercise.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Froms.FormFood.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Froms.FormHome.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Froms.FormJoin.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Froms.FormLogin.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.Froms.FormRank.resources
+C:\Users\User\Desktop\대학 과제\DB설계및관리\exe\Exercise\Exercise\obj\Debug\Exercise.FormMain.resources
+E:\Exercise\Exercise\bin\Debug\Exercise.exe.config
+E:\Exercise\Exercise\bin\Debug\Exercise.exe
+E:\Exercise\Exercise\bin\Debug\Exercise.pdb
+E:\Exercise\Exercise\bin\Debug\FontAwesome.Sharp.dll
+E:\Exercise\Exercise\bin\Debug\Oracle.DataAccess.dll
+E:\Exercise\Exercise\obj\Debug\Exercise.csproj.AssemblyReference.cache
+E:\Exercise\Exercise\obj\Debug\Exercise.csproj.SuggestedBindingRedirects.cache
+E:\Exercise\Exercise\obj\Debug\Exercise.FormMain.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Froms.FormCalculator.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Froms.FormExercise.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Froms.FormFood.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Froms.FormHome.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Froms.FormJoin.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Froms.FormLogin.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Froms.FormRank.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.Properties.Resources.resources
+E:\Exercise\Exercise\obj\Debug\Exercise.csproj.GenerateResource.cache
+E:\Exercise\Exercise\obj\Debug\Exercise.csproj.CoreCompileInputs.cache
+E:\Exercise\Exercise\obj\Debug\Exercise.csproj.CopyComplete
+E:\Exercise\Exercise\obj\Debug\Exercise.exe
+E:\Exercise\Exercise\obj\Debug\Exercise.pdb
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\bin\Debug\Exercise.exe.config
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\bin\Debug\Exercise.exe
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\bin\Debug\Exercise.pdb
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\bin\Debug\Oracle.DataAccess.dll
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.FormMain.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Froms.FormCalculator.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Froms.FormExercise.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Froms.FormFood.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Froms.FormHome.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Froms.FormJoin.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Froms.FormLogin.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Froms.FormRank.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.Properties.Resources.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.csproj.GenerateResource.cache
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.csproj.CoreCompileInputs.cache
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.exe
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.pdb
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.CustomControll.RoundButton.resources
+C:\Users\shin0\OneDrive\바탕 화면\C#_team\Exercise\Exercise\obj\Debug\Exercise.csproj.AssemblyReference.cache
+D:\c#\Exercise\Exercise\bin\Debug\Oracle.DataAccess.dll
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.CustomControll.RoundButton.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.FormMain.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Froms.FormCalculator.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Froms.FormExercise.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Froms.FormFood.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Froms.FormHome.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Froms.FormJoin.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Froms.FormLogin.resources
+D:\c#\Exercise\Exercise\obj\Debug\Exercise.Froms.FormRank.resources
