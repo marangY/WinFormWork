@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inputLabel = new System.Windows.Forms.Label();
             this.totalCalorie = new System.Windows.Forms.Label();
             this.totalKal = new System.Windows.Forms.Label();
@@ -44,9 +47,6 @@
             this.customComboBox1 = new Exercise.CustomControll.CustomComboBox();
             this.roundButton1 = new Exercise.CustomControll.RoundButton();
             this.selectCustomComboBox = new Exercise.CustomControll.CustomComboBox();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EFDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +114,33 @@
             this.EFDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EFDataGridView.Size = new System.Drawing.Size(620, 513);
             this.EFDataGridView.TabIndex = 3;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.FillWeight = 80F;
+            this.name.HeaderText = "운동";
+            this.name.MinimumWidth = 10;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Category.FillWeight = 80F;
+            this.Category.HeaderText = "카테고리";
+            this.Category.MinimumWidth = 10;
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // calorie
+            // 
+            this.calorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.calorie.FillWeight = 120F;
+            this.calorie.HeaderText = "분당 칼로리(kal)";
+            this.calorie.MinimumWidth = 10;
+            this.calorie.Name = "calorie";
+            this.calorie.ReadOnly = true;
             // 
             // inputLabel
             // 
@@ -253,7 +280,7 @@
             this.customComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
             this.customComboBox1.Name = "customComboBox1";
             this.customComboBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.customComboBox1.Size = new System.Drawing.Size(200, 45);
+            this.customComboBox1.Size = new System.Drawing.Size(200, 48);
             this.customComboBox1.TabIndex = 7;
             this.customComboBox1.Texts = "";
             // 
@@ -295,37 +322,10 @@
             this.selectCustomComboBox.MinimumSize = new System.Drawing.Size(200, 30);
             this.selectCustomComboBox.Name = "selectCustomComboBox";
             this.selectCustomComboBox.Padding = new System.Windows.Forms.Padding(3);
-            this.selectCustomComboBox.Size = new System.Drawing.Size(240, 70);
+            this.selectCustomComboBox.Size = new System.Drawing.Size(240, 75);
             this.selectCustomComboBox.TabIndex = 0;
             this.selectCustomComboBox.Texts = "";
             this.selectCustomComboBox.OnSelectedIndexChanged += new System.EventHandler(this.selectCustomComboBox_OnSelectedIndexChanged);
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.FillWeight = 80F;
-            this.name.HeaderText = "운동";
-            this.name.MinimumWidth = 10;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Category.FillWeight = 80F;
-            this.Category.HeaderText = "카테고리";
-            this.Category.MinimumWidth = 10;
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // calorie
-            // 
-            this.calorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.calorie.FillWeight = 120F;
-            this.calorie.HeaderText = "분당 칼로리(kal)";
-            this.calorie.MinimumWidth = 10;
-            this.calorie.Name = "calorie";
-            this.calorie.ReadOnly = true;
             // 
             // FormCalculator
             // 

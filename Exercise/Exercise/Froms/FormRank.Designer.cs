@@ -134,7 +134,7 @@
             this.dateComboBox.MinimumSize = new System.Drawing.Size(200, 35);
             this.dateComboBox.Name = "dateComboBox";
             this.dateComboBox.Padding = new System.Windows.Forms.Padding(2);
-            this.dateComboBox.Size = new System.Drawing.Size(205, 58);
+            this.dateComboBox.Size = new System.Drawing.Size(205, 60);
             this.dateComboBox.TabIndex = 7;
             this.dateComboBox.Texts = "";
             // 

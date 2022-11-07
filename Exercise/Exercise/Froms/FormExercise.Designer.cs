@@ -36,12 +36,12 @@
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.categoryInputCustomComboBox = new Exercise.CustomControll.CustomComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.timeTxt = new Exercise.CustomControll.CustomTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.nameTxt = new Exercise.CustomControll.CustomTextBox();
             this.categoryCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.searchRoundButton = new Exercise.CustomControll.RoundButton();
@@ -150,39 +150,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Append";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(332, 72);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 33);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Category";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(688, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 33);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Time";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(13, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 33);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Name";
-            // 
             // iconPictureBox3
             // 
             this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
@@ -214,9 +181,20 @@
             this.categoryInputCustomComboBox.MinimumSize = new System.Drawing.Size(200, 30);
             this.categoryInputCustomComboBox.Name = "categoryInputCustomComboBox";
             this.categoryInputCustomComboBox.Padding = new System.Windows.Forms.Padding(3);
-            this.categoryInputCustomComboBox.Size = new System.Drawing.Size(200, 45);
+            this.categoryInputCustomComboBox.Size = new System.Drawing.Size(200, 48);
             this.categoryInputCustomComboBox.TabIndex = 13;
             this.categoryInputCustomComboBox.Texts = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(332, 72);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 33);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Category";
             // 
             // timeTxt
             // 
@@ -239,6 +217,28 @@
             this.timeTxt.TabIndex = 16;
             this.timeTxt.Texts = "";
             this.timeTxt.UnderlinedStyle = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(688, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 33);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Time";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(13, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 33);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Name";
             // 
             // nameTxt
             // 
@@ -273,12 +273,12 @@
             this.categoryCustomComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.categoryCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.categoryCustomComboBox.ListTextColor = System.Drawing.Color.White;
-            this.categoryCustomComboBox.Location = new System.Drawing.Point(942, 42);
+            this.categoryCustomComboBox.Location = new System.Drawing.Point(942, 40);
             this.categoryCustomComboBox.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
             this.categoryCustomComboBox.MinimumSize = new System.Drawing.Size(200, 30);
             this.categoryCustomComboBox.Name = "categoryCustomComboBox";
             this.categoryCustomComboBox.Padding = new System.Windows.Forms.Padding(3);
-            this.categoryCustomComboBox.Size = new System.Drawing.Size(200, 45);
+            this.categoryCustomComboBox.Size = new System.Drawing.Size(200, 48);
             this.categoryCustomComboBox.TabIndex = 11;
             this.categoryCustomComboBox.Texts = "";
             // 
