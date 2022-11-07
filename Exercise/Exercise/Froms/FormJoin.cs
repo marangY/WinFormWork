@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +21,8 @@ namespace Exercise.Froms
         private String IdPlaceholder = "  ID";
         private String PwPlaceholder = "  Password";
         private String ADPlaceholder = "  Adress";
+
+        Regex regex = new Regex(@"[^a-z A-Z 0-9]*");
 
         public FormJoin()
         {
@@ -95,6 +98,12 @@ namespace Exercise.Froms
 
                 return;
             }
+            else if (regex.IsMatch(txtID.Text))
+            {
+                sendMessage("아이디는 영문 혹은 숫자만 입력해야 합니다.");
+
+                return;
+            }
 
             if (txtPW.Text.Length > 20)
             {
@@ -105,6 +114,12 @@ namespace Exercise.Froms
             else if (txtPW.Text.Equals(PwPlaceholder))
             {
                 sendMessage("비밀번호를 입력해 주세요.");
+
+                return;
+            }
+            else if (regex.IsMatch(txtPW.Text))
+            {
+                sendMessage("비밀번호는 영문 혹은 숫자만 입력해야 합니다.");
 
                 return;
             }
@@ -142,7 +157,7 @@ namespace Exercise.Froms
         public void sendMessage(string str)
         {
             MessageForm message = new MessageForm(str);
-            message.StartPosition = FormStartPosition.Manual;
+            message.StartPosition = FormStartPosition.CenterParent;
             SystemSounds.Beep.Play();
             message.ShowDialog();
         }
