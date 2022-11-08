@@ -90,7 +90,7 @@ namespace Exercise.Froms
 
                 return;
             }
-            else if (txtID.Text.Equals(txtID))
+            else if (txtID.Text.Equals(IdPlaceholder))
             {
                 sendMessage("아이디를 입력해 주세요.");
 
@@ -163,5 +163,15 @@ namespace Exercise.Froms
             }
         }
         //
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            txtID.Focus();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            txtPW.Focus();
+        }
     }
 }

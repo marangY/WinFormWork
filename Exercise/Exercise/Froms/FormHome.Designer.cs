@@ -30,7 +30,6 @@
         {
             this.bodyGroupBox = new System.Windows.Forms.GroupBox();
             this.bmiGroupBox = new System.Windows.Forms.GroupBox();
-            this.bmi = new System.Windows.Forms.TextBox();
             this.bodyFatGroupBox = new System.Windows.Forms.GroupBox();
             this.bodyFat = new System.Windows.Forms.TextBox();
             this.percentage = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.foodKal = new System.Windows.Forms.Label();
             this.exerciseKal = new System.Windows.Forms.Label();
             this.totalKal = new System.Windows.Forms.Label();
+            this.bmi = new System.Windows.Forms.Label();
             this.bodyGroupBox.SuspendLayout();
             this.bmiGroupBox.SuspendLayout();
             this.bodyFatGroupBox.SuspendLayout();
@@ -83,18 +83,6 @@
             this.bmiGroupBox.TabIndex = 3;
             this.bmiGroupBox.TabStop = false;
             this.bmiGroupBox.Text = "BMI";
-            // 
-            // bmi
-            // 
-            this.bmi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.bmi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bmi.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bmi.ForeColor = System.Drawing.Color.White;
-            this.bmi.Location = new System.Drawing.Point(5, 34);
-            this.bmi.Name = "bmi";
-            this.bmi.Size = new System.Drawing.Size(260, 33);
-            this.bmi.TabIndex = 1;
-            this.bmi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bodyFatGroupBox
             // 
@@ -301,6 +289,17 @@
             this.totalKal.Text = "0  kal";
             this.totalKal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bmi
+            // 
+            this.bmi.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.bmi.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bmi.Location = new System.Drawing.Point(6, 31);
+            this.bmi.Name = "bmi";
+            this.bmi.Size = new System.Drawing.Size(259, 33);
+            this.bmi.TabIndex = 0;
+            this.bmi.Text = "bmi";
+            this.bmi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -321,7 +320,6 @@
             this.bodyGroupBox.ResumeLayout(false);
             this.bodyGroupBox.PerformLayout();
             this.bmiGroupBox.ResumeLayout(false);
-            this.bmiGroupBox.PerformLayout();
             this.bodyFatGroupBox.ResumeLayout(false);
             this.bodyFatGroupBox.PerformLayout();
             this.weightGroupBox.ResumeLayout(false);
@@ -347,7 +345,6 @@
         private System.Windows.Forms.TextBox bodyFat;
         private System.Windows.Forms.Label percentage;
         private System.Windows.Forms.TextBox weight;
-        private System.Windows.Forms.TextBox bmi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -355,5 +352,6 @@
         private System.Windows.Forms.Label foodKal;
         private System.Windows.Forms.Label exerciseKal;
         private System.Windows.Forms.Label totalKal;
+        private System.Windows.Forms.Label bmi;
     }
 }

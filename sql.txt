@@ -1,0 +1,197 @@
+-- 테이블, 시퀀스 삭제
+DROP TABLE user_exercise;
+
+DROP TABLE user_food;
+
+DROP TABLE exercise_info;
+
+DROP TABLE food_info;
+
+DROP TABLE food_kategorie;
+
+DROP TABLE exercise_kategorie;
+
+DROP TABLE user_status;
+
+DROP TABLE total_calorie;
+
+DROP TABLE user_info;
+
+DROP SEQUENCE SEQ_FOOD_ID;
+
+DROP SEQUENCE SEQ_EXERCISE_ID;
+
+DROP SEQUENCE SEQ_USER_EXERCISE_ID;
+
+DROP SEQUENCE SEQ_USER_FOOD_ID;
+
+-- 테이블, 시퀀스 선언
+CREATE TABLE user_info (
+  user_id VARCHAR2(20) NOT NULL,
+  password VARCHAR2(200) NOT NULL,
+  email VARCHAR2(100) NOT NULL,
+  PRIMARY KEY (user_id));
+
+CREATE TABLE user_status (
+  user_id VARCHAR2(20) NOT NULL,
+  height NUMBER NOT NULL,
+  weight NUMBER NOT NULL,
+  body_fat NUMBER NOT NULL,
+  PRIMARY KEY (user_id),
+  CONSTRAINT FK_user_to_user_status
+    FOREIGN KEY (user_id)
+    REFERENCES user_info (user_id));
+
+CREATE TABLE exercise_kategorie (
+  kategorie VARCHAR2(45) NOT NULL,
+  PRIMARY KEY (kategorie));
+
+CREATE TABLE exercise_info (
+  exercise_id NUMBER NOT NULL,
+  exercise_name VARCHAR2(100) NOT NULL,
+  calorie NUMBER NOT NULL,
+  kategorie VARCHAR2(45) NOT NULL,
+  PRIMARY KEY (exercise_id),
+  CONSTRAINT FK_ex_kategorie_to_ex_info
+    FOREIGN KEY (kategorie)
+    REFERENCES exercise_kategorie (kategorie));
+
+CREATE TABLE user_exercise (
+  user_id VARCHAR2(20) NOT NULL,
+  id NUMBER NOT NULL,
+  exercise NUMBER NOT NULL,
+  time NUMBER NOT NULL,
+  datenow Date NOT NULL,
+  PRIMARY KEY (id, user_id),
+  CONSTRAINT FK_user_to_user_exersise
+    FOREIGN KEY (user_id)
+    REFERENCES user_info (user_id),
+  CONSTRAINT FK_ex_info_to_user_ex
+    FOREIGN KEY (exercise)
+    REFERENCES exercise_info (exercise_id));
+
+CREATE TABLE food_kategorie (
+  kategorie VARCHAR2(45) NOT NULL,
+  PRIMARY KEY (kategorie));
+
+CREATE TABLE food_info (
+  food_id NUMBER NOT NULL,
+  name VARCHAR2(100) NOT NULL,
+  calorie NUMBER NOT NULL,
+  kategorie VARCHAR2(45) NOT NULL,
+  PRIMARY KEY (food_id),
+  CONSTRAINT FK_food_kategorie_to_food_info
+    FOREIGN KEY (kategorie)
+    REFERENCES food_kategorie (kategorie));
+
+CREATE TABLE user_food (
+  user_id VARCHAR2(20) NOT NULL,
+  id NUMBER NOT NULL,
+  food NUMBER NOT NULL,
+  weight NUMBER NOT NULL,
+  datenow DATE NOT NULL,
+  PRIMARY KEY (id, user_id),
+  CONSTRAINT FK_user_to_user_food
+    FOREIGN KEY (user_id)
+    REFERENCES user_info (user_id),
+  CONSTRAINT FK_food_info_to_user_food
+    FOREIGN KEY (food)
+    REFERENCES food_info (food_id));
+
+CREATE TABLE total_calorie (
+  user_id VARCHAR2(20) NOT NULL,
+  datenow DATE NOT NULL,
+  food_calorie NUMBER NOT NULL,
+  exersise NUMBER NOT NULL,
+  PRIMARY KEY (user_id, datenow),
+  CONSTRAINT FK_user_to_total_calorie
+    FOREIGN KEY (user_id)
+    REFERENCES user_info (user_id));
+
+CREATE SEQUENCE SEQ_FOOD_ID INCREMENT BY 1 START WITH 1000000;
+CREATE SEQUENCE SEQ_EXERCISE_ID INCREMENT BY 1 START WITH 3000000;
+CREATE SEQUENCE SEQ_USER_EXERCISE_ID INCREMENT BY 1 START WITH 5000000;
+CREATE SEQUENCE SEQ_USER_FOOD_ID INCREMENT BY 1 START WITH 7000000;
+
+-- 음식 카테고리 추가
+insert into food_kategorie VALUES('곡류');
+insert into food_kategorie VALUES('채소');
+insert into food_kategorie VALUES('과일');
+insert into food_kategorie VALUES('유제품');
+insert into food_kategorie VALUES('육류');
+insert into food_kategorie VALUES('해산물');
+insert into food_kategorie VALUES('주류');
+insert into food_kategorie VALUES('요리');
+insert into food_kategorie VALUES('기타');
+
+-- 운동 카테고리 추가
+insert into exercise_kategorie VALUES('유산소');
+insert into exercise_kategorie VALUES('무산소');
+insert into exercise_kategorie VALUES('스포츠');
+
+
+--음식 데이터 추가
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '빵', 2.646, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '건포도 식빵', 2.739, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '롤빵', 3.1, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '마늘빵', 3.499, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '바게트', 2.892, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '베이글', 2.502, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '크루아상', 4.061, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '흰빵', 2.646, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '포카치아', 2.495, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '흰 쌀밥', 1.25, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '현미밥', 1.109, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '찹쌀', 0.97, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '파스타(건조)', 3.55, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '파스타(조리)', 1.31, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오트밀', 0.676, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '귀리', 3.89, '곡류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '조', 3.77, '곡류');
+
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '양배추', 0.246, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '적양배추', 0.311, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오이', 0.09, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '애호박', 0.167, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '아스파라거스', 0.203, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '브로콜리', 0.337, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '토마토', 0.177, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '호박', 0.261, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '가지', 0.249, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '옥수수', 1.06, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '샐러리', 0.12, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '버섯', 0.222, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '양파', 0.397, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '피망', 0.201, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '파프리카', 0.3, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '감자', 0.55, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '청경채', 0.13, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '당근', 0.413, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '완두콩', 0.81, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '고구마', 0.858, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '양상추', 0.148, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '상추', 0.148, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '배추', 0.12, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '무', 0.158, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '파', 0.339, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '마늘', 1.68, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '콩나물', 0.29, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '강낭콩', 3.329, '채소');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '팥', 3.291, '채소');
+
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '사과', 0.521, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '복숭아', 0.36, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '망고', 0.598, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오렌지', 0.471, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '포도', 0.669, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '바나나', 0.889, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '배', 0.571, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '딸기', 0.325, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '키위', 0.609, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '파인애플', 0.5, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '자두', 0.459, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '블루베리', 0.49, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '수박', 0.304, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '멜론', 0.337, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '귤', 0.39, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '용과', 0.34, '과일');
