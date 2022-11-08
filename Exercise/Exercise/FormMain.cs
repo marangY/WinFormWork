@@ -301,6 +301,7 @@ namespace Exercise
 
         private void logout_Click(object sender, EventArgs e)
         {
+            Reset();
             Config.UserName = null;
             Config.Login = false;
             logout.Visible = false;

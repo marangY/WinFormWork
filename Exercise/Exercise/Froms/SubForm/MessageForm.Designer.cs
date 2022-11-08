@@ -91,6 +91,7 @@
             this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.txtMessage);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MessageForm";
             this.Text = "MessageForm";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MessageForm_MouseDown);

@@ -34,7 +34,7 @@ namespace Exercise.Froms
             foreach (var txt in txtList)
             {
                 //처음 공백 Placeholder 지정
-                txt.ForeColor = Color.White;
+                txt.ForeColor = Color.Silver;
                 if (txt == txtID) txt.Text = IdPlaceholder;
                 else if (txt == txtPW) txt.Text = PwPlaceholder;
                 else if (txt == txtEM) txt.Text = EmPlaceholder;
@@ -62,7 +62,7 @@ namespace Exercise.Froms
             if (string.IsNullOrWhiteSpace(txt.Text))
             {
                 //사용자 입력값이 하나도 없는 경우에 포커스 잃으면 Placeholder 적용해주기
-                txt.ForeColor = Color.White; //Placeholder 흐린 글씨
+                txt.ForeColor = Color.Silver; //Placeholder 흐린 글씨
                 if (txt == txtID) txt.Text = IdPlaceholder;
                 else if (txt == txtEM) txt.Text = EmPlaceholder;
                 else if (txt == txtPW) { txt.Text = PwPlaceholder; txtPW.PasswordChar = default; }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.logout = new System.Windows.Forms.Label();
             this.CalculatorBtn = new FontAwesome.Sharp.IconButton();
             this.ExerciseBtn = new FontAwesome.Sharp.IconButton();
             this.FoodBtn = new FontAwesome.Sharp.IconButton();
@@ -49,7 +50,6 @@
             this.clock = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.logout = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -74,11 +74,18 @@
             this.panelMenu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelMenu.Name = "panelMenu";
             // 
+            // logout
+            // 
+            resources.ApplyResources(this.logout, "logout");
+            this.logout.ForeColor = System.Drawing.Color.OrangeRed;
+            this.logout.Name = "logout";
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // CalculatorBtn
             // 
             resources.ApplyResources(this.CalculatorBtn, "CalculatorBtn");
             this.CalculatorBtn.FlatAppearance.BorderSize = 0;
-            this.CalculatorBtn.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.CalculatorBtn.ForeColor = System.Drawing.Color.White;
             this.CalculatorBtn.IconChar = FontAwesome.Sharp.IconChar.Calculator;
             this.CalculatorBtn.IconColor = System.Drawing.Color.White;
             this.CalculatorBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -90,7 +97,7 @@
             // 
             resources.ApplyResources(this.ExerciseBtn, "ExerciseBtn");
             this.ExerciseBtn.FlatAppearance.BorderSize = 0;
-            this.ExerciseBtn.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.ExerciseBtn.ForeColor = System.Drawing.Color.White;
             this.ExerciseBtn.IconChar = FontAwesome.Sharp.IconChar.PersonWalking;
             this.ExerciseBtn.IconColor = System.Drawing.Color.White;
             this.ExerciseBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -102,7 +109,7 @@
             // 
             resources.ApplyResources(this.FoodBtn, "FoodBtn");
             this.FoodBtn.FlatAppearance.BorderSize = 0;
-            this.FoodBtn.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.FoodBtn.ForeColor = System.Drawing.Color.White;
             this.FoodBtn.IconChar = FontAwesome.Sharp.IconChar.Apple;
             this.FoodBtn.IconColor = System.Drawing.Color.White;
             this.FoodBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -114,7 +121,7 @@
             // 
             resources.ApplyResources(this.RankBtn, "RankBtn");
             this.RankBtn.FlatAppearance.BorderSize = 0;
-            this.RankBtn.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.RankBtn.ForeColor = System.Drawing.Color.White;
             this.RankBtn.IconChar = FontAwesome.Sharp.IconChar.RankingStar;
             this.RankBtn.IconColor = System.Drawing.Color.White;
             this.RankBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -126,7 +133,7 @@
             // 
             resources.ApplyResources(this.HomeBtn, "HomeBtn");
             this.HomeBtn.FlatAppearance.BorderSize = 0;
-            this.HomeBtn.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.HomeBtn.ForeColor = System.Drawing.Color.White;
             this.HomeBtn.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.HomeBtn.IconColor = System.Drawing.Color.White;
             this.HomeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -231,13 +238,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // logout
-            // 
-            resources.ApplyResources(this.logout, "logout");
-            this.logout.ForeColor = System.Drawing.Color.OrangeRed;
-            this.logout.Name = "logout";
-            this.logout.Click += new System.EventHandler(this.logout_Click);
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -247,6 +247,7 @@
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
