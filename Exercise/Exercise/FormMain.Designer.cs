@@ -49,6 +49,7 @@
             this.clock = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.logout = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -62,6 +63,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.logout);
             this.panelMenu.Controls.Add(this.CalculatorBtn);
             this.panelMenu.Controls.Add(this.ExerciseBtn);
             this.panelMenu.Controls.Add(this.FoodBtn);
@@ -229,6 +231,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // logout
+            // 
+            resources.ApplyResources(this.logout, "logout");
+            this.logout.ForeColor = System.Drawing.Color.OrangeRed;
+            this.logout.Name = "logout";
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -240,6 +249,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "FormMain";
             this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
@@ -274,6 +284,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label date;
         public FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
+        public System.Windows.Forms.Label logout;
     }
 }
 

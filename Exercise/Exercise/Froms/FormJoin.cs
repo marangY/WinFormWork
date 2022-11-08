@@ -20,23 +20,24 @@ namespace Exercise.Froms
         TextBox[] txtList;
         private String IdPlaceholder = "  ID";
         private String PwPlaceholder = "  Password";
-        private String ADPlaceholder = "  Adress";
+        private String EmPlaceholder = "  Email";
 
         Regex regex = new Regex(@"[^a-z A-Z 0-9]*");
+        Regex regexEm = new Regex(@"^([0-9a-zA-Z]+)@([0-9a-zA-Z]+)(\.[0-9a-zA-Z]+){1,}$");
 
         public FormJoin()
         {
             InitializeComponent();
 
             //ID, Password TextBox Placeholder 설정
-            txtList = new TextBox[] { txtID, txtPW, txtAD };
+            txtList = new TextBox[] { txtID, txtPW, txtEM };
             foreach (var txt in txtList)
             {
                 //처음 공백 Placeholder 지정
                 txt.ForeColor = Color.White;
                 if (txt == txtID) txt.Text = IdPlaceholder;
                 else if (txt == txtPW) txt.Text = PwPlaceholder;
-                else if (txt == txtAD) txt.Text = ADPlaceholder;
+                else if (txt == txtEM) txt.Text = EmPlaceholder;
 
                 //텍스트박스 커서 Focus 여부에 따라 이벤트 지정
                 txt.GotFocus += RemovePlaceholder;
@@ -48,7 +49,7 @@ namespace Exercise.Froms
         private void RemovePlaceholder(object sender, EventArgs e)
         {
             TextBox txt = (TextBox)sender;
-            if (txt.Text == IdPlaceholder | txt.Text == PwPlaceholder | txt.Text == ADPlaceholder)
+            if (txt.Text == IdPlaceholder | txt.Text == PwPlaceholder | txt.Text == EmPlaceholder)
             {
                 txt.ForeColor = Color.White; //사용자 입력 진한 글씨
                 txt.Text = string.Empty;
@@ -63,7 +64,7 @@ namespace Exercise.Froms
                 //사용자 입력값이 하나도 없는 경우에 포커스 잃으면 Placeholder 적용해주기
                 txt.ForeColor = Color.White; //Placeholder 흐린 글씨
                 if (txt == txtID) txt.Text = IdPlaceholder;
-                else if (txt == txtAD) txt.Text = ADPlaceholder;
+                else if (txt == txtEM) txt.Text = EmPlaceholder;
                 else if (txt == txtPW) { txt.Text = PwPlaceholder; txtPW.PasswordChar = default; }
             }
         }
@@ -98,7 +99,7 @@ namespace Exercise.Froms
 
                 return;
             }
-            else if (regex.IsMatch(txtID.Text))
+            else if (!regex.IsMatch(txtID.Text))
             {
                 sendMessage("아이디는 영문 혹은 숫자만 입력해야 합니다.");
 
@@ -117,27 +118,33 @@ namespace Exercise.Froms
 
                 return;
             }
-            else if (regex.IsMatch(txtPW.Text))
+            else if (!regex.IsMatch(txtPW.Text))
             {
                 sendMessage("비밀번호는 영문 혹은 숫자만 입력해야 합니다.");
 
                 return;
             }
 
-            if (txtAD.Text.Length > 100)
+            if (txtEM.Text.Length > 100)
             {
-                sendMessage("주소는 100 글자 이상 입력할 수 없습니다.");
+                sendMessage("이메일 주소는 100 글자 이상 입력할 수 없습니다.");
 
                 return;
             }
-            else if (txtAD.Text.Length.Equals(ADPlaceholder))
+            else if (txtEM.Text.Length.Equals(EmPlaceholder))
             {
-                sendMessage("주소를 입력해 주세요.");
+                sendMessage("이메일 주소를 입력해 주세요.");
+
+                return;
+            }
+            else if (!regexEm.IsMatch(txtEM.Text))
+            {
+                sendMessage("이메일 주소를 입력해 주세요");
 
                 return;
             }
 
-            JoinService join = new JoinService(txtID.Text, txtPW.Text, txtAD.Text);
+            JoinService join = new JoinService(txtID.Text, txtPW.Text, txtEM.Text);
 
             if (join.existenceId())
             {
@@ -177,11 +184,11 @@ namespace Exercise.Froms
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                txtAD.Focus();
+                txtEM.Focus();
             }
         }
 
-        private void txtAD_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtEM_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

@@ -131,6 +131,7 @@ namespace Exercise.Froms
             Parent.idTitleChildFrom.Text = Config.UserName;
             Parent.idTitleChildFrom.ForeColor = Color.DeepSkyBlue;
             Parent.iconCurrentChildForm.IconChar = IconChar.User;
+            Parent.logout.Visible = true;
             Close();
         }
 

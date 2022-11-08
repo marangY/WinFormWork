@@ -55,9 +55,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(285, 57);
+            this.label1.Location = new System.Drawing.Point(228, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 37);
+            this.label1.Size = new System.Drawing.Size(147, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Calculater";
             // 
@@ -94,8 +95,8 @@
             this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.EFDataGridView.EnableHeadersVisualStyles = false;
             this.EFDataGridView.GridColor = System.Drawing.Color.White;
-            this.EFDataGridView.Location = new System.Drawing.Point(544, 123);
-            this.EFDataGridView.Margin = new System.Windows.Forms.Padding(3, 30, 30, 3);
+            this.EFDataGridView.Location = new System.Drawing.Point(435, 102);
+            this.EFDataGridView.Margin = new System.Windows.Forms.Padding(2, 25, 24, 2);
             this.EFDataGridView.MultiSelect = false;
             this.EFDataGridView.Name = "EFDataGridView";
             this.EFDataGridView.ReadOnly = true;
@@ -112,7 +113,7 @@
             this.EFDataGridView.RowTemplate.DividerHeight = 1;
             this.EFDataGridView.RowTemplate.Height = 37;
             this.EFDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EFDataGridView.Size = new System.Drawing.Size(620, 513);
+            this.EFDataGridView.Size = new System.Drawing.Size(496, 428);
             this.EFDataGridView.TabIndex = 3;
             // 
             // name
@@ -147,9 +148,10 @@
             this.inputLabel.AutoSize = true;
             this.inputLabel.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.inputLabel.Location = new System.Drawing.Point(50, 288);
+            this.inputLabel.Location = new System.Drawing.Point(40, 240);
+            this.inputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inputLabel.Name = "inputLabel";
-            this.inputLabel.Size = new System.Drawing.Size(180, 37);
+            this.inputLabel.Size = new System.Drawing.Size(158, 32);
             this.inputLabel.TabIndex = 9;
             this.inputLabel.Text = "Time (min)";
             this.inputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,9 +161,10 @@
             this.totalCalorie.AutoSize = true;
             this.totalCalorie.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCalorie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.totalCalorie.Location = new System.Drawing.Point(50, 423);
+            this.totalCalorie.Location = new System.Drawing.Point(40, 352);
+            this.totalCalorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCalorie.Name = "totalCalorie";
-            this.totalCalorie.Size = new System.Drawing.Size(213, 37);
+            this.totalCalorie.Size = new System.Drawing.Size(181, 32);
             this.totalCalorie.TabIndex = 11;
             this.totalCalorie.Text = "Total Calorie";
             // 
@@ -170,9 +173,10 @@
             this.totalKal.AutoSize = true;
             this.totalKal.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalKal.ForeColor = System.Drawing.Color.White;
-            this.totalKal.Location = new System.Drawing.Point(285, 423);
+            this.totalKal.Location = new System.Drawing.Point(228, 352);
+            this.totalKal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalKal.Name = "totalKal";
-            this.totalKal.Size = new System.Drawing.Size(90, 37);
+            this.totalKal.Size = new System.Drawing.Size(75, 32);
             this.totalKal.TabIndex = 12;
             this.totalKal.Text = "0 kal";
             this.totalKal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,9 +186,10 @@
             this.kindTxt.AutoSize = true;
             this.kindTxt.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kindTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.kindTxt.Location = new System.Drawing.Point(50, 171);
+            this.kindTxt.Location = new System.Drawing.Point(40, 142);
+            this.kindTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.kindTxt.Name = "kindTxt";
-            this.kindTxt.Size = new System.Drawing.Size(151, 37);
+            this.kindTxt.Size = new System.Drawing.Size(126, 32);
             this.kindTxt.TabIndex = 14;
             this.kindTxt.Text = "Exercise";
             this.kindTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -194,9 +199,10 @@
             this.inputKind.AutoSize = true;
             this.inputKind.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputKind.ForeColor = System.Drawing.Color.White;
-            this.inputKind.Location = new System.Drawing.Point(285, 171);
+            this.inputKind.Location = new System.Drawing.Point(228, 142);
+            this.inputKind.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inputKind.Name = "inputKind";
-            this.inputKind.Size = new System.Drawing.Size(83, 37);
+            this.inputKind.Size = new System.Drawing.Size(71, 32);
             this.inputKind.TabIndex = 15;
             this.inputKind.Text = "kind";
             this.inputKind.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,9 +218,10 @@
             this.saveToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveToday.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.saveToday.ForeColor = System.Drawing.Color.White;
-            this.saveToday.Location = new System.Drawing.Point(39, 554);
+            this.saveToday.Location = new System.Drawing.Point(31, 462);
+            this.saveToday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveToday.Name = "saveToday";
-            this.saveToday.Size = new System.Drawing.Size(190, 51);
+            this.saveToday.Size = new System.Drawing.Size(152, 42);
             this.saveToday.TabIndex = 13;
             this.saveToday.Text = "Save Today";
             this.saveToday.TextColor = System.Drawing.Color.White;
@@ -229,15 +236,14 @@
             this.inputBox.BorderSize = 3;
             this.inputBox.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.inputBox.ForeColor = System.Drawing.Color.White;
-            this.inputBox.Location = new System.Drawing.Point(292, 288);
-            this.inputBox.Margin = new System.Windows.Forms.Padding(4);
+            this.inputBox.Location = new System.Drawing.Point(234, 240);
             this.inputBox.Multiline = false;
             this.inputBox.Name = "inputBox";
-            this.inputBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.inputBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.inputBox.PasswordChar = false;
             this.inputBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.inputBox.PlaceholderText = "";
-            this.inputBox.Size = new System.Drawing.Size(206, 47);
+            this.inputBox.Size = new System.Drawing.Size(165, 41);
             this.inputBox.TabIndex = 10;
             this.inputBox.Texts = "";
             this.inputBox.UnderlinedStyle = false;
@@ -251,15 +257,14 @@
             this.customTextBox1.BorderSize = 3;
             this.customTextBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.customTextBox1.ForeColor = System.Drawing.Color.White;
-            this.customTextBox1.Location = new System.Drawing.Point(544, 57);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox1.Location = new System.Drawing.Point(435, 48);
             this.customTextBox1.Multiline = false;
             this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox1.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.customTextBox1.PasswordChar = false;
             this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(206, 47);
+            this.customTextBox1.Size = new System.Drawing.Size(165, 41);
             this.customTextBox1.TabIndex = 8;
             this.customTextBox1.Texts = "";
             this.customTextBox1.UnderlinedStyle = false;
@@ -275,12 +280,12 @@
             this.customComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
             this.customComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.customComboBox1.ListTextColor = System.Drawing.Color.White;
-            this.customComboBox1.Location = new System.Drawing.Point(964, 57);
-            this.customComboBox1.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
-            this.customComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.customComboBox1.Location = new System.Drawing.Point(771, 48);
+            this.customComboBox1.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
+            this.customComboBox1.MinimumSize = new System.Drawing.Size(160, 25);
             this.customComboBox1.Name = "customComboBox1";
-            this.customComboBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.customComboBox1.Size = new System.Drawing.Size(200, 48);
+            this.customComboBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customComboBox1.Size = new System.Drawing.Size(160, 40);
             this.customComboBox1.TabIndex = 7;
             this.customComboBox1.Texts = "";
             // 
@@ -295,9 +300,10 @@
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.Location = new System.Drawing.Point(757, 60);
+            this.roundButton1.Location = new System.Drawing.Point(606, 50);
+            this.roundButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(105, 40);
+            this.roundButton1.Size = new System.Drawing.Size(84, 33);
             this.roundButton1.TabIndex = 6;
             this.roundButton1.Text = "Search";
             this.roundButton1.TextColor = System.Drawing.Color.White;
@@ -317,22 +323,22 @@
             "Food"});
             this.selectCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.selectCustomComboBox.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.selectCustomComboBox.Location = new System.Drawing.Point(39, 39);
-            this.selectCustomComboBox.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
-            this.selectCustomComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.selectCustomComboBox.Location = new System.Drawing.Point(31, 32);
+            this.selectCustomComboBox.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
+            this.selectCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
             this.selectCustomComboBox.Name = "selectCustomComboBox";
-            this.selectCustomComboBox.Padding = new System.Windows.Forms.Padding(3);
-            this.selectCustomComboBox.Size = new System.Drawing.Size(240, 75);
+            this.selectCustomComboBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectCustomComboBox.Size = new System.Drawing.Size(192, 62);
             this.selectCustomComboBox.TabIndex = 0;
             this.selectCustomComboBox.Texts = "";
             this.selectCustomComboBox.OnSelectedIndexChanged += new System.EventHandler(this.selectCustomComboBox_OnSelectedIndexChanged);
             // 
             // FormCalculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1203, 674);
+            this.ClientSize = new System.Drawing.Size(962, 562);
             this.Controls.Add(this.inputKind);
             this.Controls.Add(this.kindTxt);
             this.Controls.Add(this.saveToday);
@@ -346,6 +352,7 @@
             this.Controls.Add(this.EFDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectCustomComboBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCalculator";
             this.Text = "FormCalculator";
             this.Load += new System.EventHandler(this.FormCalculator_Load);

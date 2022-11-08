@@ -298,5 +298,16 @@ namespace Exercise
             SystemSounds.Beep.Play();
             message.ShowDialog();
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            Config.UserName = null;
+            Config.Login = false;
+            logout.Visible = false;
+            idTitleChildFrom.ForeColor = Color.FromArgb(31, 30, 68);
+            iconCurrentChildForm.IconChar = IconChar.None;
+
+            OpenOwnerFrom(new FormLogin());
+        }
     }
 }

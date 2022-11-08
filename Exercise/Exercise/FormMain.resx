@@ -117,14 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="logout.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10.2pt, style=Bold</value>
+  </data>
+  <data name="logout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 620</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>30, 0, 3, 15</value>
+  </data>
+  <data name="logout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 19</value>
+  </data>
+  <data name="logout.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="logout.Text" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="logout.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;logout.Name" xml:space="preserve">
+    <value>logout</value>
+  </data>
+  <data name="&gt;&gt;logout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logout.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;logout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="CalculatorBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
   <data name="CalculatorBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CalculatorBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10.2pt, style=Bold</value>
   </data>
@@ -135,15 +172,14 @@
     <value>NoControl</value>
   </data>
   <data name="CalculatorBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 456</value>
+    <value>0, 380</value>
   </data>
   <data name="CalculatorBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="CalculatorBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CalculatorBtn.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -166,7 +202,7 @@
     <value>panelMenu</value>
   </data>
   <data name="&gt;&gt;CalculatorBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="ExerciseBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -184,13 +220,13 @@
     <value>NoControl</value>
   </data>
   <data name="ExerciseBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 384</value>
+    <value>0, 320</value>
   </data>
   <data name="ExerciseBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="ExerciseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="ExerciseBtn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -214,7 +250,7 @@
     <value>panelMenu</value>
   </data>
   <data name="&gt;&gt;ExerciseBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="FoodBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -232,13 +268,13 @@
     <value>NoControl</value>
   </data>
   <data name="FoodBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 312</value>
+    <value>0, 260</value>
   </data>
   <data name="FoodBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="FoodBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="FoodBtn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -262,7 +298,7 @@
     <value>panelMenu</value>
   </data>
   <data name="&gt;&gt;FoodBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RankBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -280,13 +316,13 @@
     <value>NoControl</value>
   </data>
   <data name="RankBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 240</value>
+    <value>0, 200</value>
   </data>
   <data name="RankBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="RankBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="RankBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -310,7 +346,7 @@
     <value>panelMenu</value>
   </data>
   <data name="&gt;&gt;RankBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="HomeBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -328,13 +364,13 @@
     <value>NoControl</value>
   </data>
   <data name="HomeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 168</value>
+    <value>0, 140</value>
   </data>
   <data name="HomeBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="HomeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="HomeBtn.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -358,16 +394,16 @@
     <value>panelMenu</value>
   </data>
   <data name="&gt;&gt;HomeBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 41</value>
+    <value>23, 34</value>
   </data>
   <data name="Logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>29, 41, 29, 41</value>
+    <value>23, 34, 23, 34</value>
   </data>
   <data name="Logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 79</value>
+    <value>163, 66</value>
   </data>
   <data name="Logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -394,10 +430,10 @@
     <value>0, 0</value>
   </data>
   <data name="panelLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="panelLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 168</value>
+    <value>219, 140</value>
   </data>
   <data name="panelLogo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -412,7 +448,7 @@
     <value>panelMenu</value>
   </data>
   <data name="&gt;&gt;panelLogo.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="panelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -421,10 +457,10 @@
     <value>0, 0</value>
   </data>
   <data name="panelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 785</value>
+    <value>219, 654</value>
   </data>
   <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -442,13 +478,13 @@
     <value>3</value>
   </data>
   <data name="MinimizeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1116, 12</value>
+    <value>893, 10</value>
   </data>
   <data name="MinimizeBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="MinimizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 18</value>
+    <value>15, 15</value>
   </data>
   <data name="MinimizeBtn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -469,13 +505,13 @@
     <value>0</value>
   </data>
   <data name="CloseBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1172, 12</value>
+    <value>938, 10</value>
   </data>
   <data name="CloseBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 18</value>
+    <value>15, 15</value>
   </data>
   <data name="CloseBtn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -502,13 +538,13 @@
     <value>Arial, 10.2pt, style=Bold</value>
   </data>
   <data name="idTitleChildFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 46</value>
+    <value>56, 38</value>
   </data>
   <data name="idTitleChildFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="idTitleChildFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 24</value>
+    <value>45, 19</value>
   </data>
   <data name="idTitleChildFrom.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -529,13 +565,13 @@
     <value>2</value>
   </data>
   <data name="iconCurrentChildForm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 37</value>
+    <value>19, 31</value>
   </data>
   <data name="iconCurrentChildForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="iconCurrentChildForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 41</value>
+    <value>32, 34</value>
   </data>
   <data name="iconCurrentChildForm.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -556,13 +592,13 @@
     <value>Top</value>
   </data>
   <data name="panelTitleBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 0</value>
+    <value>219, 0</value>
   </data>
   <data name="panelTitleBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panelTitleBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 101</value>
+    <value>964, 84</value>
   </data>
   <data name="panelTitleBar.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -583,13 +619,13 @@
     <value>Top</value>
   </data>
   <data name="panelShadow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 101</value>
+    <value>219, 84</value>
   </data>
   <data name="panelShadow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panelShadow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 11</value>
+    <value>964, 9</value>
   </data>
   <data name="panelShadow.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -613,13 +649,10 @@
     <value>Arial, 19.8000011pt, style=Bold</value>
   </data>
   <data name="date.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 368</value>
-  </data>
-  <data name="date.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>348, 307</value>
   </data>
   <data name="date.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 46</value>
+    <value>283, 40</value>
   </data>
   <data name="date.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -646,13 +679,10 @@
     <value>Arial, 72pt, style=Bold</value>
   </data>
   <data name="clock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 200</value>
-  </data>
-  <data name="clock.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>228, 167</value>
   </data>
   <data name="clock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>646, 166</value>
+    <value>543, 139</value>
   </data>
   <data name="clock.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -679,13 +709,13 @@
     <value>맑은 고딕, 25.8000011pt, style=Bold</value>
   </data>
   <data name="time.Location" type="System.Drawing.Point, System.Drawing">
-    <value>526, 113</value>
+    <value>421, 94</value>
   </data>
   <data name="time.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>12, 12, 4, 0</value>
+    <value>10, 10, 3, 0</value>
   </data>
   <data name="time.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 70</value>
+    <value>128, 60</value>
   </data>
   <data name="time.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -709,13 +739,13 @@
     <value>Fill</value>
   </data>
   <data name="panelDeskTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 112</value>
+    <value>219, 93</value>
   </data>
   <data name="panelDeskTop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panelDeskTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 673</value>
+    <value>964, 561</value>
   </data>
   <data name="panelDeskTop.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -742,13 +772,13 @@
     <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>10, 18</value>
+    <value>8, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1479, 785</value>
+    <value>1183, 654</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>FormMain</value>

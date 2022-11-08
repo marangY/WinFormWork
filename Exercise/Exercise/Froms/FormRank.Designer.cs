@@ -81,13 +81,13 @@
             this.rankDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.rankDataGrid.EnableHeadersVisualStyles = false;
             this.rankDataGrid.GridColor = System.Drawing.Color.White;
-            this.rankDataGrid.Location = new System.Drawing.Point(143, 185);
-            this.rankDataGrid.Margin = new System.Windows.Forms.Padding(151, 3, 151, 30);
+            this.rankDataGrid.Location = new System.Drawing.Point(114, 154);
+            this.rankDataGrid.Margin = new System.Windows.Forms.Padding(121, 2, 121, 25);
             this.rankDataGrid.Name = "rankDataGrid";
             this.rankDataGrid.RowHeadersVisible = false;
             this.rankDataGrid.RowHeadersWidth = 51;
             this.rankDataGrid.RowTemplate.Height = 50;
-            this.rankDataGrid.Size = new System.Drawing.Size(900, 450);
+            this.rankDataGrid.Size = new System.Drawing.Size(720, 375);
             this.rankDataGrid.TabIndex = 5;
             // 
             // Column1
@@ -112,10 +112,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(118)))), ((int)(((byte)(176)))));
-            this.label1.Location = new System.Drawing.Point(133, 104);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(106, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 58);
+            this.label1.Size = new System.Drawing.Size(264, 48);
             this.label1.TabIndex = 6;
             this.label1.Text = "00.00 RANK";
             // 
@@ -130,24 +129,26 @@
             this.dateComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(118)))), ((int)(((byte)(176)))));
             this.dateComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.dateComboBox.ListTextColor = System.Drawing.Color.White;
-            this.dateComboBox.Location = new System.Drawing.Point(838, 104);
-            this.dateComboBox.MinimumSize = new System.Drawing.Size(200, 35);
+            this.dateComboBox.Location = new System.Drawing.Point(670, 87);
+            this.dateComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateComboBox.MinimumSize = new System.Drawing.Size(160, 29);
             this.dateComboBox.Name = "dateComboBox";
             this.dateComboBox.Padding = new System.Windows.Forms.Padding(2);
-            this.dateComboBox.Size = new System.Drawing.Size(205, 60);
+            this.dateComboBox.Size = new System.Drawing.Size(164, 50);
             this.dateComboBox.TabIndex = 7;
             this.dateComboBox.Texts = "";
             // 
             // FormRank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1203, 674);
+            this.ClientSize = new System.Drawing.Size(962, 562);
             this.Controls.Add(this.dateComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rankDataGrid);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormRank";
             this.Text = "FormRank";
             ((System.ComponentModel.ISupportInitialize)(this.rankDataGrid)).EndInit();

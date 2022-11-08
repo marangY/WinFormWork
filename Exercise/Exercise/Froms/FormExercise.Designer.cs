@@ -84,8 +84,8 @@
             this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.EFDataGridView.EnableHeadersVisualStyles = false;
             this.EFDataGridView.GridColor = System.Drawing.Color.White;
-            this.EFDataGridView.Location = new System.Drawing.Point(62, 116);
-            this.EFDataGridView.Margin = new System.Windows.Forms.Padding(101, 0, 101, 30);
+            this.EFDataGridView.Location = new System.Drawing.Point(50, 97);
+            this.EFDataGridView.Margin = new System.Windows.Forms.Padding(81, 0, 81, 25);
             this.EFDataGridView.MultiSelect = false;
             this.EFDataGridView.Name = "EFDataGridView";
             this.EFDataGridView.ReadOnly = true;
@@ -102,7 +102,7 @@
             this.EFDataGridView.RowTemplate.DividerHeight = 1;
             this.EFDataGridView.RowTemplate.Height = 37;
             this.EFDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EFDataGridView.Size = new System.Drawing.Size(1080, 345);
+            this.EFDataGridView.Size = new System.Drawing.Size(864, 288);
             this.EFDataGridView.TabIndex = 4;
             // 
             // name
@@ -143,9 +143,11 @@
             this.groupBox1.Controls.Add(this.nameTxt);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(62, 485);
+            this.groupBox1.Location = new System.Drawing.Point(50, 404);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1080, 157);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(864, 131);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Append";
@@ -157,11 +159,11 @@
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.iconPictureBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 70;
-            this.iconPictureBox3.Location = new System.Drawing.Point(997, 49);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.iconPictureBox3.IconSize = 56;
+            this.iconPictureBox3.Location = new System.Drawing.Point(798, 41);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 8, 2);
             this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.iconPictureBox3.Size = new System.Drawing.Size(56, 58);
             this.iconPictureBox3.TabIndex = 20;
             this.iconPictureBox3.TabStop = false;
             // 
@@ -176,12 +178,11 @@
             this.categoryInputCustomComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.categoryInputCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.categoryInputCustomComboBox.ListTextColor = System.Drawing.Color.White;
-            this.categoryInputCustomComboBox.Location = new System.Drawing.Point(476, 60);
-            this.categoryInputCustomComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.categoryInputCustomComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.categoryInputCustomComboBox.Location = new System.Drawing.Point(381, 50);
+            this.categoryInputCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
             this.categoryInputCustomComboBox.Name = "categoryInputCustomComboBox";
-            this.categoryInputCustomComboBox.Padding = new System.Windows.Forms.Padding(3);
-            this.categoryInputCustomComboBox.Size = new System.Drawing.Size(200, 48);
+            this.categoryInputCustomComboBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.categoryInputCustomComboBox.Size = new System.Drawing.Size(160, 40);
             this.categoryInputCustomComboBox.TabIndex = 13;
             this.categoryInputCustomComboBox.Texts = "";
             // 
@@ -189,10 +190,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(332, 72);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label3.Location = new System.Drawing.Point(266, 60);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 33);
+            this.label3.Size = new System.Drawing.Size(116, 29);
             this.label3.TabIndex = 17;
             this.label3.Text = "Category";
             // 
@@ -205,15 +206,14 @@
             this.timeTxt.BorderSize = 3;
             this.timeTxt.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.timeTxt.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.timeTxt.Location = new System.Drawing.Point(777, 60);
-            this.timeTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.timeTxt.Location = new System.Drawing.Point(622, 50);
             this.timeTxt.Multiline = false;
             this.timeTxt.Name = "timeTxt";
-            this.timeTxt.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.timeTxt.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.timeTxt.PasswordChar = false;
             this.timeTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.timeTxt.PlaceholderText = "";
-            this.timeTxt.Size = new System.Drawing.Size(206, 47);
+            this.timeTxt.Size = new System.Drawing.Size(165, 41);
             this.timeTxt.TabIndex = 16;
             this.timeTxt.Texts = "";
             this.timeTxt.UnderlinedStyle = false;
@@ -222,10 +222,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(688, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.label2.Location = new System.Drawing.Point(550, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 33);
+            this.label2.Size = new System.Drawing.Size(69, 29);
             this.label2.TabIndex = 15;
             this.label2.Text = "Time";
             // 
@@ -233,10 +233,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(13, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.label1.Location = new System.Drawing.Point(10, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 33);
+            this.label1.Size = new System.Drawing.Size(77, 29);
             this.label1.TabIndex = 14;
             this.label1.Text = "Name";
             // 
@@ -249,15 +249,14 @@
             this.nameTxt.BorderSize = 3;
             this.nameTxt.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.nameTxt.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nameTxt.Location = new System.Drawing.Point(117, 58);
-            this.nameTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.nameTxt.Location = new System.Drawing.Point(94, 48);
             this.nameTxt.Multiline = false;
             this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.nameTxt.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.nameTxt.PasswordChar = false;
             this.nameTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.nameTxt.PlaceholderText = "";
-            this.nameTxt.Size = new System.Drawing.Size(206, 47);
+            this.nameTxt.Size = new System.Drawing.Size(165, 41);
             this.nameTxt.TabIndex = 13;
             this.nameTxt.Texts = "";
             this.nameTxt.UnderlinedStyle = false;
@@ -273,12 +272,12 @@
             this.categoryCustomComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.categoryCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.categoryCustomComboBox.ListTextColor = System.Drawing.Color.White;
-            this.categoryCustomComboBox.Location = new System.Drawing.Point(942, 40);
-            this.categoryCustomComboBox.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
-            this.categoryCustomComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.categoryCustomComboBox.Location = new System.Drawing.Point(754, 33);
+            this.categoryCustomComboBox.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
+            this.categoryCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
             this.categoryCustomComboBox.Name = "categoryCustomComboBox";
-            this.categoryCustomComboBox.Padding = new System.Windows.Forms.Padding(3);
-            this.categoryCustomComboBox.Size = new System.Drawing.Size(200, 48);
+            this.categoryCustomComboBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.categoryCustomComboBox.Size = new System.Drawing.Size(160, 40);
             this.categoryCustomComboBox.TabIndex = 11;
             this.categoryCustomComboBox.Texts = "";
             // 
@@ -293,9 +292,10 @@
             this.searchRoundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchRoundButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchRoundButton.ForeColor = System.Drawing.Color.White;
-            this.searchRoundButton.Location = new System.Drawing.Point(290, 47);
+            this.searchRoundButton.Location = new System.Drawing.Point(232, 39);
+            this.searchRoundButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchRoundButton.Name = "searchRoundButton";
-            this.searchRoundButton.Size = new System.Drawing.Size(105, 40);
+            this.searchRoundButton.Size = new System.Drawing.Size(84, 33);
             this.searchRoundButton.TabIndex = 10;
             this.searchRoundButton.Text = "Search";
             this.searchRoundButton.TextColor = System.Drawing.Color.White;
@@ -310,30 +310,30 @@
             this.searchCustomTextBox.BorderSize = 3;
             this.searchCustomTextBox.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.searchCustomTextBox.ForeColor = System.Drawing.Color.White;
-            this.searchCustomTextBox.Location = new System.Drawing.Point(62, 40);
-            this.searchCustomTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchCustomTextBox.Location = new System.Drawing.Point(50, 33);
             this.searchCustomTextBox.Multiline = false;
             this.searchCustomTextBox.Name = "searchCustomTextBox";
-            this.searchCustomTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.searchCustomTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.searchCustomTextBox.PasswordChar = false;
             this.searchCustomTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.searchCustomTextBox.PlaceholderText = "";
-            this.searchCustomTextBox.Size = new System.Drawing.Size(206, 47);
+            this.searchCustomTextBox.Size = new System.Drawing.Size(165, 41);
             this.searchCustomTextBox.TabIndex = 9;
             this.searchCustomTextBox.Texts = "";
             this.searchCustomTextBox.UnderlinedStyle = false;
             // 
             // FormExercise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1203, 674);
+            this.ClientSize = new System.Drawing.Size(962, 562);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.categoryCustomComboBox);
             this.Controls.Add(this.searchRoundButton);
             this.Controls.Add(this.searchCustomTextBox);
             this.Controls.Add(this.EFDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormExercise";
             this.Text = "FormExercise";
             ((System.ComponentModel.ISupportInitialize)(this.EFDataGridView)).EndInit();

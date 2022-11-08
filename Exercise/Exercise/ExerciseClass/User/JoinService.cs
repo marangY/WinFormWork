@@ -12,13 +12,13 @@ namespace Exercise.ExerciseClass.User
     {
         private string id;
         private string pw;
-        private string ad;
+        private string em;
 
-        public JoinService(string id, string pw, string ad)
+        public JoinService(string id, string pw, string em)
         {
             this.id = id;
             this.pw = PasswordEncoder.EncryptionSHA256(pw);
-            this.ad = ad;
+            this.em = em;
         }
 
         public bool existenceId()
@@ -37,7 +37,7 @@ namespace Exercise.ExerciseClass.User
             DataRow newRow = dbconn.Table.NewRow();
             newRow["user_id"] = id;
             newRow["password"] = pw;
-            newRow["adress"] = ad;
+            newRow["email"] = em;
 
             dbconn.Table.Rows.Add(newRow);
             dbconn.DBAdapter.Update(dbconn.DS);
