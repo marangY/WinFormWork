@@ -195,6 +195,12 @@ insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '수박', 0.304, '과일');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '멜론', 0.337, '과일');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '귤', 0.39, '과일');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '용과', 0.34, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '감', 1.269, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '귤', 0.39, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '무화과', 0.741, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '자몽', 0.421, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '레몬', 0.289, '과일');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '라임', 0.301, '과일');
 
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '치즈', 4.025, '유제품');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '체다 치즈', 4.025, '유제품');
@@ -247,9 +253,38 @@ insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '양고기', 1.36, '육류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '토끼고기', 1.73, '육류');
 
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '고등어', 1.83, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '광어', 1.03, '해산물');'
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '우럭', 0.94, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '연어', 1.2, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '갈치', 1.1, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '참치', 1.319, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '참치캔 (동원)', 2.1, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '참치캔(기름 제거) (동원)', 1.2, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '고추 참치캔', 1.3, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '조개', 0.74, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '바지락', 0.67, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '관자', 1.06, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '꼬막', 0.81, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '홍합', 0.86, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '새우', 0.992, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '게', 0.86, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '꽃게', 1.22, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '대게', 0.6, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '랍스타', 0.97, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '골뱅이(캔) (유동)', 0.8, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오징어', 1.05, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '문어', 0.82, '해산물');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '낙지', 0.6, '해산물');
 
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '소주', 1.31, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '맥주', 0.37, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '와인', 0.7, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '화이트 와인', 0.74, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '보드카', 2.93, '주류');
+
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '치킨', 2.459, '요리');
+
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '물', 0, '기타');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '탄수화물', 4, '기타');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '단백질', 4, '기타');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '지방', 9, '기타');
