@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Exercise.ExerciseClass.DataBase;
+using Exercise.ExerciseClass.Food;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,11 @@ namespace Exercise.Froms
         public FormFood()
         {
             InitializeComponent();
+            FoodManagement fm = new FoodManagement();
+
+            EFDataGridView.DataSource = fm.ReturnAllList();
         }
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exercise.ExerciseClass.Exercise;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace Exercise.Froms
         public FormExercise()
         {
             InitializeComponent();
+            ExercisManagement em = new ExercisManagement();
+
+            EFDataGridView.DataSource = em.ReturnAllList();
         }
     }
 }

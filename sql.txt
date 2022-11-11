@@ -7,9 +7,9 @@ DROP TABLE exercise_info;
 
 DROP TABLE food_info;
 
-DROP TABLE food_kategorie;
+DROP TABLE food_category;
 
-DROP TABLE exercise_kategorie;
+DROP TABLE exercise_category;
 
 DROP TABLE user_status;
 
@@ -42,19 +42,19 @@ CREATE TABLE user_status (
     FOREIGN KEY (user_id)
     REFERENCES user_info (user_id));
 
-CREATE TABLE exercise_kategorie (
-  kategorie VARCHAR2(45) NOT NULL,
-  PRIMARY KEY (kategorie));
+CREATE TABLE exercise_category (
+  category VARCHAR2(45) NOT NULL,
+  PRIMARY KEY (category));
 
 CREATE TABLE exercise_info (
   exercise_id NUMBER NOT NULL,
-  exercise_name VARCHAR2(100) NOT NULL,
+  name VARCHAR2(100) NOT NULL,
   calorie NUMBER NOT NULL,
-  kategorie VARCHAR2(45) NOT NULL,
+  category VARCHAR2(45) NOT NULL,
   PRIMARY KEY (exercise_id),
-  CONSTRAINT FK_ex_kategorie_to_ex_info
-    FOREIGN KEY (kategorie)
-    REFERENCES exercise_kategorie (kategorie));
+  CONSTRAINT FK_ex_category_to_ex_info
+    FOREIGN KEY (category)
+    REFERENCES exercise_category (category));
 
 CREATE TABLE user_exercise (
   user_id VARCHAR2(20) NOT NULL,
@@ -70,19 +70,19 @@ CREATE TABLE user_exercise (
     FOREIGN KEY (exercise)
     REFERENCES exercise_info (exercise_id));
 
-CREATE TABLE food_kategorie (
-  kategorie VARCHAR2(45) NOT NULL,
-  PRIMARY KEY (kategorie));
+CREATE TABLE food_category (
+  category VARCHAR2(45) NOT NULL,
+  PRIMARY KEY (category));
 
 CREATE TABLE food_info (
   food_id NUMBER NOT NULL,
   name VARCHAR2(100) NOT NULL,
   calorie NUMBER NOT NULL,
-  kategorie VARCHAR2(45) NOT NULL,
+  category VARCHAR2(45) NOT NULL,
   PRIMARY KEY (food_id),
-  CONSTRAINT FK_food_kategorie_to_food_info
-    FOREIGN KEY (kategorie)
-    REFERENCES food_kategorie (kategorie));
+  CONSTRAINT FK_food_category_to_food_info
+    FOREIGN KEY (category)
+    REFERENCES food_category (category));
 
 CREATE TABLE user_food (
   user_id VARCHAR2(20) NOT NULL,
@@ -114,21 +114,23 @@ CREATE SEQUENCE SEQ_USER_EXERCISE_ID INCREMENT BY 1 START WITH 5000000;
 CREATE SEQUENCE SEQ_USER_FOOD_ID INCREMENT BY 1 START WITH 7000000;
 
 -- 음식 카테고리 추가
-insert into food_kategorie VALUES('곡류');
-insert into food_kategorie VALUES('채소');
-insert into food_kategorie VALUES('과일');
-insert into food_kategorie VALUES('유제품');
-insert into food_kategorie VALUES('육류');
-insert into food_kategorie VALUES('해산물');
-insert into food_kategorie VALUES('주류');
-insert into food_kategorie VALUES('요리');
-insert into food_kategorie VALUES('기타');
+insert into food_category VALUES('곡류');
+insert into food_category VALUES('채소');
+insert into food_category VALUES('과일');
+insert into food_category VALUES('유제품');
+insert into food_category VALUES('육류');
+insert into food_category VALUES('해산물');
+insert into food_category VALUES('주류');
+insert into food_category VALUES('음료');
+insert into food_category VALUES('요리');
+insert into food_category VALUES('기타');
 
 -- 운동 카테고리 추가
-insert into exercise_kategorie VALUES('유산소');
-insert into exercise_kategorie VALUES('무산소');
-insert into exercise_kategorie VALUES('스포츠');
-
+insert into exercise_category VALUES('유산소');
+insert into exercise_category VALUES('구기종목');
+insert into exercise_category VALUES('무술');
+insert into exercise_category VALUES('맨몸운동');
+insert into exercise_category VALUES('기타');
 
 --음식 데이터 추가
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '빵', 2.646, '곡류');
@@ -253,7 +255,7 @@ insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '양고기', 1.36, '육류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '토끼고기', 1.73, '육류');
 
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '고등어', 1.83, '해산물');
-insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '광어', 1.03, '해산물');'
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '광어', 1.03, '해산물');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '우럭', 0.94, '해산물');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '연어', 1.2, '해산물');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '갈치', 1.1, '해산물');
@@ -277,14 +279,135 @@ insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '문어', 0.82, '해산물');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '낙지', 0.6, '해산물');
 
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '소주', 1.31, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '참이슬 (소주)', 1.355, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '처음처럼 (소주)', 1.422, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '진로 (소주)', 1.022, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '좋은데이 (소주)', 1.111, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '한라산 (소주)', 1.142, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '맥주', 0.37, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '카스 (맥주)', 0.42, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '테라 (맥주)', 0.43, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '클라우드 (맥주)', 0.478, '주류');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '아사히 (맥주)', 0.42, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '와인', 0.7, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '화이트 와인', 0.74, '주류');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '보드카', 2.93, '주류');
 
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오렌지 주스', 0.45, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오렌지쥬스 (미닛메이드)', 0.365, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '아침에주스 100% 오렌지 (서울우유)', 0.365, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오렌지드링크 (델몬트)', 0.54, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '사과 주스', 0.47, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '사과드링크', 0.315, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '아침에주스 사과  (서울우유)', 0.523, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '코카콜라', 0.46, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '펩시', 0.45, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '칠성 사이다', 0.425, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '스프라이트', 0.44, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '환타 파인애플', 0.214, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '환타 오렌지', 0.191, '음료');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '환타 포도', 0.315, '음료');
+
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '치킨', 2.459, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '후라이드 치킨 (BBQ치킨)', 2.6, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '황금올리브 치킨 (BBQ치킨)', 2.54, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '자메이커 통다리 치킨 (BBQ치킨)', 2.01, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '양념 치킨 (BBQ치킨)', 2.781, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '후라이드 치킨 (네네치킨)', 3.31, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '양념 치킨 (네네치킨)', 2.61, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '스노윙치즈 치킨 (네네치킨)', 3.211, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '후라이드 치킨 (페리카나)', 2.7, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '매운양념 치킨 (페리카나)', 3, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '후라이드 치킨 (BHC)', 3.47, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '뿌링클 치킨 (BHC)', 2.636, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '맛초킹 치킨 (BHC)', 2.64, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '오리지널 치킨 (교촌)', 3.46, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '허니콤보 치킨 (교촌)', 3.19, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '레드콤보 치킨 (교촌)', 3.03, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '굽네 치킨 (굽네치킨)', 1.633, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '볼케이노 치킨 (굽네치킨)', 2.19, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '고추바사삭 치킨 (굽네치킨)', 2.17, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '햄버거', 2.9, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '빅맥 (맥도날드)', 2.607, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '불고기버거 (맥도날드)', 2.449, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '1955버거 (맥도날드)', 2.081, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '와퍼 (버거킹)', 2.227, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '불고기버거 (롯데리아)', 2.532, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '데리버거 (롯데리아)', 2.598, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '새우버거  (롯데리아)', 3.113, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '감자튀김', 2.74, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '피자', 2.58, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '콤비네이션 피자', 2.44, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '불고기 피자', 2.53, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '치즈 피자', 2.76, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '포테이토 피자', 2.34, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '족발', 2.29, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '보쌈', 2.9, '요리');
+insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '떡볶이', 1.4, '요리');
 
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '물', 0, '기타');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '탄수화물', 4, '기타');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '단백질', 4, '기타');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '지방', 9, '기타');
+
+--운동 데이터 추가
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (3km/h)', 2.4, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (5km/h)', 4, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (5.5km/h) ', 4.6, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (6.5km/h) ', 6.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '자전거 (16km/h) ', 4.8, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '자전거 (18km/h) ', 7.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(3km/h)', 3.7, '유산소');   
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(5km/h)', 6.4, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(10km/h)', 12.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '줄넘기', 12.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '크로스핏', 8.6, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '버피테스트', 8.6, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '줄넘기', 12.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '계단오르기', 8.6, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '자전거', 9.6, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '런닝머신', 9.8, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '하이킹', 7.4 , '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '등산', 9.8, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '수영', 8.6, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '스케이팅 (16km/h)', 6.2 , '유산소');
+
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '축구', 9.8, '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '탁구', 4.8 , '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '배구', 4.8, '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '볼링', 4.8, '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '야구', 6.2 , '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '배드민턴', 6.2 , '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '농구', 7.4 , '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '소프트볼', 6.2 , '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '테니스', 9.8, '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '럭비', 9.8, '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '크리켓', 6.2, '구기종목');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '핸드볼', 9.8, '구기종목');
+
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '권투', 14.8, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '킥복싱', 8.6, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '태권도', 8.6, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '무에타이', 8.6, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '유도', 8.6, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '합기도', 8.6, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '공수도', 8.6, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '가라테', 8.6, '무술');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '택견', 8.6, '무술');
+
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '푸쉬업', 9, '맨몸운동');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '턱걸이', 10, '맨몸운동');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '플랭크', 15, '맨몸운동');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '스쿼트', 9.8, '맨몸운동');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '윗몸일으키기', 9.8, '맨몸운동');
+
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '서핑', 3.6, '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '양궁', 4.8, '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '승마', 4.8, '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '카약', 6.2, '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '댄스 (느린동작)', 4.8, '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '훌라후프', 6.2, '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '폴댄스', 7.4 , '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '스쿠버 다이빙', 7.4 , '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '댄스 (빠른 동작)', 7.4 , '기타');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '발레', 8.6, '기타');
