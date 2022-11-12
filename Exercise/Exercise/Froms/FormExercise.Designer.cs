@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CALORIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,9 +46,6 @@
             this.categoryCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.searchRoundButton = new Exercise.CustomControll.RoundButton();
             this.searchCustomTextBox = new Exercise.CustomControll.CustomTextBox();
-            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CALORIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EFDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -61,27 +61,27 @@
             this.EFDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EFDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EFDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.EFDataGridView.ColumnHeadersHeight = 50;
             this.EFDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NAME,
             this.CATEGORY,
             this.CALORIE});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle11;
             this.EFDataGridView.EnableHeadersVisualStyles = false;
             this.EFDataGridView.GridColor = System.Drawing.Color.White;
             this.EFDataGridView.Location = new System.Drawing.Point(50, 97);
@@ -89,14 +89,14 @@
             this.EFDataGridView.MultiSelect = false;
             this.EFDataGridView.Name = "EFDataGridView";
             this.EFDataGridView.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.EFDataGridView.RowHeadersVisible = false;
             this.EFDataGridView.RowHeadersWidth = 82;
             this.EFDataGridView.RowTemplate.DividerHeight = 1;
@@ -104,6 +104,36 @@
             this.EFDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EFDataGridView.Size = new System.Drawing.Size(864, 288);
             this.EFDataGridView.TabIndex = 4;
+            // 
+            // NAME
+            // 
+            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NAME.DataPropertyName = "NAME";
+            this.NAME.FillWeight = 120F;
+            this.NAME.HeaderText = "운동";
+            this.NAME.MinimumWidth = 10;
+            this.NAME.Name = "NAME";
+            this.NAME.ReadOnly = true;
+            // 
+            // CATEGORY
+            // 
+            this.CATEGORY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CATEGORY.DataPropertyName = "CATEGORY";
+            this.CATEGORY.FillWeight = 80F;
+            this.CATEGORY.HeaderText = "카테고리";
+            this.CATEGORY.MinimumWidth = 10;
+            this.CATEGORY.Name = "CATEGORY";
+            this.CATEGORY.ReadOnly = true;
+            // 
+            // CALORIE
+            // 
+            this.CALORIE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CALORIE.DataPropertyName = "CALORIE";
+            this.CALORIE.FillWeight = 80F;
+            this.CALORIE.HeaderText = "분당 칼로리(kal)";
+            this.CALORIE.MinimumWidth = 10;
+            this.CALORIE.Name = "CALORIE";
+            this.CALORIE.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -245,6 +275,13 @@
             this.categoryCustomComboBox.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
             this.categoryCustomComboBox.ForeColor = System.Drawing.Color.White;
             this.categoryCustomComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.categoryCustomComboBox.Items.AddRange(new object[] {
+            "전체",
+            "유산소",
+            "구기종목",
+            "무술",
+            "맨몸운동",
+            "기타"});
             this.categoryCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.categoryCustomComboBox.ListTextColor = System.Drawing.Color.White;
             this.categoryCustomComboBox.Location = new System.Drawing.Point(754, 33);
@@ -255,6 +292,7 @@
             this.categoryCustomComboBox.Size = new System.Drawing.Size(160, 40);
             this.categoryCustomComboBox.TabIndex = 11;
             this.categoryCustomComboBox.Texts = "";
+            this.categoryCustomComboBox.OnSelectedIndexChanged += new System.EventHandler(this.categoryCustomComboBox_OnSelectedIndexChanged);
             // 
             // searchRoundButton
             // 
@@ -275,6 +313,7 @@
             this.searchRoundButton.Text = "Search";
             this.searchRoundButton.TextColor = System.Drawing.Color.White;
             this.searchRoundButton.UseVisualStyleBackColor = false;
+            this.searchRoundButton.Click += new System.EventHandler(this.searchRoundButton_Click);
             // 
             // searchCustomTextBox
             // 
@@ -297,36 +336,6 @@
             this.searchCustomTextBox.TabIndex = 9;
             this.searchCustomTextBox.Texts = "";
             this.searchCustomTextBox.UnderlinedStyle = false;
-            // 
-            // NAME
-            // 
-            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NAME.DataPropertyName = "NAME";
-            this.NAME.FillWeight = 120F;
-            this.NAME.HeaderText = "운동";
-            this.NAME.MinimumWidth = 10;
-            this.NAME.Name = "NAME";
-            this.NAME.ReadOnly = true;
-            // 
-            // CATEGORY
-            // 
-            this.CATEGORY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CATEGORY.DataPropertyName = "CATEGORY";
-            this.CATEGORY.FillWeight = 80F;
-            this.CATEGORY.HeaderText = "카테고리";
-            this.CATEGORY.MinimumWidth = 10;
-            this.CATEGORY.Name = "CATEGORY";
-            this.CATEGORY.ReadOnly = true;
-            // 
-            // CALORIE
-            // 
-            this.CALORIE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CALORIE.DataPropertyName = "CALORIE";
-            this.CALORIE.FillWeight = 80F;
-            this.CALORIE.HeaderText = "분당 칼로리(kal)";
-            this.CALORIE.MinimumWidth = 10;
-            this.CALORIE.Name = "CALORIE";
-            this.CALORIE.ReadOnly = true;
             // 
             // FormExercise
             // 
