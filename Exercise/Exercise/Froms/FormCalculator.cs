@@ -1,9 +1,14 @@
-﻿using System;
+﻿using Exercise.ExerciseClass.Calculator;
+using Exercise.ExerciseClass.Exercise;
+using Exercise.ExerciseClass.Food;
+using Exercise.Froms.SubForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +17,21 @@ namespace Exercise.Froms
 {
     public partial class FormCalculator : Form
     {
+        FoodManagement fm = new FoodManagement();
+        ExerciseManagement em = new ExerciseManagement();
+        string search = null;
+        string categorys = "전체";
+
+        string save_name;
+        string save_category;
+        float save_calorie;
+        float save_input;
+        float save_total;
+
         public FormCalculator()
         {
             InitializeComponent();
+            EFDataGridView.MouseWheel += new MouseEventHandler(mousewheel);
         }
 
         private void FormCalculator_Load(object sender, EventArgs e)
@@ -22,24 +39,201 @@ namespace Exercise.Froms
             selectCustomComboBox.SelectedIndex = 0;
         }
 
+        private void mousewheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0 && EFDataGridView.FirstDisplayedScrollingRowIndex > 0)
+            {
+                EFDataGridView.FirstDisplayedScrollingRowIndex--;
+            }
+            else if (e.Delta < 0)
+            {
+                EFDataGridView.FirstDisplayedScrollingRowIndex++;
+            }
+        }
+
         private void selectCustomComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             if (selectCustomComboBox.SelectedIndex == 0)
             {
+                inputKind.Text = "kind";
+                totalKal.Text = "0 kal";
+                inputBox.Texts = String.Empty;
+
                 EFDataGridView.Columns[0].HeaderText = "운동종류";
                 EFDataGridView.Columns[1].HeaderText = "카테고리";
                 EFDataGridView.Columns[2].HeaderText = "분당 칼로리(kal)";
                 inputLabel.Text = "Time (min)";
                 kindTxt.Text = "Exercise";
+
+                categoryCustomComboBox.Items.Clear();
+                categoryCustomComboBox.Texts = String.Empty;
+                categoryCustomComboBox.Items.Add("전체");
+                categoryCustomComboBox.Items.Add("유산소");
+                categoryCustomComboBox.Items.Add("구기종목");
+                categoryCustomComboBox.Items.Add("무술");
+                categoryCustomComboBox.Items.Add("맨몸운동");
+                categoryCustomComboBox.Items.Add("기타");
+                categoryCustomComboBox.SelectedIndex = 0;
+
+                EFDataGridView.DataSource = em.returnAllList();
             }
             else if (selectCustomComboBox.SelectedIndex == 1)
             {
+                inputKind.Text = "kind";
+                totalKal.Text = "0 kal";
+                inputBox.Texts = String.Empty;
+
                 EFDataGridView.Columns[0].HeaderText = "음식종류";
                 EFDataGridView.Columns[1].HeaderText = "카테고리";
                 EFDataGridView.Columns[2].HeaderText = "그램당 칼로리(kal)";
                 inputLabel.Text = "gram (g)";
                 kindTxt.Text = "Food";
+
+                categoryCustomComboBox.Items.Clear();
+                categoryCustomComboBox.Texts = String.Empty;
+                categoryCustomComboBox.Items.Add("전체");
+                categoryCustomComboBox.Items.Add("곡류");
+                categoryCustomComboBox.Items.Add("채소");
+                categoryCustomComboBox.Items.Add("과일");
+                categoryCustomComboBox.Items.Add("유제품");
+                categoryCustomComboBox.Items.Add("육류");
+                categoryCustomComboBox.Items.Add("해산물");
+                categoryCustomComboBox.Items.Add("주류");
+                categoryCustomComboBox.Items.Add("음료");
+                categoryCustomComboBox.Items.Add("요리");
+                categoryCustomComboBox.Items.Add("기타");
+                categoryCustomComboBox.SelectedIndex = 0;
+
+                EFDataGridView.DataSource = fm.returnAllList();
             }
+        }
+
+        public void UpdatefmGridView()
+        {
+            if (search != null && categorys.Equals("전체"))
+            {
+                EFDataGridView.DataSource = fm.returnSearchList(search);
+            }
+            else if (search == null && !categorys.Equals("전체"))
+            {
+                EFDataGridView.DataSource = fm.returnSelectCategoryList(categorys);
+            }
+            else if (search == null || categorys.Equals("전체"))
+            {
+                EFDataGridView.DataSource = fm.returnAllList();
+            }
+            else
+            {
+                EFDataGridView.DataSource = fm.returnSearchSelectList(categorys, search);
+            }
+        }
+
+        public void UpdateemGridView()
+        {
+            if (search != null && categorys.Equals("전체"))
+            {
+                EFDataGridView.DataSource = em.returnSearchList(search);
+            }
+            else if (search == null && !categorys.Equals("전체"))
+            {
+                EFDataGridView.DataSource = em.returnSelectCategoryList(categorys);
+            }
+            else if (search == null || categorys.Equals("전체"))
+            {
+                EFDataGridView.DataSource = em.returnAllList();
+            }
+            else
+            {
+                EFDataGridView.DataSource = em.returnSearchSelectList(categorys, search);
+            }
+        }
+
+        private void categoryCustomComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            categorys = categoryCustomComboBox.SelectedItem.ToString();
+
+            if (selectCustomComboBox.SelectedIndex == 0)
+            {
+                UpdateemGridView();
+            }
+            else if (selectCustomComboBox.SelectedIndex == 1)
+            {
+                UpdatefmGridView();
+            }
+         }
+
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+            search = searchCustomTextBox.Texts.ToString();
+
+            if (selectCustomComboBox.SelectedIndex == 0)
+            {
+                UpdateemGridView();
+            }
+            else if (selectCustomComboBox.SelectedIndex == 1)
+            {
+                UpdatefmGridView();
+            }
+        }
+
+        private void searchCustomTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+
+                search = searchCustomTextBox.Texts.ToString();
+
+                if (selectCustomComboBox.SelectedIndex == 0)
+                {
+                    UpdateemGridView();
+                }
+                else if (selectCustomComboBox.SelectedIndex == 1)
+                {
+                    UpdatefmGridView();
+                }
+            }
+        }
+
+        private void EFDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CalculatorService cs = new CalculatorService(inputBox.Texts);
+            if (!cs.confirmNull())
+            {
+                if (selectCustomComboBox.SelectedIndex == 0)
+                {
+                    sendMessage("운동 시간을 입력해주십시오.");
+
+                }
+                else if (selectCustomComboBox.SelectedIndex == 1)
+                {
+                    sendMessage("음식 섭취량을 입력해주십시오.");
+                }
+                return;
+            }
+            if (!cs.confirmNumber())
+            {
+                sendMessage("숫자만 입력해주십시오.");
+                return;
+            }
+
+            DataGridViewRow row = EFDataGridView.SelectedRows[0];
+            save_name = row.Cells[0].Value as string;
+            save_category = row.Cells[1].Value as string;
+            save_calorie = Convert.ToSingle(row.Cells[2].Value);
+            inputKind.Text = save_name; //운동 종류 이름
+            save_input = Convert.ToSingle(inputBox.Texts); //입력 받은 시간 값
+            save_total = save_calorie * save_input; //계산하는 식
+            totalKal.Text = save_total.ToString() + " kal"; //다시 문자열 변환 후 대입 
+        }
+
+        //메세지 박스
+        public void sendMessage(string str)
+        {
+            MessageForm message = new MessageForm(str);
+            message.StartPosition = FormStartPosition.CenterParent;
+            SystemSounds.Beep.Play();
+            message.ShowDialog();
         }
     }
 }

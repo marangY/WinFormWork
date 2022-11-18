@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.categoryInputCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.gramTxt = new Exercise.CustomControll.CustomTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.nameTxt = new Exercise.CustomControll.CustomTextBox();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
             this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CALORIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryInputCustomComboBox = new Exercise.CustomControll.CustomComboBox();
-            this.timeTxt = new Exercise.CustomControll.CustomTextBox();
-            this.nameTxt = new Exercise.CustomControll.CustomTextBox();
             this.categoryCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.searchRoundButton = new Exercise.CustomControll.RoundButton();
             this.searchCustomTextBox = new Exercise.CustomControll.CustomTextBox();
@@ -56,7 +56,7 @@
             this.groupBox1.Controls.Add(this.iconPictureBox3);
             this.groupBox1.Controls.Add(this.categoryInputCustomComboBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.timeTxt);
+            this.groupBox1.Controls.Add(this.gramTxt);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.nameTxt);
@@ -85,6 +85,37 @@
             this.iconPictureBox3.Size = new System.Drawing.Size(56, 58);
             this.iconPictureBox3.TabIndex = 21;
             this.iconPictureBox3.TabStop = false;
+            this.iconPictureBox3.Click += new System.EventHandler(this.iconPictureBox3_Click);
+            // 
+            // categoryInputCustomComboBox
+            // 
+            this.categoryInputCustomComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.categoryInputCustomComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.categoryInputCustomComboBox.BorderSize = 3;
+            this.categoryInputCustomComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.categoryInputCustomComboBox.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.categoryInputCustomComboBox.ForeColor = System.Drawing.Color.White;
+            this.categoryInputCustomComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.categoryInputCustomComboBox.Items.AddRange(new object[] {
+            "곡류",
+            "채소",
+            "과일",
+            "유제품",
+            "육류",
+            "해산물",
+            "주류",
+            "음료",
+            "요리",
+            "기타"});
+            this.categoryInputCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.categoryInputCustomComboBox.ListTextColor = System.Drawing.Color.White;
+            this.categoryInputCustomComboBox.Location = new System.Drawing.Point(381, 50);
+            this.categoryInputCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
+            this.categoryInputCustomComboBox.Name = "categoryInputCustomComboBox";
+            this.categoryInputCustomComboBox.Padding = new System.Windows.Forms.Padding(2);
+            this.categoryInputCustomComboBox.Size = new System.Drawing.Size(160, 40);
+            this.categoryInputCustomComboBox.TabIndex = 13;
+            this.categoryInputCustomComboBox.Texts = "";
             // 
             // label3
             // 
@@ -96,6 +127,28 @@
             this.label3.Size = new System.Drawing.Size(116, 29);
             this.label3.TabIndex = 17;
             this.label3.Text = "Category";
+            // 
+            // gramTxt
+            // 
+            this.gramTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.gramTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.gramTxt.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.gramTxt.BorderRadius = 0;
+            this.gramTxt.BorderSize = 3;
+            this.gramTxt.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.gramTxt.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gramTxt.Location = new System.Drawing.Point(622, 50);
+            this.gramTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.gramTxt.Multiline = false;
+            this.gramTxt.Name = "gramTxt";
+            this.gramTxt.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.gramTxt.PasswordChar = false;
+            this.gramTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.gramTxt.PlaceholderText = "";
+            this.gramTxt.Size = new System.Drawing.Size(165, 41);
+            this.gramTxt.TabIndex = 16;
+            this.gramTxt.Texts = "";
+            this.gramTxt.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -119,6 +172,29 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Name";
             // 
+            // nameTxt
+            // 
+            this.nameTxt.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.nameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.nameTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.nameTxt.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.nameTxt.BorderRadius = 0;
+            this.nameTxt.BorderSize = 3;
+            this.nameTxt.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nameTxt.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.nameTxt.Location = new System.Drawing.Point(94, 48);
+            this.nameTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.nameTxt.Multiline = false;
+            this.nameTxt.Name = "nameTxt";
+            this.nameTxt.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.nameTxt.PasswordChar = false;
+            this.nameTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.nameTxt.PlaceholderText = "";
+            this.nameTxt.Size = new System.Drawing.Size(165, 41);
+            this.nameTxt.TabIndex = 13;
+            this.nameTxt.Texts = "";
+            this.nameTxt.UnderlinedStyle = false;
+            // 
             // EFDataGridView
             // 
             this.EFDataGridView.AllowUserToAddRows = false;
@@ -129,46 +205,47 @@
             this.EFDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EFDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EFDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.EFDataGridView.ColumnHeadersHeight = 50;
             this.EFDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NAME,
             this.CATEGORY,
             this.CALORIE});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.EFDataGridView.EnableHeadersVisualStyles = false;
             this.EFDataGridView.GridColor = System.Drawing.Color.White;
-            this.EFDataGridView.Location = new System.Drawing.Point(40, 89);
+            this.EFDataGridView.Location = new System.Drawing.Point(50, 97);
             this.EFDataGridView.Margin = new System.Windows.Forms.Padding(81, 0, 81, 25);
             this.EFDataGridView.MultiSelect = false;
             this.EFDataGridView.Name = "EFDataGridView";
             this.EFDataGridView.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.EFDataGridView.RowHeadersVisible = false;
             this.EFDataGridView.RowHeadersWidth = 82;
             this.EFDataGridView.RowTemplate.DividerHeight = 1;
             this.EFDataGridView.RowTemplate.Height = 37;
+            this.EFDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.EFDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EFDataGridView.Size = new System.Drawing.Size(864, 288);
             this.EFDataGridView.TabIndex = 13;
@@ -202,70 +279,6 @@
             this.CALORIE.MinimumWidth = 10;
             this.CALORIE.Name = "CALORIE";
             this.CALORIE.ReadOnly = true;
-            // 
-            // categoryInputCustomComboBox
-            // 
-            this.categoryInputCustomComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.categoryInputCustomComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.categoryInputCustomComboBox.BorderSize = 3;
-            this.categoryInputCustomComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.categoryInputCustomComboBox.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.categoryInputCustomComboBox.ForeColor = System.Drawing.Color.White;
-            this.categoryInputCustomComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.categoryInputCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.categoryInputCustomComboBox.ListTextColor = System.Drawing.Color.White;
-            this.categoryInputCustomComboBox.Location = new System.Drawing.Point(381, 50);
-            this.categoryInputCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
-            this.categoryInputCustomComboBox.Name = "categoryInputCustomComboBox";
-            this.categoryInputCustomComboBox.Padding = new System.Windows.Forms.Padding(2);
-            this.categoryInputCustomComboBox.Size = new System.Drawing.Size(160, 40);
-            this.categoryInputCustomComboBox.TabIndex = 13;
-            this.categoryInputCustomComboBox.Texts = "";
-            // 
-            // timeTxt
-            // 
-            this.timeTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.timeTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.timeTxt.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.timeTxt.BorderRadius = 0;
-            this.timeTxt.BorderSize = 3;
-            this.timeTxt.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.timeTxt.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.timeTxt.Location = new System.Drawing.Point(622, 50);
-            this.timeTxt.Margin = new System.Windows.Forms.Padding(4);
-            this.timeTxt.Multiline = false;
-            this.timeTxt.Name = "timeTxt";
-            this.timeTxt.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.timeTxt.PasswordChar = false;
-            this.timeTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.timeTxt.PlaceholderText = "";
-            this.timeTxt.Size = new System.Drawing.Size(165, 41);
-            this.timeTxt.TabIndex = 16;
-            this.timeTxt.Texts = "";
-            this.timeTxt.UnderlinedStyle = false;
-            // 
-            // nameTxt
-            // 
-            this.nameTxt.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.nameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.nameTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.nameTxt.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.nameTxt.BorderRadius = 0;
-            this.nameTxt.BorderSize = 3;
-            this.nameTxt.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.nameTxt.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nameTxt.Location = new System.Drawing.Point(94, 48);
-            this.nameTxt.Margin = new System.Windows.Forms.Padding(4);
-            this.nameTxt.Multiline = false;
-            this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.nameTxt.PasswordChar = false;
-            this.nameTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.nameTxt.PlaceholderText = "";
-            this.nameTxt.Size = new System.Drawing.Size(165, 41);
-            this.nameTxt.TabIndex = 13;
-            this.nameTxt.Texts = "";
-            this.nameTxt.UnderlinedStyle = false;
             // 
             // categoryCustomComboBox
             // 
@@ -358,6 +371,7 @@
             this.Name = "FormFood";
             this.ShowInTaskbar = false;
             this.Text = "FormFood";
+            this.Load += new System.EventHandler(this.FormFood_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
@@ -371,7 +385,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private CustomControll.CustomComboBox categoryInputCustomComboBox;
         private System.Windows.Forms.Label label3;
-        private CustomControll.CustomTextBox timeTxt;
+        private CustomControll.CustomTextBox gramTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private CustomControll.CustomTextBox nameTxt;

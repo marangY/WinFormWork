@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OracleClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,32 +13,38 @@ namespace Exercise.ExerciseClass.Food
 {
     internal class FoodManagement
     {
-        string name;
-        string category;
-        string calorie;
-
-        public DataTable ReturnAllList()
+        public DataTable returnAllList()
         {
             DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info");
+            dbconn.getTableToDB();
             return dbconn.Table;
         }
 
-        public DataTable ReturnSelectCategoryList(string category)
+        public DataTable returnSelectCategoryList(string category)
         {
             DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info WHERE category='" + category + "'");
+            dbconn.getTableToDB();
             return dbconn.Table;
         }
 
-        public DataTable ReturnSearchCategoryList(string name)
+        public DataTable returnSearchList(string name)
         {
             DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info WHERE name like'%" + name + "%'");
+            dbconn.getTableToDB();
             return dbconn.Table;
         }
 
-        public DataTable ReturnSearchSelectCategoryList(string category, string name)
+        public DataTable returnSearchSelectList(string category, string name)
         {
             DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info WHERE name like'%" + name + "%' AND category='" + category + "'");
+            dbconn.getTableToDB();
             return dbconn.Table;
+        }
+
+        public void addEntity(String name, String category, OracleNumber gram)
+        {
+            DataBaseConnect dbconn = new DataBaseConnect("insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '" + name + "', " + gram + ", '" + category + "')");
+            dbconn.updateDB();
         }
     }
 }

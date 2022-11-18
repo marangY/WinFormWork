@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.bodyGroupBox = new System.Windows.Forms.GroupBox();
+            this.statusUpdateButton = new Exercise.CustomControll.RoundButton();
             this.bmiGroupBox = new System.Windows.Forms.GroupBox();
             this.bmi = new System.Windows.Forms.Label();
             this.bodyFatGroupBox = new System.Windows.Forms.GroupBox();
@@ -57,6 +58,7 @@
             // 
             // bodyGroupBox
             // 
+            this.bodyGroupBox.Controls.Add(this.statusUpdateButton);
             this.bodyGroupBox.Controls.Add(this.bmiGroupBox);
             this.bodyGroupBox.Controls.Add(this.bodyFatGroupBox);
             this.bodyGroupBox.Controls.Add(this.weightGroupBox);
@@ -67,20 +69,39 @@
             this.bodyGroupBox.Location = new System.Drawing.Point(31, 32);
             this.bodyGroupBox.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
             this.bodyGroupBox.Name = "bodyGroupBox";
-            this.bodyGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bodyGroupBox.Size = new System.Drawing.Size(280, 500);
+            this.bodyGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.bodyGroupBox.Size = new System.Drawing.Size(280, 519);
             this.bodyGroupBox.TabIndex = 0;
             this.bodyGroupBox.TabStop = false;
             this.bodyGroupBox.Text = "Body Status";
+            // 
+            // statusUpdateButton
+            // 
+            this.statusUpdateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.statusUpdateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.statusUpdateButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.statusUpdateButton.BorderRadius = 0;
+            this.statusUpdateButton.BorderSize = 0;
+            this.statusUpdateButton.FlatAppearance.BorderSize = 0;
+            this.statusUpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statusUpdateButton.ForeColor = System.Drawing.Color.White;
+            this.statusUpdateButton.Location = new System.Drawing.Point(93, 469);
+            this.statusUpdateButton.Name = "statusUpdateButton";
+            this.statusUpdateButton.Size = new System.Drawing.Size(90, 35);
+            this.statusUpdateButton.TabIndex = 4;
+            this.statusUpdateButton.Text = "Update";
+            this.statusUpdateButton.TextColor = System.Drawing.Color.White;
+            this.statusUpdateButton.UseVisualStyleBackColor = false;
+            this.statusUpdateButton.Click += new System.EventHandler(this.statusUpdateButton_Click);
             // 
             // bmiGroupBox
             // 
             this.bmiGroupBox.Controls.Add(this.bmi);
             this.bmiGroupBox.ForeColor = System.Drawing.Color.White;
-            this.bmiGroupBox.Location = new System.Drawing.Point(6, 413);
+            this.bmiGroupBox.Location = new System.Drawing.Point(6, 393);
             this.bmiGroupBox.Margin = new System.Windows.Forms.Padding(4, 42, 4, 0);
             this.bmiGroupBox.Name = "bmiGroupBox";
-            this.bmiGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bmiGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.bmiGroupBox.Size = new System.Drawing.Size(263, 60);
             this.bmiGroupBox.TabIndex = 3;
             this.bmiGroupBox.TabStop = false;
@@ -103,10 +124,10 @@
             this.bodyFatGroupBox.Controls.Add(this.bodyFat);
             this.bodyFatGroupBox.Controls.Add(this.percentage);
             this.bodyFatGroupBox.ForeColor = System.Drawing.Color.White;
-            this.bodyFatGroupBox.Location = new System.Drawing.Point(6, 312);
+            this.bodyFatGroupBox.Location = new System.Drawing.Point(6, 292);
             this.bodyFatGroupBox.Margin = new System.Windows.Forms.Padding(4, 42, 4, 0);
             this.bodyFatGroupBox.Name = "bodyFatGroupBox";
-            this.bodyFatGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bodyFatGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.bodyFatGroupBox.Size = new System.Drawing.Size(263, 60);
             this.bodyFatGroupBox.TabIndex = 2;
             this.bodyFatGroupBox.TabStop = false;
@@ -119,7 +140,7 @@
             this.bodyFat.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bodyFat.ForeColor = System.Drawing.Color.White;
             this.bodyFat.Location = new System.Drawing.Point(5, 28);
-            this.bodyFat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bodyFat.Margin = new System.Windows.Forms.Padding(2);
             this.bodyFat.Name = "bodyFat";
             this.bodyFat.Size = new System.Drawing.Size(208, 27);
             this.bodyFat.TabIndex = 4;
@@ -140,10 +161,10 @@
             this.weightGroupBox.Controls.Add(this.weight);
             this.weightGroupBox.Controls.Add(this.KG);
             this.weightGroupBox.ForeColor = System.Drawing.Color.White;
-            this.weightGroupBox.Location = new System.Drawing.Point(6, 210);
+            this.weightGroupBox.Location = new System.Drawing.Point(6, 190);
             this.weightGroupBox.Margin = new System.Windows.Forms.Padding(4, 42, 4, 0);
             this.weightGroupBox.Name = "weightGroupBox";
-            this.weightGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weightGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.weightGroupBox.Size = new System.Drawing.Size(263, 60);
             this.weightGroupBox.TabIndex = 2;
             this.weightGroupBox.TabStop = false;
@@ -156,7 +177,7 @@
             this.weight.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight.ForeColor = System.Drawing.Color.White;
             this.weight.Location = new System.Drawing.Point(4, 28);
-            this.weight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weight.Margin = new System.Windows.Forms.Padding(2);
             this.weight.Name = "weight";
             this.weight.Size = new System.Drawing.Size(208, 27);
             this.weight.TabIndex = 3;
@@ -177,10 +198,10 @@
             this.heightGroupBox.Controls.Add(this.cm);
             this.heightGroupBox.Controls.Add(this.height);
             this.heightGroupBox.ForeColor = System.Drawing.Color.White;
-            this.heightGroupBox.Location = new System.Drawing.Point(6, 108);
+            this.heightGroupBox.Location = new System.Drawing.Point(6, 88);
             this.heightGroupBox.Margin = new System.Windows.Forms.Padding(4, 42, 4, 0);
             this.heightGroupBox.Name = "heightGroupBox";
-            this.heightGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.heightGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.heightGroupBox.Size = new System.Drawing.Size(263, 60);
             this.heightGroupBox.TabIndex = 1;
             this.heightGroupBox.TabStop = false;
@@ -203,7 +224,7 @@
             this.height.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.height.ForeColor = System.Drawing.Color.White;
             this.height.Location = new System.Drawing.Point(4, 28);
-            this.height.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.height.Margin = new System.Windows.Forms.Padding(2);
             this.height.Name = "height";
             this.height.Size = new System.Drawing.Size(208, 27);
             this.height.TabIndex = 0;
@@ -211,8 +232,8 @@
             // 
             // user
             // 
-            this.user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.user.Location = new System.Drawing.Point(6, 42);
+            this.user.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.user.Location = new System.Drawing.Point(6, 26);
             this.user.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(270, 40);
@@ -325,7 +346,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bodyGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormHome";
             this.Text = "FormHome";
             this.Load += new System.EventHandler(this.FormHome_Load);
@@ -364,5 +385,6 @@
         private System.Windows.Forms.Label exerciseKal;
         private System.Windows.Forms.Label totalKal;
         private System.Windows.Forms.Label bmi;
+        private CustomControll.RoundButton statusUpdateButton;
     }
 }

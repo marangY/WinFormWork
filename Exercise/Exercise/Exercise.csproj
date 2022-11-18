@@ -94,10 +94,12 @@
     <Compile Include="CustomControll\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExerciseClass\Calculator\CalculatorService.cs" />
     <Compile Include="ExerciseClass\Config\Config.cs" />
     <Compile Include="ExerciseClass\DataBase\DataBaseConnect.cs" />
-    <Compile Include="ExerciseClass\Exercise\ExercisManagement.cs" />
+    <Compile Include="ExerciseClass\Exercise\ExerciseManagement.cs" />
     <Compile Include="ExerciseClass\Food\FoodManagement.cs" />
+    <Compile Include="ExerciseClass\User\UserStatusService.cs" />
     <Compile Include="ExerciseClass\User\JoinService.cs" />
     <Compile Include="ExerciseClass\User\LoginService.cs" />
     <Compile Include="ExerciseClass\User\PasswordEncoder.cs" />

@@ -24,6 +24,7 @@ namespace Exercise.ExerciseClass.User
         public bool existenceId()
         {
             DataBaseConnect dbconn = new DataBaseConnect("select user_id from user_info where user_id = '" + id + "'");
+            dbconn.getTableToDB();
             if (dbconn.Table.Rows.Count != 0)
             {
                 return true;
@@ -34,6 +35,7 @@ namespace Exercise.ExerciseClass.User
         public void authorization()
         {
             DataBaseConnect dbconn = new DataBaseConnect("select * from user_info");
+            dbconn.getTableToDB();
             DataRow newRow = dbconn.Table.NewRow();
             newRow["user_id"] = id;
             newRow["password"] = pw;

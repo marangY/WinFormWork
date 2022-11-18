@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inputLabel = new System.Windows.Forms.Label();
             this.totalCalorie = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.inputKind = new System.Windows.Forms.Label();
             this.saveToday = new Exercise.CustomControll.RoundButton();
             this.inputBox = new Exercise.CustomControll.CustomTextBox();
-            this.customTextBox1 = new Exercise.CustomControll.CustomTextBox();
-            this.customComboBox1 = new Exercise.CustomControll.CustomComboBox();
+            this.searchCustomTextBox = new Exercise.CustomControll.CustomTextBox();
+            this.categoryCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.roundButton1 = new Exercise.CustomControll.RoundButton();
             this.selectCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.EFDataGridView)).BeginInit();
@@ -83,7 +83,7 @@
             this.EFDataGridView.ColumnHeadersHeight = 50;
             this.EFDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
-            this.Category,
+            this.category,
             this.calorie});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -112,31 +112,36 @@
             this.EFDataGridView.RowHeadersWidth = 82;
             this.EFDataGridView.RowTemplate.DividerHeight = 1;
             this.EFDataGridView.RowTemplate.Height = 37;
+            this.EFDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.EFDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EFDataGridView.Size = new System.Drawing.Size(496, 428);
             this.EFDataGridView.TabIndex = 3;
+            this.EFDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EFDataGridView_CellClick);
             // 
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "NAME";
             this.name.FillWeight = 80F;
             this.name.HeaderText = "운동";
             this.name.MinimumWidth = 10;
             this.name.Name = "name";
             this.name.ReadOnly = true;
             // 
-            // Category
+            // category
             // 
-            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Category.FillWeight = 80F;
-            this.Category.HeaderText = "카테고리";
-            this.Category.MinimumWidth = 10;
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
+            this.category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.category.DataPropertyName = "CATEGORY";
+            this.category.FillWeight = 80F;
+            this.category.HeaderText = "카테고리";
+            this.category.MinimumWidth = 10;
+            this.category.Name = "category";
+            this.category.ReadOnly = true;
             // 
             // calorie
             // 
             this.calorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.calorie.DataPropertyName = "CALORIE";
             this.calorie.FillWeight = 120F;
             this.calorie.HeaderText = "분당 칼로리(kal)";
             this.calorie.MinimumWidth = 10;
@@ -219,7 +224,7 @@
             this.saveToday.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.saveToday.ForeColor = System.Drawing.Color.White;
             this.saveToday.Location = new System.Drawing.Point(31, 462);
-            this.saveToday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveToday.Margin = new System.Windows.Forms.Padding(2);
             this.saveToday.Name = "saveToday";
             this.saveToday.Size = new System.Drawing.Size(152, 42);
             this.saveToday.TabIndex = 13;
@@ -237,6 +242,7 @@
             this.inputBox.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.inputBox.ForeColor = System.Drawing.Color.White;
             this.inputBox.Location = new System.Drawing.Point(234, 240);
+            this.inputBox.Margin = new System.Windows.Forms.Padding(4);
             this.inputBox.Multiline = false;
             this.inputBox.Name = "inputBox";
             this.inputBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -248,46 +254,49 @@
             this.inputBox.Texts = "";
             this.inputBox.UnderlinedStyle = false;
             // 
-            // customTextBox1
+            // searchCustomTextBox
             // 
-            this.customTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox1.BorderRadius = 0;
-            this.customTextBox1.BorderSize = 3;
-            this.customTextBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
-            this.customTextBox1.ForeColor = System.Drawing.Color.White;
-            this.customTextBox1.Location = new System.Drawing.Point(435, 48);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(165, 41);
-            this.customTextBox1.TabIndex = 8;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
+            this.searchCustomTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.searchCustomTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.searchCustomTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.searchCustomTextBox.BorderRadius = 0;
+            this.searchCustomTextBox.BorderSize = 3;
+            this.searchCustomTextBox.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
+            this.searchCustomTextBox.ForeColor = System.Drawing.Color.White;
+            this.searchCustomTextBox.Location = new System.Drawing.Point(435, 48);
+            this.searchCustomTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchCustomTextBox.Multiline = false;
+            this.searchCustomTextBox.Name = "searchCustomTextBox";
+            this.searchCustomTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.searchCustomTextBox.PasswordChar = false;
+            this.searchCustomTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.searchCustomTextBox.PlaceholderText = "";
+            this.searchCustomTextBox.Size = new System.Drawing.Size(165, 41);
+            this.searchCustomTextBox.TabIndex = 8;
+            this.searchCustomTextBox.Texts = "";
+            this.searchCustomTextBox.UnderlinedStyle = false;
+            this.searchCustomTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchCustomTextBox_KeyPress);
             // 
-            // customComboBox1
+            // categoryCustomComboBox
             // 
-            this.customComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.customComboBox1.BorderSize = 3;
-            this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.customComboBox1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.customComboBox1.ForeColor = System.Drawing.Color.White;
-            this.customComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.customComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customComboBox1.ListTextColor = System.Drawing.Color.White;
-            this.customComboBox1.Location = new System.Drawing.Point(771, 48);
-            this.customComboBox1.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
-            this.customComboBox1.MinimumSize = new System.Drawing.Size(160, 25);
-            this.customComboBox1.Name = "customComboBox1";
-            this.customComboBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.customComboBox1.Size = new System.Drawing.Size(160, 40);
-            this.customComboBox1.TabIndex = 7;
-            this.customComboBox1.Texts = "";
+            this.categoryCustomComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.categoryCustomComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.categoryCustomComboBox.BorderSize = 3;
+            this.categoryCustomComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.categoryCustomComboBox.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.categoryCustomComboBox.ForeColor = System.Drawing.Color.White;
+            this.categoryCustomComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.categoryCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.categoryCustomComboBox.ListTextColor = System.Drawing.Color.White;
+            this.categoryCustomComboBox.Location = new System.Drawing.Point(771, 48);
+            this.categoryCustomComboBox.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
+            this.categoryCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
+            this.categoryCustomComboBox.Name = "categoryCustomComboBox";
+            this.categoryCustomComboBox.Padding = new System.Windows.Forms.Padding(2);
+            this.categoryCustomComboBox.Size = new System.Drawing.Size(160, 40);
+            this.categoryCustomComboBox.TabIndex = 7;
+            this.categoryCustomComboBox.Texts = "";
+            this.categoryCustomComboBox.OnSelectedIndexChanged += new System.EventHandler(this.categoryCustomComboBox_OnSelectedIndexChanged);
             // 
             // roundButton1
             // 
@@ -301,13 +310,14 @@
             this.roundButton1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton1.ForeColor = System.Drawing.Color.White;
             this.roundButton1.Location = new System.Drawing.Point(606, 50);
-            this.roundButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundButton1.Margin = new System.Windows.Forms.Padding(2);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.Size = new System.Drawing.Size(84, 33);
             this.roundButton1.TabIndex = 6;
             this.roundButton1.Text = "Search";
             this.roundButton1.TextColor = System.Drawing.Color.White;
             this.roundButton1.UseVisualStyleBackColor = false;
+            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
             // selectCustomComboBox
             // 
@@ -327,7 +337,7 @@
             this.selectCustomComboBox.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
             this.selectCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
             this.selectCustomComboBox.Name = "selectCustomComboBox";
-            this.selectCustomComboBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectCustomComboBox.Padding = new System.Windows.Forms.Padding(2);
             this.selectCustomComboBox.Size = new System.Drawing.Size(192, 62);
             this.selectCustomComboBox.TabIndex = 0;
             this.selectCustomComboBox.Texts = "";
@@ -346,13 +356,13 @@
             this.Controls.Add(this.totalCalorie);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.inputLabel);
-            this.Controls.Add(this.customTextBox1);
-            this.Controls.Add(this.customComboBox1);
+            this.Controls.Add(this.searchCustomTextBox);
+            this.Controls.Add(this.categoryCustomComboBox);
             this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.EFDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectCustomComboBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCalculator";
             this.Text = "FormCalculator";
             this.Load += new System.EventHandler(this.FormCalculator_Load);
@@ -368,8 +378,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView EFDataGridView;
         private CustomControll.RoundButton roundButton1;
-        private CustomControll.CustomComboBox customComboBox1;
-        private CustomControll.CustomTextBox customTextBox1;
+        private CustomControll.CustomComboBox categoryCustomComboBox;
+        private CustomControll.CustomTextBox searchCustomTextBox;
         private System.Windows.Forms.Label inputLabel;
         private CustomControll.CustomTextBox inputBox;
         private System.Windows.Forms.Label totalCalorie;
@@ -378,7 +388,7 @@
         private System.Windows.Forms.Label kindTxt;
         private System.Windows.Forms.Label inputKind;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.DataGridViewTextBoxColumn calorie;
     }
 }

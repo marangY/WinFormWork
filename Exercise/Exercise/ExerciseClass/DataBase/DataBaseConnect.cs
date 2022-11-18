@@ -10,27 +10,6 @@ namespace Exercise.ExerciseClass.DataBase
 {
     internal class DataBaseConnect
     {
-        public DataBaseConnect(string commandString)
-        {
-            this.commandString = commandString;
-
-            try
-            {
-                DBAdapter = new OracleDataAdapter(this.commandString, connectionString);
-                myCommandBuilder = new OracleCommandBuilder(DBAdapter);
-
-                DS = new DataSet();
-                DBAdapter.Fill(DS);
-
-                Table = DS.Tables[0];
-            }
-            catch (DataException DE)
-            {
-                Console.WriteLine(DE.Message);
-            }
-
-        }
-
         private string connectionString = Properties.Resources.connectionString;
         private string commandString;
 
@@ -46,5 +25,53 @@ namespace Exercise.ExerciseClass.DataBase
 
         // DataSet 객체입니다.
         public DataSet DS;
+
+        OracleCommand command;
+
+        OracleConnection connection;
+
+        public DataBaseConnect(string commandString)
+        {
+            this.commandString = commandString;
+        }
+
+        public void getTableToDB()
+        {
+            try
+            {
+                DBAdapter = new OracleDataAdapter(this.commandString, connectionString);
+                myCommandBuilder = new OracleCommandBuilder(DBAdapter);
+
+                DS = new DataSet();
+                DBAdapter.Fill(DS);
+
+                Table = DS.Tables[0];
+            }
+            catch (DataException DE)
+            {
+                Console.WriteLine(DE.Message);
+            }
+        }
+
+        public void updateDB()
+        {
+            try
+            {
+                connection = new OracleConnection(connectionString);
+                command = new OracleCommand();
+                command.Connection = connection;
+                command.CommandText = commandString;
+                
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (DataException DE)
+            {
+                Console.WriteLine(DE.Message);
+            }
+        }
+
+        
     }
 }
