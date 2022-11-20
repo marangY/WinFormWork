@@ -71,3 +71,4 @@ C:\Users\jwkid\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exer
 C:\Users\jwkid\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.csproj.CopyComplete
 C:\Users\jwkid\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.exe
 C:\Users\jwkid\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.pdb
+C:\Users\jwkid\Documents\GitHub\WinFormWork\Exercise\Exercise\obj\x64\Debug\Exercise.Froms.FormSchedule.resources

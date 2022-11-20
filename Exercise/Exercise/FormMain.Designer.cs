@@ -50,6 +50,7 @@
             this.clock = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ScheduleBtn = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -63,6 +64,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.ScheduleBtn);
             this.panelMenu.Controls.Add(this.logout);
             this.panelMenu.Controls.Add(this.CalculatorBtn);
             this.panelMenu.Controls.Add(this.ExerciseBtn);
@@ -238,6 +240,18 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ScheduleBtn
+            // 
+            resources.ApplyResources(this.ScheduleBtn, "ScheduleBtn");
+            this.ScheduleBtn.FlatAppearance.BorderSize = 0;
+            this.ScheduleBtn.ForeColor = System.Drawing.Color.White;
+            this.ScheduleBtn.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
+            this.ScheduleBtn.IconColor = System.Drawing.Color.White;
+            this.ScheduleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ScheduleBtn.Name = "ScheduleBtn";
+            this.ScheduleBtn.UseVisualStyleBackColor = true;
+            this.ScheduleBtn.Click += new System.EventHandler(this.ScheduleBtn_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -286,6 +300,7 @@
         private System.Windows.Forms.Label date;
         public FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         public System.Windows.Forms.Label logout;
+        private FontAwesome.Sharp.IconButton ScheduleBtn;
     }
 }
 

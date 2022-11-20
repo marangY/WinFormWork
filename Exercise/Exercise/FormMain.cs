@@ -59,6 +59,7 @@ namespace Exercise
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(24, 161, 251);
+            public static Color color6 = Color.FromArgb(135, 224, 93);
 
         }
 
@@ -214,6 +215,21 @@ namespace Exercise
             OpenChildFrom(new FormCalculator());
         }
 
+        private void ScheduleBtn_Click(object sender, EventArgs e)
+        {
+            if (!Config.Login)
+            {
+                sendMessage("로그인이 필요합니다");
+                return;
+            }
+
+            ActivateButton(sender, RGBColors.color6);
+
+            changeIconCurrentChildForm(ScheduleBtn.IconColor, ScheduleBtn.IconChar, ScheduleBtn.Text);
+
+            OpenChildFrom(new FormSchedule());
+        }
+
         //로고 클릭 이벤트 등록
         private void Logo_Click(object sender, EventArgs e)
         {
@@ -310,5 +326,7 @@ namespace Exercise
 
             OpenOwnerFrom(new FormLogin());
         }
+
+        
     }
 }

@@ -59,35 +59,5 @@ namespace Exercise.ExerciseClass.Calculator
             }
             return true;
         }
-
-        public void save()
-        {
-            if (index == 0)
-            {
-                DataBaseConnect dbconn = new DataBaseConnect("select * from user_exercise");
-                DataRow newRow = dbconn.Table.NewRow();
-                //newRow["user_id"] = id;
-                //newRow["id"] = id;
-                newRow["exercise"] = name;
-                newRow["time"] = input;
-                newRow["date"] = DateTime.Now.ToString();
-
-                dbconn.Table.Rows.Add(newRow);
-                dbconn.DBAdapter.Update(dbconn.DS);
-            }
-            else if (index == 1)
-            {
-                DataBaseConnect dbconn = new DataBaseConnect("select * from user_food");
-                DataRow newRow = dbconn.Table.NewRow();
-                //newRow["user_id"] = id;
-                //newRow["id"] = id;
-                newRow["exercise"] = name;
-                newRow["time"] = input;
-                newRow["date"] = DateTime.Now.ToString();
-
-                dbconn.Table.Rows.Add(newRow);
-                dbconn.DBAdapter.Update(dbconn.DS);
-            }
-        }
     }
 }

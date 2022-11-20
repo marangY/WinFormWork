@@ -151,6 +151,12 @@
     <Compile Include="Froms\FormRank.Designer.cs">
       <DependentUpon>FormRank.cs</DependentUpon>
     </Compile>
+    <Compile Include="Froms\FormSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FormSchedule.Designer.cs">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\SubForm\MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FormRank.resx">
       <DependentUpon>FormRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FormSchedule.resx">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\SubForm\MessageForm.resx">
       <DependentUpon>MessageForm.cs</DependentUpon>
