@@ -15,28 +15,28 @@ namespace Exercise.ExerciseClass.Food
     {
         public DataTable returnAllList()
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info");
+            DataBaseConnect dbconn = new DataBaseConnect("select FOOD_ID, NAME, CATEGORY, CALORIE from food_info");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
 
         public DataTable returnSelectCategoryList(string category)
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info WHERE category='" + category + "'");
+            DataBaseConnect dbconn = new DataBaseConnect("select FOOD_ID, NAME, CATEGORY, CALORIE from food_info WHERE category='" + category + "'");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
 
         public DataTable returnSearchList(string name)
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info WHERE name like'%" + name + "%'");
+            DataBaseConnect dbconn = new DataBaseConnect("select FOOD_ID, NAME, CATEGORY, CALORIE from food_info WHERE name like'%" + name + "%'");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
 
         public DataTable returnSearchSelectList(string category, string name)
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from food_info WHERE name like'%" + name + "%' AND category='" + category + "'");
+            DataBaseConnect dbconn = new DataBaseConnect("select FOOD_ID, NAME, CATEGORY, CALORIE from food_info WHERE name like'%" + name + "%' AND category='" + category + "'");
             dbconn.getTableToDB();
             return dbconn.Table;
         }

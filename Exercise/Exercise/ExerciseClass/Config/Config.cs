@@ -10,5 +10,7 @@ namespace Exercise.ExerciseClass.DataBase
     {
         public static String UserName = null;
         public static Boolean Login = false;
+
+        
     }
 }

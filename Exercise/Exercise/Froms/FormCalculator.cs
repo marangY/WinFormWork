@@ -6,10 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OracleClient;
 using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,14 +21,14 @@ namespace Exercise.Froms
     {
         FoodManagement fm = new FoodManagement();
         ExerciseManagement em = new ExerciseManagement();
+
         string search = null;
         string categorys = "전체";
 
-        string save_name;
-        string save_category;
-        float save_calorie;
-        float save_input;
-        float save_total;
+        OracleNumber select_id;
+        OracleNumber select_input;
+
+        Regex regexnumber = new Regex(@"[0-9]");
 
         public FormCalculator()
         {
@@ -59,9 +61,10 @@ namespace Exercise.Froms
                 totalKal.Text = "0 kal";
                 inputBox.Texts = String.Empty;
 
-                EFDataGridView.Columns[0].HeaderText = "운동종류";
-                EFDataGridView.Columns[1].HeaderText = "카테고리";
-                EFDataGridView.Columns[2].HeaderText = "분당 칼로리(kal)";
+                EFDataGridView.Columns[0].DataPropertyName = "EXERCISE_ID";
+                EFDataGridView.Columns[1].HeaderText = "운동종류";
+                EFDataGridView.Columns[2].HeaderText = "카테고리";
+                EFDataGridView.Columns[3].HeaderText = "분당 칼로리(kal)";
                 inputLabel.Text = "Time (min)";
                 kindTxt.Text = "Exercise";
 
@@ -83,9 +86,10 @@ namespace Exercise.Froms
                 totalKal.Text = "0 kal";
                 inputBox.Texts = String.Empty;
 
-                EFDataGridView.Columns[0].HeaderText = "음식종류";
-                EFDataGridView.Columns[1].HeaderText = "카테고리";
-                EFDataGridView.Columns[2].HeaderText = "그램당 칼로리(kal)";
+                EFDataGridView.Columns[0].DataPropertyName = "FOOD_ID";
+                EFDataGridView.Columns[1].HeaderText = "음식종류";
+                EFDataGridView.Columns[2].HeaderText = "카테고리";
+                EFDataGridView.Columns[3].HeaderText = "그램당 칼로리(kal)";
                 inputLabel.Text = "gram (g)";
                 kindTxt.Text = "Food";
 
@@ -197,35 +201,59 @@ namespace Exercise.Froms
 
         private void EFDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            CalculatorService cs = new CalculatorService(inputBox.Texts);
-            if (!cs.confirmNull())
+            updateInfo();
+        }
+        private void saveToday_Click(object sender, EventArgs e)
+        {
+            updateInfo();
+
+            CalculatorService cs = new CalculatorService();
+            if (selectCustomComboBox.SelectedIndex == 0)
+            {
+                cs.addExerciseEntity(select_id, select_input);
+            }
+            else if (selectCustomComboBox.SelectedIndex == 1)
+            {
+                cs.addFoodEntity(select_id, select_input);
+            }
+
+            sendMessage("오늘 활동에 추가 되었습니다.");
+        }
+
+        public void updateInfo()
+        {
+            if (inputBox.Texts == "")
             {
                 if (selectCustomComboBox.SelectedIndex == 0)
                 {
-                    sendMessage("운동 시간을 입력해주십시오.");
-
+                    sendMessage("운동 시간을 입력해 주세요.");
+                    inputBox.Focus();
                 }
                 else if (selectCustomComboBox.SelectedIndex == 1)
                 {
-                    sendMessage("음식 섭취량을 입력해주십시오.");
+                    sendMessage("음식 그램을 입력해 주세요.");
+                    inputBox.Focus();
                 }
                 return;
             }
-            if (!cs.confirmNumber())
+
+            if (!regexnumber.IsMatch(inputBox.Texts))
             {
-                sendMessage("숫자만 입력해주십시오.");
-                return;
+                sendMessage("숫자를 입력해 주세요.");
+                inputBox.Texts = string.Empty;
+                inputBox.Focus();
             }
 
             DataGridViewRow row = EFDataGridView.SelectedRows[0];
-            save_name = row.Cells[0].Value as string;
-            save_category = row.Cells[1].Value as string;
-            save_calorie = Convert.ToSingle(row.Cells[2].Value);
-            inputKind.Text = save_name; //운동 종류 이름
-            save_input = Convert.ToSingle(inputBox.Texts); //입력 받은 시간 값
-            save_total = save_calorie * save_input; //계산하는 식
-            totalKal.Text = save_total.ToString() + " kal"; //다시 문자열 변환 후 대입 
+
+            inputKind.Text = row.Cells[1].Value.ToString();
+            totalKal.Text = (Double.Parse(row.Cells[3].Value.ToString()) * Double.Parse(inputBox.Texts)).ToString();
+
+            select_id = OracleNumber.Parse(row.Cells[0].Value.ToString());
+            select_input = OracleNumber.Parse(inputBox.Texts);
         }
+
+
 
         //메세지 박스
         public void sendMessage(string str)

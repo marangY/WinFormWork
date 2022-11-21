@@ -94,5 +94,10 @@ namespace Exercise.Froms
             sendMessage("유저 신체 정보가 갱신 되었습니다.");
             bmi.Text = (Math.Round(this.wt / ((this.ht / 100) * (this.ht / 100)) * 100) / 100.0).ToString();
         }
+
+        private void updateToday()
+        {
+            
+        }
     }
 }

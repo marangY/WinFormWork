@@ -1,4 +1,6 @@
 -- 테이블, 시퀀스 삭제
+DROP TABLE user_schedule;
+
 DROP TABLE user_exercise;
 
 DROP TABLE user_food;
@@ -102,11 +104,26 @@ CREATE TABLE total_calorie (
   user_id VARCHAR2(20) NOT NULL,
   datenow DATE NOT NULL,
   food_calorie NUMBER NOT NULL,
-  exersise NUMBER NOT NULL,
+  exercise_calorie NUMBER NOT NULL,
   PRIMARY KEY (user_id, datenow),
   CONSTRAINT FK_user_to_total_calorie
     FOREIGN KEY (user_id)
     REFERENCES user_info (user_id));
+
+CREATE TABLE user_schedule(
+  schedule_id NUMBER NOT NULL,
+  user_id VARCHAR2(20) NOT NULL,
+  datenow DATE NOT NULL,
+  exercise_id NUMBER NOT NULL,
+  time NUMBER NOT NULL,
+  PRIMARY KEY (schedule_id),
+  CONSTRAINT FK_user_to_user_schedule
+    FOREIGN KEY (user_id)
+    REFERENCES user_info (user_id),
+  CONSTRAINT FK_ex_info_to_user_schedule
+    FOREIGN KEY (exercise_id)
+    REFERENCES exercise_info (exercise_id)
+  );
 
 CREATE SEQUENCE SEQ_FOOD_ID INCREMENT BY 1 START WITH 1000000;
 CREATE SEQUENCE SEQ_EXERCISE_ID INCREMENT BY 1 START WITH 3000000;

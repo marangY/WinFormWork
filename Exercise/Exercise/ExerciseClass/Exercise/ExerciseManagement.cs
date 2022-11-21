@@ -13,28 +13,28 @@ namespace Exercise.ExerciseClass.Exercise
     {
         public DataTable returnAllList()
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from exercise_info");
+            DataBaseConnect dbconn = new DataBaseConnect("select EXERCISE_ID ,NAME, CATEGORY, CALORIE from exercise_info");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
 
         public DataTable returnSelectCategoryList(string category)
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from exercise_info WHERE category='"+ category + "'");
+            DataBaseConnect dbconn = new DataBaseConnect("select EXERCISE_ID, NAME, CATEGORY, CALORIE from exercise_info WHERE category='" + category + "'");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
 
         public DataTable returnSearchList(string name)
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from exercise_info WHERE name like'%" + name + "%'");
+            DataBaseConnect dbconn = new DataBaseConnect("select EXERCISE_ID, NAME, CATEGORY, CALORIE from exercise_info WHERE name like'%" + name + "%'");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
 
         public DataTable returnSearchSelectList(string category, string name)
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select NAME, CATEGORY, CALORIE from exercise_info WHERE name like'%" + name + "%' AND category='" + category + "'");
+            DataBaseConnect dbconn = new DataBaseConnect("select EXERCISE_ID, NAME, CATEGORY, CALORIE from exercise_info WHERE name like'%" + name + "%' AND category='" + category + "'");
             dbconn.getTableToDB();
             return dbconn.Table;
         }

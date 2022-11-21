@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.ScheduleBtn = new FontAwesome.Sharp.IconButton();
             this.logout = new System.Windows.Forms.Label();
             this.CalculatorBtn = new FontAwesome.Sharp.IconButton();
             this.ExerciseBtn = new FontAwesome.Sharp.IconButton();
@@ -50,7 +51,6 @@
             this.clock = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ScheduleBtn = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -75,6 +75,18 @@
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelMenu.Name = "panelMenu";
+            // 
+            // ScheduleBtn
+            // 
+            resources.ApplyResources(this.ScheduleBtn, "ScheduleBtn");
+            this.ScheduleBtn.FlatAppearance.BorderSize = 0;
+            this.ScheduleBtn.ForeColor = System.Drawing.Color.White;
+            this.ScheduleBtn.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
+            this.ScheduleBtn.IconColor = System.Drawing.Color.White;
+            this.ScheduleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ScheduleBtn.Name = "ScheduleBtn";
+            this.ScheduleBtn.UseVisualStyleBackColor = true;
+            this.ScheduleBtn.Click += new System.EventHandler(this.ScheduleBtn_Click);
             // 
             // logout
             // 
@@ -239,18 +251,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // ScheduleBtn
-            // 
-            resources.ApplyResources(this.ScheduleBtn, "ScheduleBtn");
-            this.ScheduleBtn.FlatAppearance.BorderSize = 0;
-            this.ScheduleBtn.ForeColor = System.Drawing.Color.White;
-            this.ScheduleBtn.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
-            this.ScheduleBtn.IconColor = System.Drawing.Color.White;
-            this.ScheduleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ScheduleBtn.Name = "ScheduleBtn";
-            this.ScheduleBtn.UseVisualStyleBackColor = true;
-            this.ScheduleBtn.Click += new System.EventHandler(this.ScheduleBtn_Click);
             // 
             // FormMain
             // 

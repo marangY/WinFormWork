@@ -32,20 +32,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
-            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CALORIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.categoryInputCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.timeTxt = new Exercise.CustomControll.CustomTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.categoryInputCustomComboBox = new Exercise.CustomControll.CustomComboBox();
-            this.timeTxt = new Exercise.CustomControll.CustomTextBox();
             this.nameTxt = new Exercise.CustomControll.CustomTextBox();
             this.categoryCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.searchRoundButton = new Exercise.CustomControll.RoundButton();
             this.searchCustomTextBox = new Exercise.CustomControll.CustomTextBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CALORIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EFDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -71,6 +72,7 @@
             this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.EFDataGridView.ColumnHeadersHeight = 50;
             this.EFDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.NAME,
             this.CATEGORY,
             this.CALORIE});
@@ -105,36 +107,6 @@
             this.EFDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EFDataGridView.Size = new System.Drawing.Size(864, 288);
             this.EFDataGridView.TabIndex = 4;
-            // 
-            // NAME
-            // 
-            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NAME.DataPropertyName = "NAME";
-            this.NAME.FillWeight = 120F;
-            this.NAME.HeaderText = "운동";
-            this.NAME.MinimumWidth = 10;
-            this.NAME.Name = "NAME";
-            this.NAME.ReadOnly = true;
-            // 
-            // CATEGORY
-            // 
-            this.CATEGORY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CATEGORY.DataPropertyName = "CATEGORY";
-            this.CATEGORY.FillWeight = 80F;
-            this.CATEGORY.HeaderText = "카테고리";
-            this.CATEGORY.MinimumWidth = 10;
-            this.CATEGORY.Name = "CATEGORY";
-            this.CATEGORY.ReadOnly = true;
-            // 
-            // CALORIE
-            // 
-            this.CALORIE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CALORIE.DataPropertyName = "CALORIE";
-            this.CALORIE.FillWeight = 80F;
-            this.CALORIE.HeaderText = "분당 칼로리(kal)";
-            this.CALORIE.MinimumWidth = 10;
-            this.CALORIE.Name = "CALORIE";
-            this.CALORIE.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -172,39 +144,6 @@
             this.iconPictureBox3.TabStop = false;
             this.iconPictureBox3.Click += new System.EventHandler(this.iconPictureBox3_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(266, 60);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 29);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Category";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(550, 60);
-            this.label2.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 29);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Time";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(10, 60);
-            this.label1.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 29);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Name";
-            // 
             // categoryInputCustomComboBox
             // 
             this.categoryInputCustomComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -230,6 +169,17 @@
             this.categoryInputCustomComboBox.TabIndex = 13;
             this.categoryInputCustomComboBox.Texts = "";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(266, 60);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 29);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Category";
+            // 
             // timeTxt
             // 
             this.timeTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -251,6 +201,28 @@
             this.timeTxt.TabIndex = 16;
             this.timeTxt.Texts = "";
             this.timeTxt.UnderlinedStyle = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(550, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 29);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Time";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(10, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 29);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Name";
             // 
             // nameTxt
             // 
@@ -292,7 +264,7 @@
             "기타"});
             this.categoryCustomComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.categoryCustomComboBox.ListTextColor = System.Drawing.Color.White;
-            this.categoryCustomComboBox.Location = new System.Drawing.Point(754, 33);
+            this.categoryCustomComboBox.Location = new System.Drawing.Point(754, 39);
             this.categoryCustomComboBox.Margin = new System.Windows.Forms.Padding(24, 25, 2, 2);
             this.categoryCustomComboBox.MinimumSize = new System.Drawing.Size(160, 25);
             this.categoryCustomComboBox.Name = "categoryCustomComboBox";
@@ -345,6 +317,46 @@
             this.searchCustomTextBox.Texts = "";
             this.searchCustomTextBox.UnderlinedStyle = false;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "EXERCISE_ID";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 125;
+            // 
+            // NAME
+            // 
+            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NAME.DataPropertyName = "NAME";
+            this.NAME.FillWeight = 120F;
+            this.NAME.HeaderText = "운동";
+            this.NAME.MinimumWidth = 10;
+            this.NAME.Name = "NAME";
+            this.NAME.ReadOnly = true;
+            // 
+            // CATEGORY
+            // 
+            this.CATEGORY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CATEGORY.DataPropertyName = "CATEGORY";
+            this.CATEGORY.FillWeight = 80F;
+            this.CATEGORY.HeaderText = "카테고리";
+            this.CATEGORY.MinimumWidth = 10;
+            this.CATEGORY.Name = "CATEGORY";
+            this.CATEGORY.ReadOnly = true;
+            // 
+            // CALORIE
+            // 
+            this.CALORIE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CALORIE.DataPropertyName = "CALORIE";
+            this.CALORIE.FillWeight = 80F;
+            this.CALORIE.HeaderText = "분당 칼로리(kal)";
+            this.CALORIE.MinimumWidth = 10;
+            this.CALORIE.Name = "CALORIE";
+            this.CALORIE.ReadOnly = true;
+            // 
             // FormExercise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -381,6 +393,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORY;
         private System.Windows.Forms.DataGridViewTextBoxColumn CALORIE;

@@ -3,6 +3,7 @@ using Exercise.Froms.SubForm;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OracleClient;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -14,50 +15,19 @@ namespace Exercise.ExerciseClass.Calculator
 {
     internal class CalculatorService
     {
-        private String input;
-        private String name;
-        private int index;
-
-
-
-        public CalculatorService(String input)
+        public void addExerciseEntity(OracleNumber id, OracleNumber input)
         {
-            this.input = input;
+            String date = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss");
+            DataBaseConnect dbconn = new DataBaseConnect("insert into user_exercise VALUES('" + Config.UserName + "', SEQ_USER_EXERCISE_ID.NEXTVAL, " + id + ", " + input + ", TO_DATE('"+date+"', 'YYYY-MM-DD-HH24:MI:SS'))");
+            dbconn.updateDB();
         }
 
-        public CalculatorService(String name, String input, int index)
+        public void addFoodEntity(OracleNumber id, OracleNumber input)
         {
-            this.name = name; //운동이름
-            this.input = input; // 시간입력
-            this.index = index; // 운동 / 음식 체크박스
+            String date = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss");
+            DataBaseConnect dbconn = new DataBaseConnect("insert into user_food VALUES('" + Config.UserName + "', SEQ_USER_FOOD_ID.NEXTVAL, " + id + ", " + input + ", TO_DATE('" + date + "', 'YYYY-MM-DD-HH24:MI:SS'))");
+            dbconn.updateDB();
         }
 
-
-        public void sendMessage(string str)
-        {
-            MessageForm message = new MessageForm(str);
-            message.StartPosition = FormStartPosition.CenterParent;
-            SystemSounds.Beep.Play();
-            message.ShowDialog();
-        }
-
-
-        public bool confirmNull()
-        {
-            if (input != "") { return true; }
-            return false;
-        }
-
-        public bool confirmNumber()
-        {
-            Regex regexnumber = new Regex(@"[0-9]");
-            Boolean ismatch = regexnumber.IsMatch(input);
-
-            if (!ismatch)
-            {
-                return false;
-            }
-            return true;
-        }
     }
 }

@@ -326,7 +326,5 @@ namespace Exercise
 
             OpenOwnerFrom(new FormLogin());
         }
-
-        
     }
 }
