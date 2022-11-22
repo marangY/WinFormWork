@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
 using Exercise.ExerciseClass.DataBase;
+using Exercise.ExerciseClass.Schedule;
 using Exercise.Froms;
 using Exercise.Froms.SubForm;
 using FontAwesome.Sharp;
@@ -20,6 +21,8 @@ namespace Exercise
     public partial class FormMain : Form
     {
         // 필드
+        ScheduleService ss = new ScheduleService();
+
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildFrom;
@@ -241,6 +244,7 @@ namespace Exercise
 
             currentChildFrom.Close();
             Reset();
+            updateSchedule();
             changeIconCurrentChildForm(Color.DeepSkyBlue, IconChar.User, Config.UserName);
         }
 
@@ -325,6 +329,36 @@ namespace Exercise
             iconCurrentChildForm.IconChar = IconChar.None;
 
             OpenOwnerFrom(new FormLogin());
+        }
+
+        public void updateSchedule()
+        {
+            DataTable todayTable = ss.returnTodaySchedule();
+
+            DataRowCollection rows = todayTable.Rows;
+
+            string scheduleTxt = "";
+
+            foreach (DataRow row in rows)
+            {
+                string scheduleSave = "";
+
+                for (int i = 0; i < todayTable.Columns.Count; i++)
+                {
+                    if(i == 0)
+                    {
+                        scheduleSave += row[i].ToString() + " : ";
+                    }
+                    else
+                    {
+                        scheduleSave += row[i].ToString() + "분";
+                    }
+                }
+                scheduleSave += "\n";
+                scheduleTxt += scheduleSave;
+            }
+
+            schedule.Text = scheduleTxt;
         }
     }
 }

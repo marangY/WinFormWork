@@ -132,6 +132,7 @@ namespace Exercise.Froms
             Parent.idTitleChildFrom.ForeColor = Color.DeepSkyBlue;
             Parent.iconCurrentChildForm.IconChar = IconChar.User;
             Parent.logout.Visible = true;
+            Parent.updateSchedule();
             Close();
         }
 

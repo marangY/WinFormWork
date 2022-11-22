@@ -99,6 +99,8 @@
     <Compile Include="ExerciseClass\DataBase\DataBaseConnect.cs" />
     <Compile Include="ExerciseClass\Exercise\ExerciseManagement.cs" />
     <Compile Include="ExerciseClass\Food\FoodManagement.cs" />
+    <Compile Include="ExerciseClass\Rank\RankService.cs" />
+    <Compile Include="ExerciseClass\Schedule\ScheduleService.cs" />
     <Compile Include="ExerciseClass\User\UserStatusService.cs" />
     <Compile Include="ExerciseClass\User\JoinService.cs" />
     <Compile Include="ExerciseClass\User\LoginService.cs" />

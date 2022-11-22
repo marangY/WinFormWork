@@ -28,6 +28,8 @@ namespace Exercise.Froms
         public FormHome()
         {
             InitializeComponent();
+
+            updateToday();
         }
 
         private void FormHome_Load(object sender, EventArgs e)
@@ -97,7 +99,25 @@ namespace Exercise.Froms
 
         private void updateToday()
         {
-            
+            DataTable et = us.returnExerciseToday();
+            DataTable ft = us.returnFoodToday();
+
+            double eTotal = 0;
+            double fTotal = 0;
+
+            foreach (DataRow row in et.Rows)
+            {
+                eTotal += Double.Parse(row[0].ToString());
+            }
+
+            foreach (DataRow row in ft.Rows)
+            {
+                fTotal += Double.Parse(row[0].ToString());
+            }
+
+            foodKal.Text = fTotal.ToString() + " kal";
+            exerciseKal.Text = eTotal.ToString() + " kal";
+            totalKal.Text = (fTotal - eTotal).ToString() + " kal";
         }
     }
 }

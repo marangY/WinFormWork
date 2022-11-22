@@ -27,6 +27,11 @@ namespace Exercise.Froms
             EFDataGridView.MouseWheel += new MouseEventHandler(mousewheel);
         }
 
+        private void FormExercise_Load(object sender, EventArgs e)
+        {
+            categoryCustomComboBox.SelectedIndex = 0;
+        }
+
         public void UpdateGridView()
         {
             if (search != null && categorys.Equals("전체"))
@@ -133,5 +138,7 @@ namespace Exercise.Froms
             SystemSounds.Beep.Play();
             message.ShowDialog();
         }
+
+        
     }
 }

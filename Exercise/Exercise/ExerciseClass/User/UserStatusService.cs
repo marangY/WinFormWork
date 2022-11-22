@@ -31,7 +31,7 @@ namespace Exercise.ExerciseClass.User
         public DataTable returnExerciseToday()
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd");
-            DataBaseConnect dbconn = new DataBaseConnect("select ue.TIME*e.CALORIE from exercise_info e, user_exercise ue where ue.user_id = '"+Config.UserName+"' And ue.datenow >= TO_DATE('"+date+"', 'YYYY-MM-DD') And ue.datenow < TO_DATE('"+date+"', 'YYYY-MM-DD') + 1 And ue.exercise = e.exercise_id; '");
+            DataBaseConnect dbconn = new DataBaseConnect("select ue.TIME*e.CALORIE from exercise_info e, user_exercise ue where ue.user_id = '"+Config.UserName+"' And ue.datenow >= TO_DATE('"+date+"', 'YYYY-MM-DD') And ue.datenow < TO_DATE('"+date+"', 'YYYY-MM-DD') + 1 And ue.exercise = e.exercise_id");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
@@ -39,7 +39,7 @@ namespace Exercise.ExerciseClass.User
         public DataTable returnFoodToday()
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd");
-            DataBaseConnect dbconn = new DataBaseConnect("select uf.weight*f.CALORIE from food_info f, user_food uf where uf.user_id = '" + Config.UserName + "' And uf.datenow >= TO_DATE('" + date + "', 'YYYY-MM-DD') And uf.datenow < TO_DATE('" + date + "', 'YYYY-MM-DD') + 1 And uf.food = f.food_id; '");
+            DataBaseConnect dbconn = new DataBaseConnect("select uf.weight*f.CALORIE from food_info f, user_food uf where uf.user_id = '" + Config.UserName + "' And uf.datenow >= TO_DATE('" + date + "', 'YYYY-MM-DD') And uf.datenow < TO_DATE('" + date + "', 'YYYY-MM-DD') + 1 And uf.food = f.food_id");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
