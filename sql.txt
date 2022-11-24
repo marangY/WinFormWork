@@ -381,15 +381,15 @@ insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '단백질', 4, '기타');
 insert into food_info VALUES(SEQ_FOOD_ID.NEXTVAL, '지방', 9, '기타');
 
 --운동 데이터 추가
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (3k;h)', 2.4, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (5k;h)', 4, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (5.5k;h) ', 4.6, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (6.5k;h) ', 6.2, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '자전거 (16k;h) ', 4.8, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '자전거 (18k;h) ', 7.2, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(3k;h)', 3.7, '유산소');   
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(5k;h)', 6.4, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(10k;h)', 12.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (3km/h)', 2.4, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (5km/h)', 4, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (5.5km/h) ', 4.6, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '걷기 (6.5km/h) ', 6.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '자전거 (16km/h) ', 4.8, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '자전거 (18km/h) ', 7.2, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(3km/h)', 3.7, '유산소');   
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(5km/h)', 6.4, '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '달리기(10km/h)', 12.2, '유산소');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '줄넘기', 12.2, '유산소');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '크로스핏', 8.6, '유산소');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '버피테스트', 8.6, '유산소');
@@ -400,7 +400,7 @@ insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '런닝머신', 9.8, '
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '하이킹', 7.4 , '유산소');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '등산', 9.8, '유산소');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '수영', 8.6, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '스케이팅 (16k;h)', 6.2 , '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '스케이팅 (16km/h)', 6.2 , '유산소');
 
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '축구', 9.8, '구기종목');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '탁구', 4.8 , '구기종목');
