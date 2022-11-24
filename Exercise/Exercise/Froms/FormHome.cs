@@ -20,8 +20,6 @@ namespace Exercise.Froms
         double ht;
         double wt;
 
-
-
         UserStatusService us = new UserStatusService();
         DataTable ut = new DataTable();
 
@@ -30,6 +28,11 @@ namespace Exercise.Froms
             InitializeComponent();
 
             updateToday();
+            EDataGridView.MouseWheel += new MouseEventHandler(mousewheelExercise);
+            FDataGridView.MouseWheel += new MouseEventHandler(mousewheelFood);
+
+            FDataGridView.DataSource = us.returnTodayFoodTotal();
+            EDataGridView.DataSource = us.returnTodayExerciseTotal();
         }
 
         private void FormHome_Load(object sender, EventArgs e)
@@ -95,6 +98,30 @@ namespace Exercise.Froms
 
             sendMessage("유저 신체 정보가 갱신 되었습니다.");
             bmi.Text = (Math.Round(this.wt / ((this.ht / 100) * (this.ht / 100)) * 100) / 100.0).ToString();
+        }
+
+        private void mousewheelExercise(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0 && EDataGridView.FirstDisplayedScrollingRowIndex > 0)
+            {
+                EDataGridView.FirstDisplayedScrollingRowIndex--;
+            }
+            else if (e.Delta < 0)
+            {
+                EDataGridView.FirstDisplayedScrollingRowIndex++;
+            }
+        }
+
+        private void mousewheelFood(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0 && FDataGridView.FirstDisplayedScrollingRowIndex > 0)
+            {
+                FDataGridView.FirstDisplayedScrollingRowIndex--;
+            }
+            else if (e.Delta < 0)
+            {
+                FDataGridView.FirstDisplayedScrollingRowIndex++;
+            }
         }
 
         private void updateToday()

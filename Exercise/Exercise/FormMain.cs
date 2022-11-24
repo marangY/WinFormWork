@@ -360,5 +360,10 @@ namespace Exercise
 
             schedule.Text = scheduleTxt;
         }
+
+        private void panelDeskTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

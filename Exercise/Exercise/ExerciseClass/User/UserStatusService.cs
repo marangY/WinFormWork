@@ -44,6 +44,22 @@ namespace Exercise.ExerciseClass.User
             return dbconn.Table;
         }
 
+        public DataTable returnTodayFoodTotal()
+        {
+            String date = DateTime.Now.ToString("yyyy-MM-dd");
+            DataBaseConnect dbconn = new DataBaseConnect("select f.name as name, uf.weight as gram, uf.weight*f.CALORIE as kal from food_info f, user_food uf where uf.user_id = '" + Config.UserName + "' And uf.datenow >= TO_DATE('" + date + "', 'YYYY-MM-DD') And uf.datenow < TO_DATE('" + date + "', 'YYYY-MM-DD') + 1 And uf.food = f.food_id");
+            dbconn.getTableToDB();
+            return dbconn.Table;
+        }
+
+        public DataTable returnTodayExerciseTotal()
+        {
+            String date = DateTime.Now.ToString("yyyy-MM-dd");
+            DataBaseConnect dbconn = new DataBaseConnect("select e.name as name, ue.time as time, ue.time*e.CALORIE as kal from exercise_info e, user_exercise ue where ue.user_id = '" + Config.UserName +"' And ue.datenow >= TO_DATE('" + date + "', 'YYYY-MM-DD') And ue.datenow < TO_DATE('" + date + "', 'YYYY-MM-DD') + 1 And ue.exercise = e.exercise_id");
+            dbconn.getTableToDB();
+            return dbconn.Table;
+        }
+
         public void addUserStatus(OracleNumber height, OracleNumber weight, OracleNumber bodyfat)
         {
             DataBaseConnect dbconn = new DataBaseConnect("insert into user_status VALUES('"+Config.UserName+"', "+ height  + ", "+ weight +", "+ bodyfat +")");

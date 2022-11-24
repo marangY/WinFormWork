@@ -24,7 +24,7 @@ namespace Exercise.Froms
         string search;
         string categorys = "전체";
 
-        List<String> scheduleID;
+        List<String> scheduleID = new List<string>();
 
         Regex regexnumber = new Regex(@"[0-9]");
 
@@ -98,6 +98,7 @@ namespace Exercise.Froms
         private void updateListView()
         {
             scheduleListView.Items.Clear();
+            scheduleID.Clear();
 
             DataTable userScheduleTable = ss.returnUserSchedule();
 
@@ -108,10 +109,12 @@ namespace Exercise.Froms
                 ListViewItem item = new ListViewItem(row[0].ToString());
                 for(int i = 1; i < userScheduleTable.Columns.Count; i++)
                 {
-                    if(i == 4)
+                    if (i == 3)
                     {
                         scheduleID.Add(row[i].ToString());
+                        continue;
                     }
+
                     item.SubItems.Add(row[i].ToString());
                 }
                 scheduleListView.Items.Add(item);
@@ -162,14 +165,31 @@ namespace Exercise.Froms
             exerciseLabel.Text = row.Cells[1].Value.ToString();
         }
 
-        private void up_Click(object sender, EventArgs e)
+        private void roundButton3_Click(object sender, EventArgs e)
         {
-            
+            if (scheduleListView.FocusedItem == null)
+            {
+                sendMessage("삭제할 스케줄을 선택해 주세요");
+                return;
+            }
+
+            int index = scheduleListView.FocusedItem.Index;
+            ss.deletScheduleEntity(OracleNumber.Parse(scheduleID[index]));
+
+            sendMessage("선택한 스케줄이 삭제 되었습니다.");
+            updateListView();
         }
 
-        private void down_Click(object sender, EventArgs e)
+        private void scheduleListView_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (scheduleListView.SelectedItems.Count > 0)
+            {
+                int index = scheduleListView.SelectedItems[0].Index;
 
+                label2.Text = scheduleListView.Items[index].SubItems[0].Text;
+                label3.Text = "time: " +  scheduleListView.Items[index].SubItems[1].Text;
+                label4.Text = "date: " + scheduleListView.Items[index].SubItems[2].Text;
+            }
         }
     }
 }

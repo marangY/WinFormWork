@@ -222,10 +222,10 @@
     <value>0, 0</value>
   </data>
   <data name="panelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 785</value>
+    <value>219, 702</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
@@ -259,13 +259,13 @@
     <value>NoControl</value>
   </data>
   <data name="ScheduleBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 528</value>
+    <value>0, 440</value>
   </data>
   <data name="ScheduleBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="ScheduleBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="ScheduleBtn.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -298,13 +298,13 @@
     <value>Arial, 10.2pt, style=Bold</value>
   </data>
   <data name="logout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 744</value>
+    <value>19, 659</value>
   </data>
   <data name="logout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>38, 0, 4, 18</value>
+    <value>30, 0, 3, 15</value>
   </data>
   <data name="logout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 24</value>
+    <value>65, 19</value>
   </data>
   <data name="logout.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -343,13 +343,13 @@
     <value>NoControl</value>
   </data>
   <data name="CalculatorBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 456</value>
+    <value>0, 380</value>
   </data>
   <data name="CalculatorBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="CalculatorBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="CalculatorBtn.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -391,13 +391,13 @@
     <value>NoControl</value>
   </data>
   <data name="ExerciseBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 384</value>
+    <value>0, 320</value>
   </data>
   <data name="ExerciseBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="ExerciseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="ExerciseBtn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -439,13 +439,13 @@
     <value>NoControl</value>
   </data>
   <data name="FoodBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 312</value>
+    <value>0, 260</value>
   </data>
   <data name="FoodBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="FoodBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="FoodBtn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -487,13 +487,13 @@
     <value>NoControl</value>
   </data>
   <data name="RankBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 240</value>
+    <value>0, 200</value>
   </data>
   <data name="RankBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="RankBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="RankBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -535,13 +535,13 @@
     <value>NoControl</value>
   </data>
   <data name="HomeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 168</value>
+    <value>0, 140</value>
   </data>
   <data name="HomeBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>11, 0, 24, 0</value>
+    <value>9, 0, 19, 0</value>
   </data>
   <data name="HomeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 72</value>
+    <value>219, 60</value>
   </data>
   <data name="HomeBtn.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -586,10 +586,10 @@
     <value>0, 0</value>
   </data>
   <data name="panelLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="panelLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 168</value>
+    <value>219, 140</value>
   </data>
   <data name="panelLogo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -607,13 +607,13 @@
     <value>7</value>
   </data>
   <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 41</value>
+    <value>23, 34</value>
   </data>
   <data name="Logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>29, 41, 29, 41</value>
+    <value>23, 34, 23, 34</value>
   </data>
   <data name="Logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 79</value>
+    <value>163, 66</value>
   </data>
   <data name="Logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -685,13 +685,13 @@
     <value>Top</value>
   </data>
   <data name="panelTitleBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 0</value>
+    <value>219, 0</value>
   </data>
   <data name="panelTitleBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panelTitleBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 101</value>
+    <value>980, 84</value>
   </data>
   <data name="panelTitleBar.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -709,13 +709,13 @@
     <value>2</value>
   </data>
   <data name="MinimizeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1116, 12</value>
+    <value>893, 10</value>
   </data>
   <data name="MinimizeBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="MinimizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 18</value>
+    <value>15, 15</value>
   </data>
   <data name="MinimizeBtn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -736,13 +736,13 @@
     <value>0</value>
   </data>
   <data name="CloseBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1172, 12</value>
+    <value>938, 10</value>
   </data>
   <data name="CloseBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 18</value>
+    <value>15, 15</value>
   </data>
   <data name="CloseBtn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -769,13 +769,13 @@
     <value>Arial, 10.2pt, style=Bold</value>
   </data>
   <data name="idTitleChildFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 46</value>
+    <value>56, 38</value>
   </data>
   <data name="idTitleChildFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="idTitleChildFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 24</value>
+    <value>45, 19</value>
   </data>
   <data name="idTitleChildFrom.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -796,13 +796,13 @@
     <value>2</value>
   </data>
   <data name="iconCurrentChildForm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 37</value>
+    <value>19, 31</value>
   </data>
   <data name="iconCurrentChildForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="iconCurrentChildForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 41</value>
+    <value>32, 34</value>
   </data>
   <data name="iconCurrentChildForm.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -823,13 +823,13 @@
     <value>Top</value>
   </data>
   <data name="panelShadow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 101</value>
+    <value>219, 84</value>
   </data>
   <data name="panelShadow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="panelShadow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 11</value>
+    <value>980, 9</value>
   </data>
   <data name="panelShadow.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -846,24 +846,6 @@
   <data name="&gt;&gt;panelShadow.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="schedule.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt, style=Bold</value>
-  </data>
-  <data name="schedule.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 31</value>
-  </data>
-  <data name="schedule.Size" type="System.Drawing.Size, System.Drawing">
-    <value>417, 156</value>
-  </data>
-  <data name="schedule.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="schedule.Text" xml:space="preserve">
-    <value>schedule</value>
-  </data>
-  <data name="schedule.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
   <data name="&gt;&gt;schedule.Name" xml:space="preserve">
     <value>schedule</value>
   </data>
@@ -877,10 +859,16 @@
     <value>0</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 432</value>
+    <value>324, 360</value>
+  </data>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 203</value>
+    <value>343, 169</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -907,13 +895,10 @@
     <value>Arial, 19.8000011pt, style=Bold</value>
   </data>
   <data name="date.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 327</value>
-  </data>
-  <data name="date.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>348, 272</value>
   </data>
   <data name="date.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 46</value>
+    <value>283, 40</value>
   </data>
   <data name="date.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -940,13 +925,10 @@
     <value>Arial, 72pt, style=Bold</value>
   </data>
   <data name="clock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 149</value>
-  </data>
-  <data name="clock.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>228, 124</value>
   </data>
   <data name="clock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>646, 166</value>
+    <value>543, 139</value>
   </data>
   <data name="clock.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -973,13 +955,13 @@
     <value>맑은 고딕, 25.8000011pt, style=Bold</value>
   </data>
   <data name="time.Location" type="System.Drawing.Point, System.Drawing">
-    <value>526, 55</value>
+    <value>421, 46</value>
   </data>
   <data name="time.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>12, 12, 4, 0</value>
+    <value>10, 10, 3, 0</value>
   </data>
   <data name="time.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 70</value>
+    <value>128, 60</value>
   </data>
   <data name="time.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1006,13 +988,13 @@
     <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="panelDeskTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 112</value>
+    <value>219, 93</value>
   </data>
   <data name="panelDeskTop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panelDeskTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 673</value>
+    <value>980, 609</value>
   </data>
   <data name="panelDeskTop.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1029,6 +1011,39 @@
   <data name="&gt;&gt;panelDeskTop.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="schedule.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="schedule.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 26</value>
+  </data>
+  <data name="schedule.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="schedule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 130</value>
+  </data>
+  <data name="schedule.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="schedule.Text" xml:space="preserve">
+    <value>schedule</value>
+  </data>
+  <data name="schedule.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;schedule.Name" xml:space="preserve">
+    <value>schedule</value>
+  </data>
+  <data name="&gt;&gt;schedule.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;schedule.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;schedule.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -1038,14 +1053,11 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>10, 18</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1479, 785</value>
+    <value>1199, 702</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>FormMain</value>

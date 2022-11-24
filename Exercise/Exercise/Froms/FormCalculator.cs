@@ -1,6 +1,7 @@
 ﻿using Exercise.ExerciseClass.Calculator;
 using Exercise.ExerciseClass.Exercise;
 using Exercise.ExerciseClass.Food;
+using Exercise.ExerciseClass.Rank;
 using Exercise.Froms.SubForm;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace Exercise.Froms
     {
         FoodManagement fm = new FoodManagement();
         ExerciseManagement em = new ExerciseManagement();
+        RankService rs = new RankService();
 
         string search = null;
         string categorys = "전체";
@@ -218,6 +220,7 @@ namespace Exercise.Froms
             }
 
             sendMessage("오늘 활동에 추가 되었습니다.");
+            rs.updateCalorie();
         }
 
         public void updateInfo()

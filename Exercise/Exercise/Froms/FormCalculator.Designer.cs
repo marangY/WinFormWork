@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inputLabel = new System.Windows.Forms.Label();
             this.totalCalorie = new System.Windows.Forms.Label();
             this.totalKal = new System.Windows.Forms.Label();
@@ -44,10 +48,6 @@
             this.categoryCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.roundButton1 = new Exercise.CustomControll.RoundButton();
             this.selectCustomComboBox = new Exercise.CustomControll.CustomComboBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EFDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,6 +119,46 @@
             this.EFDataGridView.Size = new System.Drawing.Size(496, 428);
             this.EFDataGridView.TabIndex = 3;
             this.EFDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EFDataGridView_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "EXERCISE_ID";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 125;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "NAME";
+            this.name.FillWeight = 80F;
+            this.name.HeaderText = "운동";
+            this.name.MinimumWidth = 10;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // category
+            // 
+            this.category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.category.DataPropertyName = "CATEGORY";
+            this.category.FillWeight = 80F;
+            this.category.HeaderText = "카테고리";
+            this.category.MinimumWidth = 10;
+            this.category.Name = "category";
+            this.category.ReadOnly = true;
+            // 
+            // calorie
+            // 
+            this.calorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.calorie.DataPropertyName = "CALORIE";
+            this.calorie.FillWeight = 120F;
+            this.calorie.HeaderText = "분당 칼로리(kal)";
+            this.calorie.MinimumWidth = 10;
+            this.calorie.Name = "calorie";
+            this.calorie.ReadOnly = true;
             // 
             // inputLabel
             // 
@@ -276,7 +316,7 @@
             this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
             this.roundButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
             this.roundButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton1.BorderRadius = 20;
+            this.roundButton1.BorderRadius = 17;
             this.roundButton1.BorderSize = 0;
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -316,50 +356,9 @@
             this.selectCustomComboBox.Texts = "";
             this.selectCustomComboBox.OnSelectedIndexChanged += new System.EventHandler(this.selectCustomComboBox_OnSelectedIndexChanged);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "EXERCISE_ID";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            this.id.Width = 125;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "NAME";
-            this.name.FillWeight = 80F;
-            this.name.HeaderText = "운동";
-            this.name.MinimumWidth = 10;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // category
-            // 
-            this.category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.category.DataPropertyName = "CATEGORY";
-            this.category.FillWeight = 80F;
-            this.category.HeaderText = "카테고리";
-            this.category.MinimumWidth = 10;
-            this.category.Name = "category";
-            this.category.ReadOnly = true;
-            // 
-            // calorie
-            // 
-            this.calorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.calorie.DataPropertyName = "CALORIE";
-            this.calorie.FillWeight = 120F;
-            this.calorie.HeaderText = "분당 칼로리(kal)";
-            this.calorie.MinimumWidth = 10;
-            this.calorie.Name = "calorie";
-            this.calorie.ReadOnly = true;
-            // 
             // FormCalculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(962, 562);
             this.Controls.Add(this.inputKind);

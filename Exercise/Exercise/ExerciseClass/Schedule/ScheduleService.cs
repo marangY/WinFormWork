@@ -17,9 +17,15 @@ namespace Exercise.ExerciseClass.Schedule
             dbconn.updateDB();
         }
 
+        public void deletScheduleEntity(OracleNumber id)
+        {
+            DataBaseConnect dbconn = new DataBaseConnect("DELETE from user_schedule where user_id = '"+Config.UserName+"' And schedule_id = " + id);
+            dbconn.updateDB();
+        }
+
         public DataTable returnUserSchedule()
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select e.name, us.time, TO_CHAR(us.datenow, 'YYYY-MM-DD') from user_schedule us, exercise_info e where us.user_id = '" + Config.UserName + "' And e.exercise_id = us.exercise_id");
+            DataBaseConnect dbconn = new DataBaseConnect("select e.name, us.time, TO_CHAR(us.datenow, 'YYYY-MM-DD'), us.schedule_id from user_schedule us, exercise_info e where us.user_id = '" + Config.UserName + "' And e.exercise_id = us.exercise_id order by us.schedule_id");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
@@ -27,7 +33,7 @@ namespace Exercise.ExerciseClass.Schedule
         public DataTable returnTodaySchedule()
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd");
-            DataBaseConnect dbconn = new DataBaseConnect("select e.name, us.time from user_schedule us, exercise_info e where us.user_id = '" + Config.UserName + "' And e.exercise_id = us.exercise_id And us.datenow >= TO_DATE('" + date + "', 'YYYY-MM-DD') And us.datenow < TO_DATE('" + date + "', 'YYYY-MM-DD') + 1");
+            DataBaseConnect dbconn = new DataBaseConnect("select e.name, us.time from user_schedule us, exercise_info e where us.user_id = '" + Config.UserName + "' And e.exercise_id = us.exercise_id And us.datenow >= TO_DATE('" + date + "', 'YYYY-MM-DD') And us.datenow < TO_DATE('" + date + "', 'YYYY-MM-DD') + 1 order by us.schedule_id");
             dbconn.getTableToDB();
             return dbconn.Table;
         }

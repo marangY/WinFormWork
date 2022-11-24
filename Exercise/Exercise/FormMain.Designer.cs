@@ -47,12 +47,12 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.schedule = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
             this.clock = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.schedule = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -214,7 +214,6 @@
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.User;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.DeepSkyBlue;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 40;
             resources.ApplyResources(this.iconCurrentChildForm, "iconCurrentChildForm");
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.TabStop = false;
@@ -234,6 +233,21 @@
             this.panelDeskTop.Controls.Add(this.time);
             resources.ApplyResources(this.panelDeskTop, "panelDeskTop");
             this.panelDeskTop.Name = "panelDeskTop";
+            this.panelDeskTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeskTop_Paint);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.schedule);
+            this.groupBox1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // schedule
+            // 
+            resources.ApplyResources(this.schedule, "schedule");
+            this.schedule.ForeColor = System.Drawing.Color.White;
+            this.schedule.Name = "schedule";
             // 
             // date
             // 
@@ -257,25 +271,11 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.schedule);
-            this.groupBox1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // schedule
-            // 
-            resources.ApplyResources(this.schedule, "schedule");
-            this.schedule.ForeColor = System.Drawing.Color.White;
-            this.schedule.Name = "schedule";
-            // 
             // FormMain
             // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.panelDeskTop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);

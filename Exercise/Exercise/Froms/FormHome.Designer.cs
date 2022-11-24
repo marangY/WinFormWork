@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bodyGroupBox = new System.Windows.Forms.GroupBox();
-            this.statusUpdateButton = new Exercise.CustomControll.RoundButton();
             this.bmiGroupBox = new System.Windows.Forms.GroupBox();
             this.bmi = new System.Windows.Forms.Label();
             this.bodyFatGroupBox = new System.Windows.Forms.GroupBox();
@@ -49,11 +54,26 @@
             this.foodKal = new System.Windows.Forms.Label();
             this.exerciseKal = new System.Windows.Forms.Label();
             this.totalKal = new System.Windows.Forms.Label();
+            this.foodGroup = new System.Windows.Forms.GroupBox();
+            this.FDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exerciseGroup = new System.Windows.Forms.GroupBox();
+            this.EDataGridView = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusUpdateButton = new Exercise.CustomControll.RoundButton();
             this.bodyGroupBox.SuspendLayout();
             this.bmiGroupBox.SuspendLayout();
             this.bodyFatGroupBox.SuspendLayout();
             this.weightGroupBox.SuspendLayout();
             this.heightGroupBox.SuspendLayout();
+            this.foodGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FDataGridView)).BeginInit();
+            this.exerciseGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // bodyGroupBox
@@ -74,25 +94,6 @@
             this.bodyGroupBox.TabIndex = 0;
             this.bodyGroupBox.TabStop = false;
             this.bodyGroupBox.Text = "Body Status";
-            // 
-            // statusUpdateButton
-            // 
-            this.statusUpdateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.statusUpdateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.statusUpdateButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.statusUpdateButton.BorderRadius = 0;
-            this.statusUpdateButton.BorderSize = 0;
-            this.statusUpdateButton.FlatAppearance.BorderSize = 0;
-            this.statusUpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.statusUpdateButton.ForeColor = System.Drawing.Color.White;
-            this.statusUpdateButton.Location = new System.Drawing.Point(93, 469);
-            this.statusUpdateButton.Name = "statusUpdateButton";
-            this.statusUpdateButton.Size = new System.Drawing.Size(90, 35);
-            this.statusUpdateButton.TabIndex = 4;
-            this.statusUpdateButton.Text = "Update";
-            this.statusUpdateButton.TextColor = System.Drawing.Color.White;
-            this.statusUpdateButton.UseVisualStyleBackColor = false;
-            this.statusUpdateButton.Click += new System.EventHandler(this.statusUpdateButton_Click);
             // 
             // bmiGroupBox
             // 
@@ -246,7 +247,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.label1.Location = new System.Drawing.Point(445, 32);
+            this.label1.Location = new System.Drawing.Point(352, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 32);
@@ -259,7 +260,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.label2.Location = new System.Drawing.Point(445, 141);
+            this.label2.Location = new System.Drawing.Point(352, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 32);
@@ -272,7 +273,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.label3.Location = new System.Drawing.Point(445, 262);
+            this.label3.Location = new System.Drawing.Point(352, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(243, 32);
@@ -285,7 +286,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.label4.Location = new System.Drawing.Point(445, 388);
+            this.label4.Location = new System.Drawing.Point(352, 211);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(196, 32);
@@ -298,7 +299,7 @@
             this.foodKal.AutoSize = true;
             this.foodKal.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodKal.ForeColor = System.Drawing.Color.Khaki;
-            this.foodKal.Location = new System.Drawing.Point(756, 141);
+            this.foodKal.Location = new System.Drawing.Point(663, 93);
             this.foodKal.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.foodKal.Name = "foodKal";
             this.foodKal.Size = new System.Drawing.Size(83, 32);
@@ -311,7 +312,7 @@
             this.exerciseKal.AutoSize = true;
             this.exerciseKal.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exerciseKal.ForeColor = System.Drawing.Color.Khaki;
-            this.exerciseKal.Location = new System.Drawing.Point(756, 262);
+            this.exerciseKal.Location = new System.Drawing.Point(663, 154);
             this.exerciseKal.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.exerciseKal.Name = "exerciseKal";
             this.exerciseKal.Size = new System.Drawing.Size(83, 32);
@@ -324,7 +325,7 @@
             this.totalKal.AutoSize = true;
             this.totalKal.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalKal.ForeColor = System.Drawing.Color.Khaki;
-            this.totalKal.Location = new System.Drawing.Point(756, 388);
+            this.totalKal.Location = new System.Drawing.Point(663, 211);
             this.totalKal.Margin = new System.Windows.Forms.Padding(4, 17, 2, 0);
             this.totalKal.Name = "totalKal";
             this.totalKal.Size = new System.Drawing.Size(83, 32);
@@ -332,12 +333,226 @@
             this.totalKal.Text = "0  kal";
             this.totalKal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // foodGroup
+            // 
+            this.foodGroup.Controls.Add(this.FDataGridView);
+            this.foodGroup.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foodGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.foodGroup.Location = new System.Drawing.Point(358, 272);
+            this.foodGroup.Name = "foodGroup";
+            this.foodGroup.Size = new System.Drawing.Size(285, 279);
+            this.foodGroup.TabIndex = 11;
+            this.foodGroup.TabStop = false;
+            this.foodGroup.Text = "Food";
+            // 
+            // FDataGridView
+            // 
+            this.FDataGridView.AllowUserToAddRows = false;
+            this.FDataGridView.AllowUserToDeleteRows = false;
+            this.FDataGridView.AllowUserToResizeColumns = false;
+            this.FDataGridView.AllowUserToResizeRows = false;
+            this.FDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.FDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.FDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.FDataGridView.ColumnHeadersHeight = 50;
+            this.FDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.FDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FDataGridView.EnableHeadersVisualStyles = false;
+            this.FDataGridView.GridColor = System.Drawing.Color.White;
+            this.FDataGridView.Location = new System.Drawing.Point(5, 24);
+            this.FDataGridView.Margin = new System.Windows.Forms.Padding(2, 25, 24, 2);
+            this.FDataGridView.MultiSelect = false;
+            this.FDataGridView.Name = "FDataGridView";
+            this.FDataGridView.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.FDataGridView.RowHeadersVisible = false;
+            this.FDataGridView.RowHeadersWidth = 82;
+            this.FDataGridView.RowTemplate.DividerHeight = 1;
+            this.FDataGridView.RowTemplate.Height = 37;
+            this.FDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.FDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.FDataGridView.Size = new System.Drawing.Size(277, 250);
+            this.FDataGridView.TabIndex = 13;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn1.FillWeight = 120F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "음식";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "gram";
+            this.dataGridViewTextBoxColumn2.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "그램";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "kal";
+            this.dataGridViewTextBoxColumn3.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "kal";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // exerciseGroup
+            // 
+            this.exerciseGroup.Controls.Add(this.EDataGridView);
+            this.exerciseGroup.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exerciseGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.exerciseGroup.Location = new System.Drawing.Point(649, 272);
+            this.exerciseGroup.Name = "exerciseGroup";
+            this.exerciseGroup.Size = new System.Drawing.Size(285, 279);
+            this.exerciseGroup.TabIndex = 12;
+            this.exerciseGroup.TabStop = false;
+            this.exerciseGroup.Text = "Exercise";
+            // 
+            // EDataGridView
+            // 
+            this.EDataGridView.AllowUserToAddRows = false;
+            this.EDataGridView.AllowUserToDeleteRows = false;
+            this.EDataGridView.AllowUserToResizeColumns = false;
+            this.EDataGridView.AllowUserToResizeRows = false;
+            this.EDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.EDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.EDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.EDataGridView.ColumnHeadersHeight = 50;
+            this.EDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.category,
+            this.calorie});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            this.EDataGridView.EnableHeadersVisualStyles = false;
+            this.EDataGridView.GridColor = System.Drawing.Color.White;
+            this.EDataGridView.Location = new System.Drawing.Point(4, 24);
+            this.EDataGridView.Margin = new System.Windows.Forms.Padding(2, 25, 24, 2);
+            this.EDataGridView.MultiSelect = false;
+            this.EDataGridView.Name = "EDataGridView";
+            this.EDataGridView.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.EDataGridView.RowHeadersVisible = false;
+            this.EDataGridView.RowHeadersWidth = 82;
+            this.EDataGridView.RowTemplate.DividerHeight = 1;
+            this.EDataGridView.RowTemplate.Height = 37;
+            this.EDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.EDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EDataGridView.Size = new System.Drawing.Size(277, 250);
+            this.EDataGridView.TabIndex = 10;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            this.name.FillWeight = 120F;
+            this.name.HeaderText = "운동";
+            this.name.MinimumWidth = 10;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // category
+            // 
+            this.category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.category.DataPropertyName = "time";
+            this.category.FillWeight = 80F;
+            this.category.HeaderText = "시간";
+            this.category.MinimumWidth = 10;
+            this.category.Name = "category";
+            this.category.ReadOnly = true;
+            // 
+            // calorie
+            // 
+            this.calorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.calorie.DataPropertyName = "kal";
+            this.calorie.FillWeight = 80F;
+            this.calorie.HeaderText = "kal";
+            this.calorie.MinimumWidth = 10;
+            this.calorie.Name = "calorie";
+            this.calorie.ReadOnly = true;
+            // 
+            // statusUpdateButton
+            // 
+            this.statusUpdateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.statusUpdateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.statusUpdateButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.statusUpdateButton.BorderRadius = 0;
+            this.statusUpdateButton.BorderSize = 0;
+            this.statusUpdateButton.FlatAppearance.BorderSize = 0;
+            this.statusUpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statusUpdateButton.ForeColor = System.Drawing.Color.White;
+            this.statusUpdateButton.Location = new System.Drawing.Point(93, 469);
+            this.statusUpdateButton.Name = "statusUpdateButton";
+            this.statusUpdateButton.Size = new System.Drawing.Size(90, 35);
+            this.statusUpdateButton.TabIndex = 4;
+            this.statusUpdateButton.Text = "Update";
+            this.statusUpdateButton.TextColor = System.Drawing.Color.White;
+            this.statusUpdateButton.UseVisualStyleBackColor = false;
+            this.statusUpdateButton.Click += new System.EventHandler(this.statusUpdateButton_Click);
+            // 
             // FormHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(962, 562);
+            this.Controls.Add(this.exerciseGroup);
+            this.Controls.Add(this.foodGroup);
             this.Controls.Add(this.totalKal);
             this.Controls.Add(this.exerciseKal);
             this.Controls.Add(this.foodKal);
@@ -358,6 +573,10 @@
             this.weightGroupBox.PerformLayout();
             this.heightGroupBox.ResumeLayout(false);
             this.heightGroupBox.PerformLayout();
+            this.foodGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FDataGridView)).EndInit();
+            this.exerciseGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.EDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,5 +605,15 @@
         private System.Windows.Forms.Label totalKal;
         private System.Windows.Forms.Label bmi;
         private CustomControll.RoundButton statusUpdateButton;
+        private System.Windows.Forms.GroupBox foodGroup;
+        private System.Windows.Forms.GroupBox exerciseGroup;
+        private System.Windows.Forms.DataGridView EDataGridView;
+        private System.Windows.Forms.DataGridView FDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calorie;
     }
 }

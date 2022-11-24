@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rankDataGrid = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateComboBox = new Exercise.CustomControll.CustomComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateComboBox = new Exercise.CustomControll.CustomComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.rankDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,24 +90,6 @@
             this.rankDataGrid.Size = new System.Drawing.Size(720, 375);
             this.rankDataGrid.TabIndex = 5;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "순위";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "칼로리 소모";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,7 +112,7 @@
             this.dateComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.dateComboBox.ListTextColor = System.Drawing.Color.White;
             this.dateComboBox.Location = new System.Drawing.Point(670, 87);
-            this.dateComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.dateComboBox.MinimumSize = new System.Drawing.Size(160, 29);
             this.dateComboBox.Name = "dateComboBox";
             this.dateComboBox.Padding = new System.Windows.Forms.Padding(2);
@@ -138,17 +120,36 @@
             this.dateComboBox.TabIndex = 7;
             this.dateComboBox.Texts = "";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "순위";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "name";
+            this.Column2.HeaderText = "ID";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "kal";
+            this.Column3.HeaderText = "칼로리 소모";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
             // FormRank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(962, 562);
             this.Controls.Add(this.dateComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rankDataGrid);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRank";
             this.Text = "FormRank";
             ((System.ComponentModel.ISupportInitialize)(this.rankDataGrid)).EndInit();
@@ -159,10 +160,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView rankDataGrid;
+        private System.Windows.Forms.Label label1;
+        private CustomControll.CustomComboBox dateComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label label1;
-        private CustomControll.CustomComboBox dateComboBox;
     }
 }
