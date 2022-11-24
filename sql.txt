@@ -34,8 +34,7 @@ CREATE TABLE user_info (
   user_id VARCHAR2(20) NOT NULL,
   password VARCHAR2(200) NOT NULL,
   email VARCHAR2(100) NOT NULL,
-  PRIMARY KEY (user_id))
-;
+  PRIMARY KEY (user_id));
 
 CREATE TABLE user_status (
   user_id VARCHAR2(20) NOT NULL,
@@ -45,13 +44,11 @@ CREATE TABLE user_status (
   PRIMARY KEY (user_id),
   CONSTRAINT FK_user_to_user_status
     FOREIGN KEY (user_id)
-    REFERENCES user_info (user_id))
-  ;
+    REFERENCES user_info (user_id));
 
 CREATE TABLE exercise_category (
   category VARCHAR2(45) NOT NULL,
-  PRIMARY KEY (category))
-;
+  PRIMARY KEY (category));
 
 CREATE TABLE exercise_info (
   exercise_id NUMBER NOT NULL,
@@ -61,8 +58,7 @@ CREATE TABLE exercise_info (
   PRIMARY KEY (exercise_id),
   CONSTRAINT FK_ex_category_to_ex_info
     FOREIGN KEY (category)
-    REFERENCES exercise_category (category))
-  ;
+    REFERENCES exercise_category (category));
 
 CREATE TABLE user_exercise (
   user_id VARCHAR2(20) NOT NULL,
@@ -76,13 +72,11 @@ CREATE TABLE user_exercise (
     REFERENCES user_info (user_id),
   CONSTRAINT FK_ex_info_to_user_ex
     FOREIGN KEY (exercise)
-    REFERENCES exercise_info (exercise_id))
-  ;
+    REFERENCES exercise_info (exercise_id));
 
 CREATE TABLE food_category (
   category VARCHAR2(45) NOT NULL,
-  PRIMARY KEY (category))
-;
+  PRIMARY KEY (category));
 
 CREATE TABLE food_info (
   food_id NUMBER NOT NULL,
@@ -92,8 +86,7 @@ CREATE TABLE food_info (
   PRIMARY KEY (food_id),
   CONSTRAINT FK_food_category_to_food_info
     FOREIGN KEY (category)
-    REFERENCES food_category (category))
-  ;
+    REFERENCES food_category (category));
 
 CREATE TABLE user_food (
   user_id VARCHAR2(20) NOT NULL,
@@ -107,8 +100,7 @@ CREATE TABLE user_food (
     REFERENCES user_info (user_id),
   CONSTRAINT FK_food_info_to_user_food
     FOREIGN KEY (food)
-    REFERENCES food_info (food_id))
-  ;
+    REFERENCES food_info (food_id));
 
 CREATE TABLE total_calorie (
   user_id VARCHAR2(20) NOT NULL,
@@ -118,8 +110,7 @@ CREATE TABLE total_calorie (
   PRIMARY KEY (user_id, datenow),
   CONSTRAINT FK_user_to_total_calorie
     FOREIGN KEY (user_id)
-    REFERENCES user_info (user_id))
-  ;
+    REFERENCES user_info (user_id));
 
 CREATE TABLE user_schedule(
   schedule_id NUMBER NOT NULL,
@@ -134,8 +125,7 @@ CREATE TABLE user_schedule(
   CONSTRAINT FK_ex_info_to_user_schedule
     FOREIGN KEY (exercise_id)
     REFERENCES exercise_info (exercise_id)
-  )
-;
+  );
 
 CREATE SEQUENCE SEQ_FOOD_ID INCREMENT BY 1 START WITH 1000000;
 CREATE SEQUENCE SEQ_EXERCISE_ID INCREMENT BY 1 START WITH 3000000;
@@ -400,7 +390,7 @@ insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '런닝머신', 9.8, '
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '하이킹', 7.4 , '유산소');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '등산', 9.8, '유산소');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '수영', 8.6, '유산소');
-insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '스케이팅 (16km/h)', 6.2 , '유산소');
+insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '스케이팅 (16k;h)', 6.2 , '유산소');
 
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '축구', 9.8, '구기종목');
 insert into exercise_info VALUES(SEQ_EXERCISE_ID.NEXTVAL, '탁구', 4.8 , '구기종목');
