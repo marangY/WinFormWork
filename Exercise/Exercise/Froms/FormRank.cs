@@ -13,12 +13,42 @@ namespace Exercise.Froms
         public partial class FormRank : Form
         {
             RankService rs = new RankService();
-            String selectDate = DateTime.Now.ToString("yyyy-MM-dd");
+            int rankcount = 1;
 
             public FormRank()
             {
                 InitializeComponent();
-                rankDataGrid.DataSource = rs.retrunRankDate(selectDate);
+                rankDataGrid.MouseWheel += new MouseEventHandler(mousewheel);
+                DataTable dateTable = rs.retrunBoxValue();
+
+                DataRowCollection rows = dateTable.Rows;
+
+                foreach (DataRow row in rows)
+                {
+                    dateComboBox.Items.Add(row[0].ToString());
+                }
+                dateComboBox.SelectedIndex = 0;
+
+                rankDataGrid.DataSource = rs.retrunRankDate(dateComboBox.SelectedItem.ToString());
+                label1.Text = dateComboBox.SelectedItem.ToString() + " RANK";
+            }
+
+            private void dateComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+            {
+                rankDataGrid.DataSource = rs.retrunRankDate(dateComboBox.SelectedItem.ToString());
+                label1.Text = dateComboBox.SelectedItem.ToString() + " RANK";
+            }
+
+            private void mousewheel(object sender, MouseEventArgs e)
+            {
+                if (e.Delta > 0 && rankDataGrid.FirstDisplayedScrollingRowIndex > 0)
+                {
+                    rankDataGrid.FirstDisplayedScrollingRowIndex--;
+                }
+                else if (e.Delta < 0)
+                {
+                    rankDataGrid.FirstDisplayedScrollingRowIndex++;
+                }
+            }
         }
-    }
 }

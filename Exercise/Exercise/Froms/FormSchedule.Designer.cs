@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,20 +38,20 @@
             this.calorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.roundButton2 = new Exercise.CustomControll.RoundButton();
             this.scheduleCalendar = new System.Windows.Forms.MonthCalendar();
+            this.timeInput = new Exercise.CustomControll.CustomTextBox();
             this.timeLabel = new System.Windows.Forms.Label();
             this.exerciseLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.roundButton3 = new Exercise.CustomControll.RoundButton();
             this.scheduleListView = new System.Windows.Forms.ListView();
             this.Schedule = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.roundButton3 = new Exercise.CustomControll.RoundButton();
-            this.roundButton2 = new Exercise.CustomControll.RoundButton();
-            this.timeInput = new Exercise.CustomControll.CustomTextBox();
             this.searchCustomTextBox = new Exercise.CustomControll.CustomTextBox();
             this.categoryCustomComboBox = new Exercise.CustomControll.CustomComboBox();
             this.roundButton1 = new Exercise.CustomControll.RoundButton();
@@ -70,28 +70,28 @@
             this.EFDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EFDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EFDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.EFDataGridView.ColumnHeadersHeight = 50;
             this.EFDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.name,
             this.category,
             this.calorie});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.EFDataGridView.EnableHeadersVisualStyles = false;
             this.EFDataGridView.GridColor = System.Drawing.Color.White;
             this.EFDataGridView.Location = new System.Drawing.Point(460, 47);
@@ -99,14 +99,14 @@
             this.EFDataGridView.MultiSelect = false;
             this.EFDataGridView.Name = "EFDataGridView";
             this.EFDataGridView.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.EFDataGridView.RowHeadersVisible = false;
             this.EFDataGridView.RowHeadersWidth = 82;
             this.EFDataGridView.RowTemplate.DividerHeight = 1;
@@ -187,13 +187,57 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Exercise";
             // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
+            this.roundButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
+            this.roundButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton2.BorderRadius = 17;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.ForeColor = System.Drawing.Color.White;
+            this.roundButton2.Location = new System.Drawing.Point(69, 182);
+            this.roundButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(84, 33);
+            this.roundButton2.TabIndex = 15;
+            this.roundButton2.Text = "Add";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
+            // 
             // scheduleCalendar
             // 
+            this.scheduleCalendar.BackColor = System.Drawing.Color.White;
             this.scheduleCalendar.Location = new System.Drawing.Point(244, 26);
             this.scheduleCalendar.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.scheduleCalendar.Name = "scheduleCalendar";
             this.scheduleCalendar.TabIndex = 16;
             this.scheduleCalendar.TodayDate = new System.DateTime(2022, 11, 22, 0, 0, 0, 0);
+            // 
+            // timeInput
+            // 
+            this.timeInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.timeInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
+            this.timeInput.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.timeInput.BorderRadius = 0;
+            this.timeInput.BorderSize = 3;
+            this.timeInput.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeInput.ForeColor = System.Drawing.Color.White;
+            this.timeInput.Location = new System.Drawing.Point(101, 110);
+            this.timeInput.Margin = new System.Windows.Forms.Padding(4);
+            this.timeInput.Multiline = false;
+            this.timeInput.Name = "timeInput";
+            this.timeInput.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.timeInput.PasswordChar = false;
+            this.timeInput.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.timeInput.PlaceholderText = "";
+            this.timeInput.Size = new System.Drawing.Size(109, 37);
+            this.timeInput.TabIndex = 15;
+            this.timeInput.Texts = "";
+            this.timeInput.UnderlinedStyle = false;
             // 
             // timeLabel
             // 
@@ -236,49 +280,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "User Schedule";
             // 
-            // scheduleListView
+            // label4
             // 
-            this.scheduleListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.scheduleListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Schedule,
-            this.Time,
-            this.Date});
-            this.scheduleListView.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.scheduleListView.ForeColor = System.Drawing.Color.Black;
-            this.scheduleListView.HideSelection = false;
-            this.scheduleListView.Location = new System.Drawing.Point(5, 37);
-            this.scheduleListView.Margin = new System.Windows.Forms.Padding(2);
-            this.scheduleListView.Name = "scheduleListView";
-            this.scheduleListView.Scrollable = false;
-            this.scheduleListView.Size = new System.Drawing.Size(410, 371);
-            this.scheduleListView.TabIndex = 0;
-            this.scheduleListView.UseCompatibleStateImageBehavior = false;
-            this.scheduleListView.View = System.Windows.Forms.View.Details;
-            this.scheduleListView.SelectedIndexChanged += new System.EventHandler(this.scheduleListView_SelectedIndexChanged);
-            // 
-            // Schedule
-            // 
-            this.Schedule.Text = "Schedule";
-            this.Schedule.Width = 180;
-            // 
-            // Time
-            // 
-            this.Time.Text = "time";
-            this.Time.Width = 100;
-            // 
-            // Date
-            // 
-            this.Date.Text = "Date";
-            this.Date.Width = 130;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 410);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 24);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "schedule";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(145, 453);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 24);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "date:";
             // 
             // label3
             // 
@@ -289,14 +298,14 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "time:";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(145, 453);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 24);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "date:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 410);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 24);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "schedule";
             // 
             // roundButton3
             // 
@@ -319,48 +328,39 @@
             this.roundButton3.UseVisualStyleBackColor = false;
             this.roundButton3.Click += new System.EventHandler(this.roundButton3_Click);
             // 
-            // roundButton2
+            // scheduleListView
             // 
-            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
-            this.roundButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
-            this.roundButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton2.BorderRadius = 17;
-            this.roundButton2.BorderSize = 0;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.ForeColor = System.Drawing.Color.White;
-            this.roundButton2.Location = new System.Drawing.Point(69, 182);
-            this.roundButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(84, 33);
-            this.roundButton2.TabIndex = 15;
-            this.roundButton2.Text = "Add";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = false;
-            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
+            this.scheduleListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.scheduleListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Schedule,
+            this.Time,
+            this.Date});
+            this.scheduleListView.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.scheduleListView.ForeColor = System.Drawing.Color.Black;
+            this.scheduleListView.HideSelection = false;
+            this.scheduleListView.Location = new System.Drawing.Point(5, 37);
+            this.scheduleListView.Margin = new System.Windows.Forms.Padding(2);
+            this.scheduleListView.Name = "scheduleListView";
+            this.scheduleListView.Size = new System.Drawing.Size(410, 371);
+            this.scheduleListView.TabIndex = 0;
+            this.scheduleListView.UseCompatibleStateImageBehavior = false;
+            this.scheduleListView.View = System.Windows.Forms.View.Details;
+            this.scheduleListView.SelectedIndexChanged += new System.EventHandler(this.scheduleListView_SelectedIndexChanged);
             // 
-            // timeInput
+            // Schedule
             // 
-            this.timeInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.timeInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(224)))), ((int)(((byte)(93)))));
-            this.timeInput.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.timeInput.BorderRadius = 0;
-            this.timeInput.BorderSize = 3;
-            this.timeInput.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeInput.ForeColor = System.Drawing.Color.White;
-            this.timeInput.Location = new System.Drawing.Point(101, 110);
-            this.timeInput.Margin = new System.Windows.Forms.Padding(4);
-            this.timeInput.Multiline = false;
-            this.timeInput.Name = "timeInput";
-            this.timeInput.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.timeInput.PasswordChar = false;
-            this.timeInput.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.timeInput.PlaceholderText = "";
-            this.timeInput.Size = new System.Drawing.Size(109, 37);
-            this.timeInput.TabIndex = 15;
-            this.timeInput.Texts = "";
-            this.timeInput.UnderlinedStyle = false;
+            this.Schedule.Text = "Schedule";
+            this.Schedule.Width = 180;
+            // 
+            // Time
+            // 
+            this.Time.Text = "time";
+            this.Time.Width = 70;
+            // 
+            // Date
+            // 
+            this.Date.Text = "Date";
+            this.Date.Width = 130;
             // 
             // searchCustomTextBox
             // 

@@ -8,6 +8,7 @@ using System.Deployment.Application;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Exercise.ExerciseClass.Rank
@@ -45,7 +46,14 @@ namespace Exercise.ExerciseClass.Rank
 
         public DataTable retrunRankDate(string date)
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select USER_ID as name, FOOD_CALORIE-EXERCISE_CALORIE as kal from total_calorie where datenow >= TO_DATE('"+date+"', 'YYYY-MM-DD') And datenow < TO_DATE('" + date + "', 'YYYY-MM-DD') + 1 order by FOOD_CALORIE-EXERCISE_CALORIE");
+            DataBaseConnect dbconn = new DataBaseConnect("select ROWNUM as rank, USER_ID as name, kal from (select USER_ID , FOOD_CALORIE-EXERCISE_CALORIE as kal from total_calorie where datenow >= TO_DATE('"+date+"', 'YYYY-MM-DD') And datenow < TO_DATE('"+date+"', 'YYYY-MM-DD') + 1 order by FOOD_CALORIE-EXERCISE_CALORIE)");
+            dbconn.getTableToDB();
+            return dbconn.Table;
+        }
+
+        public DataTable retrunBoxValue()
+        {
+            DataBaseConnect dbconn = new DataBaseConnect("select DISTINCT to_char(datenow, 'YYYY-MM-DD') as selectdate from total_calorie");
             dbconn.getTableToDB();
             return dbconn.Table;
         }

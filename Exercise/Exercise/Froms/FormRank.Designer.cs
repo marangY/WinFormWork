@@ -96,9 +96,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(118)))), ((int)(((byte)(176)))));
             this.label1.Location = new System.Drawing.Point(106, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 48);
+            this.label1.Size = new System.Drawing.Size(368, 48);
             this.label1.TabIndex = 6;
-            this.label1.Text = "00.00 RANK";
+            this.label1.Text = "0000-00-00 RANK";
             // 
             // dateComboBox
             // 
@@ -119,9 +119,11 @@
             this.dateComboBox.Size = new System.Drawing.Size(164, 50);
             this.dateComboBox.TabIndex = 7;
             this.dateComboBox.Texts = "";
+            this.dateComboBox.OnSelectedIndexChanged += new System.EventHandler(this.dateComboBox_OnSelectedIndexChanged);
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "rank";
             this.Column1.HeaderText = "순위";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
