@@ -27,10 +27,13 @@ namespace Exercise.Froms
                 {
                     dateComboBox.Items.Add(row[0].ToString());
                 }
-                dateComboBox.SelectedIndex = 0;
 
-                rankDataGrid.DataSource = rs.retrunRankDate(dateComboBox.SelectedItem.ToString());
-                label1.Text = dateComboBox.SelectedItem.ToString() + " RANK";
+                if (dateTable.Rows.Count != 0)
+                {
+                    dateComboBox.SelectedIndex = 0;
+                    rankDataGrid.DataSource = rs.retrunRankDate(dateComboBox.SelectedItem.ToString());
+                    label1.Text = dateComboBox.SelectedItem.ToString() + " RANK";
+                }
             }
 
             private void dateComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
