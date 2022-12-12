@@ -122,7 +122,7 @@ namespace Exercise.Froms
 
             nameTxt.Texts = String.Empty;
             categoryInputCustomComboBox.Texts = String.Empty;
-            categoryCustomComboBox.SelectedIndex = -1;
+            categoryCustomComboBox.SelectedIndex = 0;
             timeTxt.Texts = String.Empty;
 
             searchCustomTextBox.Texts = name;

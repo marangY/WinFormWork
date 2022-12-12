@@ -124,7 +124,7 @@ namespace Exercise.Froms
 
             nameTxt.Texts = String.Empty;
             categoryInputCustomComboBox.Texts = String.Empty;
-            categoryCustomComboBox.SelectedIndex = -1;
+            categoryCustomComboBox.SelectedIndex = 0;
             gramTxt.Texts = String.Empty;
 
             UpdateGridView();

@@ -121,8 +121,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(266, 60);
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(260, 53);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 29);
@@ -146,7 +146,7 @@
             this.gramTxt.PasswordChar = false;
             this.gramTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.gramTxt.PlaceholderText = "";
-            this.gramTxt.Size = new System.Drawing.Size(165, 41);
+            this.gramTxt.Size = new System.Drawing.Size(165, 45);
             this.gramTxt.TabIndex = 16;
             this.gramTxt.Texts = "";
             this.gramTxt.UnderlinedStyle = false;
@@ -154,8 +154,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(550, 60);
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(541, 53);
             this.label2.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 29);
@@ -165,8 +165,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(10, 60);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(10, 53);
             this.label1.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 29);
@@ -191,7 +191,7 @@
             this.nameTxt.PasswordChar = false;
             this.nameTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.nameTxt.PlaceholderText = "";
-            this.nameTxt.Size = new System.Drawing.Size(165, 41);
+            this.nameTxt.Size = new System.Drawing.Size(165, 45);
             this.nameTxt.TabIndex = 13;
             this.nameTxt.Texts = "";
             this.nameTxt.UnderlinedStyle = false;
@@ -363,7 +363,7 @@
             this.searchCustomTextBox.PasswordChar = false;
             this.searchCustomTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.searchCustomTextBox.PlaceholderText = "";
-            this.searchCustomTextBox.Size = new System.Drawing.Size(165, 41);
+            this.searchCustomTextBox.Size = new System.Drawing.Size(165, 45);
             this.searchCustomTextBox.TabIndex = 14;
             this.searchCustomTextBox.Texts = "";
             this.searchCustomTextBox.UnderlinedStyle = false;

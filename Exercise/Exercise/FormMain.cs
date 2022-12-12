@@ -63,7 +63,7 @@ namespace Exercise
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(24, 161, 251);
             public static Color color6 = Color.FromArgb(135, 224, 93);
-
+            public static Color color7 = Color.FromArgb(235, 70, 70);
         }
 
         //버튼 선택 활성화
@@ -218,6 +218,7 @@ namespace Exercise
             OpenChildFrom(new FormCalculator());
         }
 
+        //스케줄 버튼 클릭 이벤트 등록
         private void ScheduleBtn_Click(object sender, EventArgs e)
         {
             if (!Config.Login)
