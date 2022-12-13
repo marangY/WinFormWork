@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.EFDataGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@
             this.label1.Location = new System.Drawing.Point(228, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 32);
+            this.label1.Size = new System.Drawing.Size(175, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Calculater";
             // 
@@ -73,28 +73,28 @@
             this.EFDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EFDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EFDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.EFDataGridView.ColumnHeadersHeight = 50;
             this.EFDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.name,
             this.category,
             this.calorie});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EFDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.EFDataGridView.EnableHeadersVisualStyles = false;
             this.EFDataGridView.GridColor = System.Drawing.Color.White;
             this.EFDataGridView.Location = new System.Drawing.Point(435, 102);
@@ -102,14 +102,14 @@
             this.EFDataGridView.MultiSelect = false;
             this.EFDataGridView.Name = "EFDataGridView";
             this.EFDataGridView.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EFDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.EFDataGridView.RowHeadersVisible = false;
             this.EFDataGridView.RowHeadersWidth = 82;
             this.EFDataGridView.RowTemplate.DividerHeight = 1;
@@ -168,7 +168,7 @@
             this.inputLabel.Location = new System.Drawing.Point(40, 240);
             this.inputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inputLabel.Name = "inputLabel";
-            this.inputLabel.Size = new System.Drawing.Size(158, 32);
+            this.inputLabel.Size = new System.Drawing.Size(180, 37);
             this.inputLabel.TabIndex = 9;
             this.inputLabel.Text = "Time (min)";
             this.inputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,12 +176,12 @@
             // totalCalorie
             // 
             this.totalCalorie.AutoSize = true;
-            this.totalCalorie.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCalorie.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.totalCalorie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
             this.totalCalorie.Location = new System.Drawing.Point(40, 352);
             this.totalCalorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCalorie.Name = "totalCalorie";
-            this.totalCalorie.Size = new System.Drawing.Size(181, 32);
+            this.totalCalorie.Size = new System.Drawing.Size(185, 33);
             this.totalCalorie.TabIndex = 11;
             this.totalCalorie.Text = "Total Calorie";
             // 
@@ -193,7 +193,7 @@
             this.totalKal.Location = new System.Drawing.Point(228, 352);
             this.totalKal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalKal.Name = "totalKal";
-            this.totalKal.Size = new System.Drawing.Size(75, 32);
+            this.totalKal.Size = new System.Drawing.Size(90, 37);
             this.totalKal.TabIndex = 12;
             this.totalKal.Text = "0 kal";
             this.totalKal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,7 +206,7 @@
             this.kindTxt.Location = new System.Drawing.Point(40, 142);
             this.kindTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.kindTxt.Name = "kindTxt";
-            this.kindTxt.Size = new System.Drawing.Size(126, 32);
+            this.kindTxt.Size = new System.Drawing.Size(151, 37);
             this.kindTxt.TabIndex = 14;
             this.kindTxt.Text = "Exercise";
             this.kindTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,12 +214,12 @@
             // inputKind
             // 
             this.inputKind.AutoSize = true;
-            this.inputKind.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputKind.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.inputKind.ForeColor = System.Drawing.Color.White;
             this.inputKind.Location = new System.Drawing.Point(228, 142);
             this.inputKind.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inputKind.Name = "inputKind";
-            this.inputKind.Size = new System.Drawing.Size(71, 32);
+            this.inputKind.Size = new System.Drawing.Size(73, 33);
             this.inputKind.TabIndex = 15;
             this.inputKind.Text = "kind";
             this.inputKind.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,7 +262,7 @@
             this.inputBox.PasswordChar = false;
             this.inputBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.inputBox.PlaceholderText = "";
-            this.inputBox.Size = new System.Drawing.Size(165, 41);
+            this.inputBox.Size = new System.Drawing.Size(165, 45);
             this.inputBox.TabIndex = 10;
             this.inputBox.Texts = "";
             this.inputBox.UnderlinedStyle = false;
@@ -284,7 +284,7 @@
             this.searchCustomTextBox.PasswordChar = false;
             this.searchCustomTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.searchCustomTextBox.PlaceholderText = "";
-            this.searchCustomTextBox.Size = new System.Drawing.Size(165, 41);
+            this.searchCustomTextBox.Size = new System.Drawing.Size(165, 45);
             this.searchCustomTextBox.TabIndex = 8;
             this.searchCustomTextBox.Texts = "";
             this.searchCustomTextBox.UnderlinedStyle = false;

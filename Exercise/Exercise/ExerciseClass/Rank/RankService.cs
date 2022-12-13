@@ -53,7 +53,7 @@ namespace Exercise.ExerciseClass.Rank
 
         public DataTable retrunBoxValue()
         {
-            DataBaseConnect dbconn = new DataBaseConnect("select DISTINCT to_char(datenow, 'YYYY-MM-DD') as selectdate from total_calorie");
+            DataBaseConnect dbconn = new DataBaseConnect("select DISTINCT to_char(datenow, 'YYYY-MM-DD') as selectdate from total_calorie order by selectdate DESC");
             dbconn.getTableToDB();
             return dbconn.Table;
         }
