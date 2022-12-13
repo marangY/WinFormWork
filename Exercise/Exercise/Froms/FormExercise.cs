@@ -16,10 +16,12 @@ namespace Exercise.Froms
 {
     public partial class FormExercise : Form
     {
+        //필드
         ExerciseManagement em = new ExerciseManagement();
         string search;
         string categorys = "전체";
 
+        //생성자
         public FormExercise()
         {
             InitializeComponent();
@@ -27,11 +29,13 @@ namespace Exercise.Froms
             EFDataGridView.MouseWheel += new MouseEventHandler(mousewheel);
         }
 
+        //운동폼 로드
         private void FormExercise_Load(object sender, EventArgs e)
         {
             categoryCustomComboBox.SelectedIndex = 0;
         }
 
+        //그리드뷰 업데이트 함수
         public void UpdateGridView()
         {
             if (search != null && categorys.Equals("전체"))
@@ -52,6 +56,7 @@ namespace Exercise.Froms
             }
         }
 
+        //카테고리 선택 이벤트
         private void categoryCustomComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             categorys = categoryCustomComboBox.SelectedItem.ToString();
@@ -62,6 +67,7 @@ namespace Exercise.Froms
             UpdateGridView();
         }
 
+        // 검색 버튼 이벤트
         private void searchRoundButton_Click(object sender, EventArgs e)
         {
             search = searchCustomTextBox.Texts.ToString();
@@ -72,6 +78,7 @@ namespace Exercise.Froms
             UpdateGridView();
         }
 
+        // 마우스 휠 이벤트 등록
         private void mousewheel(object sender, MouseEventArgs e)
         {
             if (e.Delta > 0 && EFDataGridView.FirstDisplayedScrollingRowIndex > 0)
@@ -84,12 +91,14 @@ namespace Exercise.Froms
             }
         }
 
+        //데이터 추가 버튼 이벤트
         private void iconPictureBox3_Click(object sender, EventArgs e)
         {
             String name = nameTxt.Texts;
             String category = categoryInputCustomComboBox.SelectedItem.ToString();
             OracleNumber time;
 
+            // 유효성 검사
             if (name == null || name.Equals(""))
             {
                 sendMessage("운동 이름을 입력해 주세요");

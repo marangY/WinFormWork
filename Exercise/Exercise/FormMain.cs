@@ -319,7 +319,7 @@ namespace Exercise
             SystemSounds.Beep.Play();
             message.ShowDialog();
         }
-
+        // 로그 아웃 이벤트 등록
         private void logout_Click(object sender, EventArgs e)
         {
             Reset();
@@ -332,6 +332,7 @@ namespace Exercise
             OpenOwnerFrom(new FormLogin());
         }
 
+        // 스케줄 업데이트
         public void updateSchedule()
         {
             DataTable todayTable = ss.returnTodaySchedule();

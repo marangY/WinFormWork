@@ -20,6 +20,8 @@ namespace Exercise.Froms
 {
     public partial class FormCalculator : Form
     {
+
+        //필드
         FoodManagement fm = new FoodManagement();
         ExerciseManagement em = new ExerciseManagement();
         RankService rs = new RankService();
@@ -32,17 +34,20 @@ namespace Exercise.Froms
 
         Regex regexnumber = new Regex(@"[0-9]");
 
+        //생성자
         public FormCalculator()
         {
             InitializeComponent();
             EFDataGridView.MouseWheel += new MouseEventHandler(mousewheel);
         }
 
+        // 계산기 로드
         private void FormCalculator_Load(object sender, EventArgs e)
         {
             selectCustomComboBox.SelectedIndex = 0;
         }
 
+        //마우스 휠 이벤트 등록
         private void mousewheel(object sender, MouseEventArgs e)
         {
             if (e.Delta > 0 && EFDataGridView.FirstDisplayedScrollingRowIndex > 0)
@@ -55,6 +60,7 @@ namespace Exercise.Froms
             }
         }
 
+        //계산기 스왑 콤보 박스 이벤트 등록
         private void selectCustomComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             if (selectCustomComboBox.SelectedIndex == 0)
@@ -114,6 +120,7 @@ namespace Exercise.Froms
             }
         }
 
+        //음식 데이터 그리드뷰 업데이트 함수
         public void UpdatefmGridView()
         {
             if (search != null && categorys.Equals("전체"))
@@ -134,6 +141,7 @@ namespace Exercise.Froms
             }
         }
 
+        //운동 데이터 그리드뷰 업데이트 함수
         public void UpdateemGridView()
         {
             if (search != null && categorys.Equals("전체"))
@@ -154,6 +162,7 @@ namespace Exercise.Froms
             }
         }
 
+        // 카테고리 선택 이벤트
         private void categoryCustomComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             categorys = categoryCustomComboBox.SelectedItem.ToString();
@@ -168,6 +177,7 @@ namespace Exercise.Froms
             }
          }
 
+        // 검색 버튼 이벤트
         private void roundButton1_Click(object sender, EventArgs e)
         {
             search = searchCustomTextBox.Texts.ToString();
@@ -182,6 +192,7 @@ namespace Exercise.Froms
             }
         }
 
+        //검색 엔터 단축키 등록
         private void searchCustomTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -201,6 +212,7 @@ namespace Exercise.Froms
             }
         }
 
+        //그리드뷰 셀클릭 이벤트 등록
         private void EFDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             updateInfo();
@@ -223,8 +235,10 @@ namespace Exercise.Froms
             rs.updateCalorie();
         }
 
+        //오늘 활동 등록 버튼 이벤트
         public void updateInfo()
         {
+            //유효성 검사
             if (inputBox.Texts == "")
             {
                 if (selectCustomComboBox.SelectedIndex == 0)

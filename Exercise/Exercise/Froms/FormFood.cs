@@ -18,10 +18,12 @@ namespace Exercise.Froms
 {
     public partial class FormFood : Form
     {
+        //필드
         FoodManagement fm = new FoodManagement();
         string search;
         string categorys;
 
+        //생성자
         public FormFood()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Exercise.Froms
             EFDataGridView.MouseWheel += new MouseEventHandler(mousewheel);
         }
 
+        //
         private void FormFood_Load(object sender, EventArgs e)
         {
             categoryCustomComboBox.SelectedIndex = 0;

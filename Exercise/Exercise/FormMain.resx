@@ -790,7 +790,7 @@
     <value>Arial, 72pt, style=Bold</value>
   </data>
   <data name="clock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 124</value>
+    <value>182, 119</value>
   </data>
   <data name="clock.Size" type="System.Drawing.Size, System.Drawing">
     <value>646, 166</value>
