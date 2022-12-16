@@ -130,6 +130,7 @@ namespace Exercise.Froms
             FormMain Parent = (FormMain)Owner;
             Parent.idTitleChildFrom.Text = Config.UserName;
             Parent.idTitleChildFrom.ForeColor = Color.DeepSkyBlue;
+            Parent.iconCurrentChildForm.ForeColor = Color.DeepSkyBlue;
             Parent.iconCurrentChildForm.IconChar = IconChar.User;
             Parent.logout.Visible = true;
             Parent.updateSchedule();

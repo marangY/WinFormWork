@@ -15,6 +15,7 @@ namespace Exercise.ExerciseClass.Calculator
 {
     internal class CalculatorService
     {
+        //계산한 운동 칼로리 저장
         public void addExerciseEntity(OracleNumber id, OracleNumber input)
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss");
@@ -22,6 +23,7 @@ namespace Exercise.ExerciseClass.Calculator
             dbconn.updateDB();
         }
 
+        //계산한 음식 칼로리 저장
         public void addFoodEntity(OracleNumber id, OracleNumber input)
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss");

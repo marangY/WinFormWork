@@ -15,10 +15,13 @@ namespace Exercise.ExerciseClass.Rank
 {
     internal class RankService
     {
+        //랭크 등록
         public void updateCalorie()
         {
+            //오늘 일자 불러오기
             String date = DateTime.Now.ToString("yyyy-MM-dd");
 
+            //운동, 음식 테이블에서 유저의 하루 소비 칼로리를 받아와서 총 칼로리 계산
             UserStatusService us = new UserStatusService();
 
             DataTable et = us.returnExerciseToday();
@@ -40,6 +43,7 @@ namespace Exercise.ExerciseClass.Rank
             OracleNumber totalExercise = OracleNumber.Parse(totalex.ToString());
             OracleNumber totalFood = OracleNumber.Parse(totalfd.ToString()); ;
 
+            //merge 쿼리문을 통해 이미 데이터가 있다면 업데이트, 없다면 인서트로 데이터 추가
             DataBaseConnect dbconn = new DataBaseConnect("merge into total_calorie tc using dual on(tc.user_id = '"+Config.UserName+"' and tc.datenow = TO_DATE('"+date+"', 'YYYY-MM-DD-HH')) when matched then update set tc.FOOD_CALORIE = "+totalFood+", tc.EXERCISE_CALORIE = "+totalExercise+" when not matched then insert (tc.user_id, tc.datenow, tc.FOOD_CALORIE, tc.EXERCISE_CALORIE) VALUES('"+Config.UserName+"', TO_DATE('"+date+"', 'YYYY-MM-DD-HH'), "+totalFood+", "+totalExercise+")");
             dbconn.updateDB();
         }

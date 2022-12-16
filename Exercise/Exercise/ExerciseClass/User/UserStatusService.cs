@@ -21,6 +21,7 @@ namespace Exercise.ExerciseClass.User
             return false;
         }
 
+        //유저 신체 정보 가지고 오기
         public DataTable returnUserStatus()
         {
             DataBaseConnect dbconn = new DataBaseConnect("select HEIGHT, WEIGHT, BODY_FAT from user_status WHERE user_id = '"+Config.UserName+"'");
@@ -28,6 +29,7 @@ namespace Exercise.ExerciseClass.User
             return dbconn.Table;
         }
 
+        //오늘 활동한 운동 목록 가지고 오기
         public DataTable returnExerciseToday()
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd");
@@ -36,6 +38,7 @@ namespace Exercise.ExerciseClass.User
             return dbconn.Table;
         }
 
+        //오늘 먹은 음식 목록 가지고 오기
         public DataTable returnFoodToday()
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd");

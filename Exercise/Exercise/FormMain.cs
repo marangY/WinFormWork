@@ -109,12 +109,18 @@ namespace Exercise
             {
                 currentChildFrom.Close();
             }
+
             currentChildFrom = childForm;
+            //자식폼 속성 지정
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+
+            //패널에 자식폼 이식
             panelDeskTop.Controls.Add(childForm);
             panelDeskTop.Tag = childForm;
+
+            //자식폼 호출 및 앞으로 가져오기
             childForm.BringToFront();
             childForm.Show();
         }
@@ -326,6 +332,8 @@ namespace Exercise
             Config.UserName = null;
             Config.Login = false;
             logout.Visible = false;
+            currentChildFrom.Close();
+            currentChildFrom = null;
             idTitleChildFrom.ForeColor = Color.FromArgb(31, 30, 68);
             iconCurrentChildForm.IconChar = IconChar.None;
 

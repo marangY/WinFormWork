@@ -11,18 +11,21 @@ namespace Exercise.ExerciseClass.Schedule
 {
     internal class ScheduleService
     {
+        //스케줄 추가
         public void addScheduleEntity(OracleNumber id, OracleNumber time, string date){ 
         
             DataBaseConnect dbconn = new DataBaseConnect("insert into user_schedule VALUES(SEQ_SCHEDULE_ID.NEXTVAL, '" + Config.UserName + "', TO_DATE('" + date + "', 'YYYY-MM-DD-HH'), " + id + ", " + time + ")");
             dbconn.updateDB();
         }
 
+        //스케줄 삭제
         public void deletScheduleEntity(OracleNumber id)
         {
             DataBaseConnect dbconn = new DataBaseConnect("DELETE from user_schedule where user_id = '"+Config.UserName+"' And schedule_id = " + id);
             dbconn.updateDB();
         }
 
+        //스케줄 정보 가지고 오기
         public DataTable returnUserSchedule()
         {
             DataBaseConnect dbconn = new DataBaseConnect("select e.name, us.time, TO_CHAR(us.datenow, 'YYYY-MM-DD'), us.schedule_id from user_schedule us, exercise_info e where us.user_id = '" + Config.UserName + "' And e.exercise_id = us.exercise_id order by us.schedule_id");
@@ -30,6 +33,7 @@ namespace Exercise.ExerciseClass.Schedule
             return dbconn.Table;
         }
 
+        //오늘에 해당하는 스케줄 정보 가지고 오기
         public DataTable returnTodaySchedule()
         {
             String date = DateTime.Now.ToString("yyyy-MM-dd");

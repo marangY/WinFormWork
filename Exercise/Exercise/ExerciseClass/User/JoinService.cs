@@ -21,10 +21,13 @@ namespace Exercise.ExerciseClass.User
             this.em = em;
         }
 
+        //이미 가입하려는 아디를 다른 사람이 사용하고 있는지 확인
         public bool existenceId()
         {
+            //DB에서 입력한 아이디와 일치하는 아이디를 가지고옴
             DataBaseConnect dbconn = new DataBaseConnect("select user_id from user_info where user_id = '" + id + "'");
             dbconn.getTableToDB();
+            //존재 여부에 따라 리턴값 결정
             if (dbconn.Table.Rows.Count != 0)
             {
                 return true;
@@ -32,8 +35,10 @@ namespace Exercise.ExerciseClass.User
             return false;
         }
 
+        //회원가입 절차
         public void authorization()
         {
+            //DB에 회원정보 추가
             DataBaseConnect dbconn = new DataBaseConnect("select * from user_info");
             dbconn.getTableToDB();
             DataRow newRow = dbconn.Table.NewRow();

@@ -66,6 +66,7 @@ namespace Exercise.Froms
             message.ShowDialog();
         }
 
+        //신체 정보 등록, 수정 버튼 이벤트
         private void statusUpdateButton_Click(object sender, EventArgs e)
         {
 
@@ -84,6 +85,7 @@ namespace Exercise.Froms
                 return;
             }
 
+            //신체 정보가 저장되 있지 않다면 새로운 열 추가 , 저장 되어 있다면 업데이트
             if (us.isNullTable(ut))
             {
                 us.addUserStatus(ht, wt, bf);
